@@ -1,135 +1,249 @@
+
+
+
+
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ece Dalpolat - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-    }
+        /* Header kısmı */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .profile-photo {
+    width: 150px; /* İstediğiniz genişliği ayarlayın */
+    height: 150px; /* İstediğiniz yüksekliği ayarlayın */
+    border-radius: 50%; /* Dairesel yapar */
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 10px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      font-weight: bold;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
 
-    .section {
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 1000px;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
+        /* Bölümler */
+        .section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
 
-    .section h2 {
-      color: #333;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #2980b9;
-      padding-bottom: 5px;
-    }
+        .section h2 {
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #2980b9;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-    .section ul {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
+        .section p, .section ul {
+            font-size: 18px;
+            color: #555;
+        }
 
-    .project, .experience {
-      margin-bottom: 20px;
-    }
+        .section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
 
-    .project h3, .experience h3 {
-      color: #2980b9;
-      font-size: 1.2em;
-      margin-bottom: 5px;
-    }
+        .section h3 {
+            color: #2980b9;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
 
-    .project p, .experience p {
-      font-size: 1em;
-    }
+        /* Linkler */
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #333;
-      color: #fff;
-      margin-top: 20px;
-    }
-  </style>
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;}
+</style>
+
 </head>
 
 <body>
-  <header>
-    <h1>Ece Dalpolat</h1>
-    <p>Software Engineer & Data Scientist</p>
-  </header>
 
-  <section class="section">
-    <h2>Projects</h2>
+    <header>
+  
+        <h1>Ece Dalpolat</h1>
+      <h1 >Sofware Engineer & Data Scientist</h1>
 
-    <div class="project">
-      <h3>Pollen Classification using Deep Learning</h3>
-      <p>Developed a CNN and DenseNet121-based model for pollen image classification, achieving over 96% accuracy. Tools used include Python, TensorFlow, and Keras.</p>
-    </div>
+    </header>
 
-    <div class="project">
-      <h3>Antenna Behavior Analysis With DeepLabCut</h3>
-      <p>Analyzed antenna behavior using DeepLabCut, focusing on motion tracking and behavioral analysis in biological datasets.</p>
-    </div>
+    <section class="section">
+        <h2>About Me</h2>
+        <p>
+           Hello! I'm Ece Dalpolat, a passionate Software Engineer and data science enthusiast currently pursuing a Master's degree in Information Technologies. I hold a Bachelor's degree in Software Engineering from Kırklareli University and am actively expanding my expertise in data science and machine learning at Işık University.
 
-    <div class="project">
-      <h3>Trustable and Sustainable Open Platform for Smart Honey Value Chains</h3>
-      <p>Created a transparent and reliable digital platform for stakeholders in the honey value chain. Tasks included data collection, model development, and API integration.</p>
-    </div>
+My career has equipped me with a strong foundation in deep learning, machine learning, and data science. I am particularly focused on the intersection of technology and nature, exemplified by my work on pollen classification using deep learning techniques. My technical skill set includes Python, SQL, TensorFlow, and a range of deep learning frameworks.
 
-    <div class="project">
-      <h3>Intelligent Marketing Campaign Prediction System</h3>
-      <p>Built a system to predict customer behavior for marketing campaigns, using machine learning to reduce unnecessary costs and improve targeting accuracy.</p>
-    </div>
-  </section>
+Throughout my professional journey, I've gained hands-on experience in various roles, including Research Data Scientist, Teaching Assistant, and Software Engineer. My responsibilities have encompassed data collection, model optimization, and API integration, enabling me to deliver scalable and efficient solutions. Additionally, I have guided students in programming courses, imparting knowledge in C# and Java.
 
-  <section class="section">
+I am dedicated to leveraging technology to solve complex problems and drive innovation. My commitment to continuous learning is reflected in my completion of certifications in data science and machine learning, along with active participation in bootcamps and projects. I thrive in collaborative environments where creativity and innovation are encouraged, and I am always eager to take on new challenges.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, SQL, JavaScript, HTML, CSS</li>
+            <li>Frameworks & Tools: PyCharm, TensorFlow, NumPy, Pandas, Seaborn, Matplotlib, Git, FastAPI,ASP.NET,</li>
+            <li>Machine Learning: Data preprocessing, model training, evaluation, deep learning (CNN, DenseNet121)</li>
+            <li>Web Development: HTML5, CSS3, JavaScript</li>
+        <li>Data Analysis & Visualization: Data analysis, data visualization</li>
+        <li>Frameworks & Tools: TensorFlow, scikit-learn, Pandas, Matplotlib</li>
+        <li>API Development & Integration: API development, API integration</li>
+        <li>Software Testing: Manual and automated testing</li>
+        <li>Data Collection & Processing: Data collection, data processing</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Experience</h2>
+        <h3>Graduate Research Assistant @ Işık University</h3>
+        <p>January 2024 - Present: Assist in faculty development and teach software lab courses. Worked on supervising and helping students develop their software projects, especially focusing on data science and deep learning projects.</p>
+      <h2>Experience</h2>
+        <h3>Research Data Scientist @ Top4honeychains</h3>
+        <p>January 2024 - Present: Data Collection and Processing: I collect and process data related to honey value chains and apply various engineering techniques to ensure quality data. Model Development: I develop and optimize models using deep learning and machine learning, effectively using tools such as Python, TensorFlow and scikit-learn. API Integration: I perform API integrations to ensure that the models are compatible with other systems.</p>
     <h2>Experience</h2>
+        <h3>Software Engineer in Test (Volunteer) @ Erik Labs </h3>
+        <p>November 2023 - January 2024: Automation Testing: Using test automation tools (e.g. Selenium, TestComplete), I developed automation tests to speed up testing processes and increase repeatability. By writing test scripts, I increased the efficiency of testing processes and ensured the quality of the software. Manual Testing: Using manual testing methods, I tested software applications to ensure error-free and functional software products that meet user requirements. I identified and reported defects and proposed solutions. Knowledge and Skills: I gained in-depth knowledge of software testing strategies, test case generation, defect reporting and software development life cycle (SDLC). I contributed to improving testing processes and enhancing software quality.</p>
+    <h2>Experience</h2>
+        <h3>Software Engineer (Volunteer) @ TÜBİTAK BİLGEM YTE</h3>
+        <p>October 2023 - November 2023: ava, Eclipse/IntelliJ IDEA, SQL. Using these tools, I created effective and scalable software solutions and gained experience in software development processes.</p>
+    <h2>Experience</h2>
+        <h3>Software Engineer (Volunteer) @ Aphel</h3>
+        <p>July 2022 - September 2022: I managed the application development process using ASP.NET MVC, C#, SQL Server, Visual Studio. I developed team communication and collaboration skills to work efficiently in software projects.</p>
 
-    <div class="experience">
-      <h3>Graduate Research Assistant @ Işık University</h3>
-      <p>Assisting in faculty development and teaching software lab courses. Supervised student projects, focusing on data science and deep learning.</p>
-    </div>
 
-    <div class="experience">
-      <h3>Research Data Scientist @ TOP4HoneyChains</h3>
-      <p>Developing machine learning models and integrating APIs to optimize data-driven solutions for agricultural value chains.</p>
-    </div>
+    </section>
 
-    <div class="experience">
-      <h3>Software Engineer in Test (Volunteer) @ Erik Labs</h3>
-      <p>Created automation tests using Selenium and TestComplete, improving software quality and testing efficiency.</p>
-    </div>
+    <section class="section">
+        <h2>Projects</h2>
+      
+      <h3>Antenna Behavior Analysis With DeepLabCut - Currently the project -</h3>
+      <p>Analyzed antenna behavior using DeepLabCut, focusing on motion tracking and behavioral analysis in biological datasets.</p>
+   
+        <h3>Pollen Classification using Deep Learning</h3>
+        <p>
+            Developed a CNN and DenseNet121-based model for pollen image classification, achieving over 90% accuracy on testing data. The project used advanced deep learning techniques to distinguish between different pollen types, with the data collected and processed using Python, TensorFlow, and Keras.
+        </p>    
+      
+      <h3>Intelligent Marketing Campaign Prediction System</h3>
+      <p>Built a system to predict customer behavior for marketing campaigns, using machine learning to reduce unnecessary costs and improve targeting accuracy.
+      💡 How Did I Do It?
+Here’s a quick overview of my approach:
+Dataset:
+For this project, I used a real-world dataset from a Portuguese bank’s telemarketing campaigns. The data included information about customer demographics, campaign interactions, and the results of previous campaigns. This dataset was perfect for developing a predictive model to determine whether a customer would subscribe to a term deposit.
+Data Analysis: I explored and analyzed the dataset to understand patterns in customer behavior.
+Model Testing: I tested 10 machine learning models (like logistic regression, decision trees, XGBoost, etc.) and compared their performance.
+Balancing the Data: Since the dataset was imbalanced, I used techniques like SMOTE to handle this challenge effectively.
+Model Combination: By combining multiple models with a Voting Classifier, I achieved more accurate predictions.
+User-Friendly Interface: I built an interactive Streamlit app where users can input customer information and see predictions in real time.</p>
+   
 
-    <div class="experience">
-      <h3>Software Engineer (Volunteer) @ TÜBİTAK BİLGEM YTE</h3>
-      <p>Developed scalable software solutions using Java, SQL, and IntelliJ IDEA.</p>
-    </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2024 Ece Dalpolat. All Rights Reserved.</p>
-  </footer>
+      
+        <h3>TOP4HONEYCHAINS</h3>
+        <p>Agri-food systems enabled by interconnected digital technologies that are more transparent to consumers, farmers and other stakeholders along the agri-food value chain.
+Data Collection and Processing: I collect and process data related to honey value chains and apply various engineering techniques to ensure quality data.
+Model Development: I develop and optimize models using deep learning and machine learning, effectively using tools such as Python, TensorFlow and scikit-learn.
+API Integration: I perform API integrations to ensure that the models are compatible with other systems.</p>
+      <h3>Project: Student Success Analysis</h3>
+    <p>This project aims to investigate the factors affecting students' academic success. Using the student data available in our dataset, we examined how factors such as gender, age, family status, education level, occupation, travel time, study time, family relationships, social activities, alcohol consumption, health status, absenteeism, and grades impact student success.
+     <h4>Technologies Used</h4>
+    <ul>
+        <li><strong>Python:</strong> Used as the primary programming language.</li>
+        <li><strong>Tkinter:</strong> Used for creating graphical user interfaces (GUIs).</li>
+        <li><strong>NumPy:</strong> Used for numerical computations and data processing.</li>
+        <li><strong>Pandas:</strong> Used for data analysis and processing; specifically for reading CSV data files and processing them into data frames.</li>
+        <li><strong>Scikit-learn:</strong> Used for machine learning tasks; including label encoding, data scaling, splitting data into training and test sets, and applying a random forest classifier.</li>
+        <li><strong>Matplotlib:</strong> Used for data visualization; including visualizing confusion matrices and model performance metrics.</li>
+        <li><strong>Kaggle:</strong> Used for acquiring the dataset.</li>
+    </ul>
+    </p>
+
+    </section>
+
+    <section class="section">
+        <h2>Education</h2>
+        <h3>Master’s in Information Technologies @ Işık University</h3>
+        <p>2022 - Present: Specialization in Data Science and Machine Learning, working on advanced deep learning algorithms for classification tasks. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction.</p>
+        <h3>Bachelor’s in SoftwareEngineering @ Kirklareli University</h3>
+        <p>2022 - Present: Specialization in Data Science and Machine Learning, working on advanced deep learning algorithms for classification tasks. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction.</p>
+
+
+    </section>
+
+    <section class="section">
+        <h2>Contact</h2>
+      <p>
+            Email: <a href="mailto:ecedlplt9850@gmail.com">ecedlplt9850@gmail.com</a>
+        </p>
+        <p>
+            LinkedIn: <a href="https://www.linkedin.com/in/ece-dalpolat-0265a0221/">Ece Dalpolat</a>
+        </p>
+        <p>
+            GitHub: <a href="https://github.com/your-github-profile">GitHub Profile</a>
+        </p>
+       <p>
+            Medium: <a href="https://medium.com/@ecedlplt9850">Medium Profile</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ece Dalpolat. All Rights Reserved.</p>
+    </footer>
+
 </body>
 
-</html>
+</html> 
