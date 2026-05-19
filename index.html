@@ -1055,66 +1055,6 @@ footer {
       </div>
     </div>
 
-    <!-- CLUSTERING R&D — featured (research origin for Analytics) -->
-    <div class="ga-project" id="clustering-rd">
-      <div class="ga-header">
-        <div class="ga-header-left">
-          <span class="ga-badge">R&amp;D · Research</span>
-          <div class="ga-title" data-i18n="proj.clustering.title">Behavioral Clustering R&amp;D</div>
-          <div class="ga-sub" data-i18n="proj.clustering.sub">Qkare · Aug 2025 · Employee segmentation &amp; talent analytics</div>
-        </div>
-      </div>
-      <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">4+</div><div class="ga-metric-lbl">clustering algorithms</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">3</div><div class="ga-metric-lbl">eval metrics</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">dim-reduction methods</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">6</div><div class="ga-metric-lbl">analysis modules</div></div>
-      </div>
-      <div class="ga-body">
-        <p class="ga-desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
-
-        <div class="ga-contributions">
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd · lead</div>
-            <div class="ga-contrib-title">Feature engineering pipeline</div>
-            <div class="ga-contrib-desc">Built feature_engineering.py to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">Multi-algorithm clustering comparison</div>
-            <div class="ga-contrib-desc">Implemented clustering_model.py and advanced_model.py to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">EDA &amp; dimensionality reduction</div>
-            <div class="ga-contrib-desc">EDA.py for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">AutoML &amp; multi-cluster analysis</div>
-            <div class="ga-contrib-desc">autoMl1.py for automated model search experiments; multi_cluster_analysis.py for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts.</div>
-          </div>
-        </div>
-
-        <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — comparative clustering research</div>
-          <div class="ga-highlight-desc">Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform above (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.</div>
-        </div>
-
-        <div class="ga-stack">
-          <span class="ga-stack-tag">Python</span>
-          <span class="ga-stack-tag">scikit-learn</span>
-          <span class="ga-stack-tag">Pandas</span>
-          <span class="ga-stack-tag">Plotly</span>
-          <span class="ga-stack-tag gray">PCA / t-SNE</span>
-          <span class="ga-stack-tag gray">H2O</span>
-          <span class="ga-stack-tag gray">matplotlib</span>
-          <span class="ga-stack-tag gray">DBSCAN · GMM</span>
-          <span class="ga-stack-tag gray">joblib</span>
-        </div>
-      </div>
-    </div>
-
     <!-- COACH — featured -->
     <div class="ga-project">
       <div class="ga-header">
@@ -1526,6 +1466,66 @@ footer {
           <span class="ga-stack-tag gray">BeautifulSoup</span>
           <span class="ga-stack-tag gray">Docker</span>
           <span class="ga-stack-tag gray">Hybrid security</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLUSTERING R&D — featured (research — linked from Analytics) -->
+    <div class="ga-project" id="clustering-rd">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">R&amp;D · Research</span>
+          <div class="ga-title" data-i18n="proj.clustering.title">Behavioral Clustering R&amp;D</div>
+          <div class="ga-sub" data-i18n="proj.clustering.sub">Qkare · Aug 2025 · Employee segmentation &amp; talent analytics</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">4+</div><div class="ga-metric-lbl">clustering algorithms</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">3</div><div class="ga-metric-lbl">eval metrics</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">dim-reduction methods</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">6</div><div class="ga-metric-lbl">analysis modules</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">clustering-rd · lead</div>
+            <div class="ga-contrib-title">Feature engineering pipeline</div>
+            <div class="ga-contrib-desc">Built feature_engineering.py to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">clustering-rd</div>
+            <div class="ga-contrib-title">Multi-algorithm clustering comparison</div>
+            <div class="ga-contrib-desc">Implemented clustering_model.py and advanced_model.py to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">clustering-rd</div>
+            <div class="ga-contrib-title">EDA &amp; dimensionality reduction</div>
+            <div class="ga-contrib-desc">EDA.py for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">clustering-rd</div>
+            <div class="ga-contrib-title">AutoML &amp; multi-cluster analysis</div>
+            <div class="ga-contrib-desc">autoMl1.py for automated model search experiments; multi_cluster_analysis.py for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Core ownership — comparative clustering research</div>
+          <div class="ga-highlight-desc">Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">Python</span>
+          <span class="ga-stack-tag">scikit-learn</span>
+          <span class="ga-stack-tag">Pandas</span>
+          <span class="ga-stack-tag">Plotly</span>
+          <span class="ga-stack-tag gray">PCA / t-SNE</span>
+          <span class="ga-stack-tag gray">H2O</span>
+          <span class="ga-stack-tag gray">matplotlib</span>
+          <span class="ga-stack-tag gray">DBSCAN · GMM</span>
+          <span class="ga-stack-tag gray">joblib</span>
         </div>
       </div>
     </div>
