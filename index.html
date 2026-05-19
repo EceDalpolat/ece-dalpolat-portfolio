@@ -235,6 +235,7 @@ nav {
 .hero-photo {
   position: relative;
   z-index: 1;
+  display: block;
   width: clamp(160px, 28vw, 240px);
   height: clamp(160px, 28vw, 240px);
   border-radius: 50%;
@@ -242,27 +243,6 @@ nav {
   object-position: center top;
   border: 3px solid rgba(255, 255, 255, 0.9);
   box-shadow: var(--shadow-lg);
-  display: none;
-}
-.hero-photo.is-loaded {
-  display: block;
-}
-.hero-photo-placeholder {
-  position: relative;
-  z-index: 1;
-  width: clamp(160px, 28vw, 240px);
-  height: clamp(160px, 28vw, 240px);
-  border-radius: 50%;
-  background: linear-gradient(145deg, #ffffff 0%, #eef0ff 55%, #e0f7fa 100%);
-  border: 3px solid rgba(255, 255, 255, 0.95);
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: clamp(3rem, 8vw, 4.5rem);
-  font-weight: 800;
-  color: var(--accent);
 }
 
 /* ── SECTION WRAPPER ── */
@@ -919,7 +899,6 @@ footer {
     </div>
   </div>
   <div class="hero-photo-wrap">
-    <!-- Add your photo: assets/profile.jpg (square, min 400×400) -->
     <img
       src="assets/profile.jpg"
       alt="Ece Dalpolat"
@@ -927,10 +906,7 @@ footer {
       width="240"
       height="240"
       decoding="async"
-      onload="this.classList.add('is-loaded'); this.nextElementSibling.hidden = true"
-      onerror="this.hidden = true"
     >
-    <div class="hero-photo-placeholder" aria-hidden="true">E</div>
   </div>
 </div>
 </header>
