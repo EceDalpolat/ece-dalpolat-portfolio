@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ece Dalpolat — AI Engineer & Data Scientist</title>
-<meta name="description" content="Portfolio of Ece Dalpolat, AI Engineer & Data Scientist">
+<meta name="description" content="Portfolio of Ece Dalpolat, AI Engineer & Data Scientist" data-i18n-meta="meta.description">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
@@ -71,6 +71,26 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-right { display: flex; align-items: center; gap: 1.5rem; }
+.lang-switch { display: flex; gap: 0.25rem; }
+.lang-btn {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.lang-btn:hover { color: var(--ink); border-color: var(--ink-4); }
+.lang-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
 
 /* ── HERO ── */
 .hero {
@@ -687,24 +707,30 @@ footer {
 
 <nav>
   <a href="#" class="nav-logo">Ece Dalpolat</a>
+  <div class="nav-right">
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#about" data-i18n="nav.about">About</a></li>
+    <li><a href="#experience" data-i18n="nav.experience" data-i18n="experience.title">Experience</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+    <li><a href="#education" data-i18n="nav.education" data-i18n="education.title">Education</a></li>
+    <li><a href="#contact" data-i18n="nav.contact" data-i18n="contact.title">Contact</a></li>
   </ul>
+  <div class="lang-switch">
+    <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+    <button type="button" class="lang-btn" data-lang="tr" aria-label="Türkçe">TR</button>
+  </div>
+  </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <div class="hero-text">
-    <p class="hero-eyebrow">AI Engineer &amp; Data Scientist</p>
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow">AI Engineer &amp; Data Scientist</p>
     <h1 class="hero-name">Ece<br><em>Dalpolat</em></h1>
-    <p class="hero-bio">I build production AI systems for HR and talent analytics — dbt data platforms, multi-tenant agents, and structured LLM microservices. Currently pursuing an MSc at Işık University while engineering AI at Qkare.</p>
+    <p class="hero-bio" data-i18n="hero.bio">I build production AI systems for HR and talent analytics — dbt data platforms, multi-tenant agents, and structured LLM microservices. Currently pursuing an MSc at Işık University while engineering AI at Qkare.</p>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">View Projects</a>
+      <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaContact">Get in Touch</a>
     </div>
   </div>
   <div class="hero-photo-wrap">
@@ -715,26 +741,26 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
-    <p class="section-label">Background</p>
-    <h2 class="section-title">About Me</h2>
+    <p class="section-label" data-i18n="about.label">Background</p>
+    <h2 class="section-title" data-i18n="about.title">About Me</h2>
     <div class="about-grid">
       <div class="about-body">
-        <p>I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.</p>
-        <p>At Qkare, I own core pieces of a multi-tenant HR analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over psychometric data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.</p>
-        <p>My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&amp;D through production B2B SaaS.</p>
+        <p data-i18n-html="about.p1">I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.</p>
+        <p data-i18n-html="about.p2">At Qkare, I own core pieces of a multi-tenant HR analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over psychometric data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.</p>
+        <p data-i18n-html="about.p3">My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&amp;D through production B2B SaaS.</p>
       </div>
       <div class="about-stats">
         <div class="stat-item">
           <div class="stat-num">3+</div>
-          <div class="stat-lbl">Years of engineering experience</div>
+          <div class="stat-lbl" data-i18n="about.stat1">Years of engineering experience</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">109</div>
-          <div class="stat-lbl">dbt models in production</div>
+          <div class="stat-lbl" data-i18n="about.stat2">dbt models in production</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">8+</div>
-          <div class="stat-lbl">Production AI systems shipped</div>
+          <div class="stat-lbl" data-i18n="about.stat3">Production AI systems shipped</div>
         </div>
       </div>
     </div>
@@ -744,19 +770,19 @@ footer {
 <!-- SKILLS -->
 <section id="skills">
   <div class="container">
-    <p class="section-label">Capabilities</p>
-    <h2 class="section-title">Skills</h2>
+    <p class="section-label" data-i18n="skills.label">Capabilities</p>
+    <h2 class="section-title" data-i18n="skills.title">Skills</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <div class="skill-card-title">AI &amp; Machine Learning</div>
+        <div class="skill-card-title" data-i18n="skills.ai">AI &amp; Machine Learning</div>
         <div class="skill-tags">
           <span class="skill-tag accent">LLMs</span>
           <span class="skill-tag accent">LangChain</span>
           <span class="skill-tag accent">LangGraph</span>
           <span class="skill-tag accent">DSPy</span>
           <span class="skill-tag accent">RAG</span>
-          <span class="skill-tag">Structured output</span>
-          <span class="skill-tag">LLM-as-judge</span>
+          <span class="skill-tag" data-i18n="skills.tag.structuredOutput">Structured output</span>
+          <span class="skill-tag" data-i18n="skills.tag.llmJudge">LLM-as-judge</span>
           <span class="skill-tag">FAISS / Milvus</span>
           <span class="skill-tag">OpenAI API</span>
           <span class="skill-tag">scikit-learn</span>
@@ -764,20 +790,20 @@ footer {
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title">Data Engineering</div>
+        <div class="skill-card-title" data-i18n="skills.data">Data Engineering</div>
         <div class="skill-tags">
           <span class="skill-tag accent">dbt Core</span>
           <span class="skill-tag accent">PostgreSQL</span>
           <span class="skill-tag accent">Apache Superset</span>
           <span class="skill-tag accent">Native RLS</span>
           <span class="skill-tag">FDW</span>
-          <span class="skill-tag">Multi-tenant marts</span>
+          <span class="skill-tag" data-i18n="skills.tag.multiTenantMarts">Multi-tenant marts</span>
           <span class="skill-tag">Pandas</span>
           <span class="skill-tag">NumPy</span>
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title">Backend &amp; APIs</div>
+        <div class="skill-card-title" data-i18n="skills.backend">Backend &amp; APIs</div>
         <div class="skill-tags">
           <span class="skill-tag accent">FastAPI</span>
           <span class="skill-tag accent">Pydantic</span>
@@ -791,7 +817,7 @@ footer {
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title">Infrastructure</div>
+        <div class="skill-card-title" data-i18n="skills.infra">Infrastructure</div>
         <div class="skill-tags">
           <span class="skill-tag accent">Docker</span>
           <span class="skill-tag accent">Kubernetes</span>
@@ -803,7 +829,7 @@ footer {
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title">Programming Languages</div>
+        <div class="skill-card-title" data-i18n="skills.langs">Programming Languages</div>
         <div class="skill-tags">
           <span class="skill-tag accent">Python</span>
           <span class="skill-tag accent">SQL</span>
@@ -814,7 +840,7 @@ footer {
         </div>
       </div>
       <div class="skill-card">
-        <div class="skill-card-title">Testing &amp; Tools</div>
+        <div class="skill-card-title" data-i18n="skills.testing">Testing &amp; Tools</div>
         <div class="skill-tags">
           <span class="skill-tag">pytest</span>
           <span class="skill-tag">ruff / mypy</span>
@@ -832,8 +858,8 @@ footer {
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
-    <p class="section-label">Career</p>
-    <h2 class="section-title">Experience</h2>
+    <p class="section-label" data-i18n="experience.label">Career</p>
+    <h2 class="section-title" data-i18n="experience.title">Experience</h2>
     <div class="timeline">
 
       <div class="timeline-item">
@@ -955,16 +981,16 @@ footer {
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <p class="section-label">Work</p>
-    <h2 class="section-title">Projects</h2>
+    <p class="section-label" data-i18n="projects.label">Work</p>
+    <h2 class="section-title" data-i18n="projects.title">Projects</h2>
 
     <!-- ANALYTICS — featured -->
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · B2B SaaS</span>
-          <div class="ga-title">Analytics Platform</div>
-          <div class="ga-sub">Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack</div>
+          <div class="ga-title" data-i18n="proj.analytics.title">Analytics Platform</div>
+          <div class="ga-sub" data-i18n="proj.analytics.sub">Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1034,8 +1060,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">R&amp;D · Research</span>
-          <div class="ga-title">Behavioral Clustering R&amp;D</div>
-          <div class="ga-sub">Qkare · Aug 2025 · Employee segmentation &amp; talent analytics</div>
+          <div class="ga-title" data-i18n="proj.clustering.title">Behavioral Clustering R&amp;D</div>
+          <div class="ga-sub" data-i18n="proj.clustering.sub">Qkare · Aug 2025 · Employee segmentation &amp; talent analytics</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1094,8 +1120,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · B2B SaaS</span>
-          <div class="ga-title">Coach Platform</div>
-          <div class="ga-sub">Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching</div>
+          <div class="ga-title" data-i18n="proj.coach.title">Coach Platform</div>
+          <div class="ga-sub" data-i18n="proj.coach.sub">Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1164,8 +1190,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · B2B SaaS</span>
-          <div class="ga-title">Analyzer Platform</div>
-          <div class="ga-sub">Qkare · Apr 2025 – May 2026 · Behavioral Analytics AI Agent</div>
+          <div class="ga-title" data-i18n="proj.analyzer.title">Analyzer Platform</div>
+          <div class="ga-sub" data-i18n="proj.analyzer.sub">Qkare · Apr 2025 – May 2026 · Behavioral Analytics AI Agent</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1234,8 +1260,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · B2B SaaS</span>
-          <div class="ga-title">KPI Advisor</div>
-          <div class="ga-sub">Qkare · Apr 2026 – May 2026 · Position-based KPI Recommendation AI</div>
+          <div class="ga-title" data-i18n="proj.kpi.title">KPI Advisor</div>
+          <div class="ga-sub" data-i18n="proj.kpi.sub">Qkare · Apr 2026 – May 2026 · Position-based KPI Recommendation AI</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1304,8 +1330,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · B2B SaaS</span>
-          <div class="ga-title">Skills Advisor</div>
-          <div class="ga-sub">Qkare · Aug 2025 – May 2026 · AI competency dimension selection</div>
+          <div class="ga-title" data-i18n="proj.skills.title">Skills Advisor</div>
+          <div class="ga-sub" data-i18n="proj.skills.sub">Qkare · Aug 2025 – May 2026 · AI competency dimension selection</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1374,8 +1400,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · Platform</span>
-          <div class="ga-title">Agent API Gateway</div>
-          <div class="ga-sub">Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo</div>
+          <div class="ga-title" data-i18n="proj.gateway.title">Agent API Gateway</div>
+          <div class="ga-sub" data-i18n="proj.gateway.sub">Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1444,8 +1470,8 @@ footer {
       <div class="ga-header">
         <div class="ga-header-left">
           <span class="ga-badge">Production · Web</span>
-          <div class="ga-title">QKare AI Assistant</div>
-          <div class="ga-sub">Qkare · Jul 2025 · Corporate website chatbot</div>
+          <div class="ga-title" data-i18n="proj.chatbot.title">QKare AI Assistant</div>
+          <div class="ga-sub" data-i18n="proj.chatbot.sub">Qkare · Jul 2025 · Corporate website chatbot</div>
         </div>
       </div>
       <div class="ga-metrics">
@@ -1602,8 +1628,8 @@ footer {
 <!-- EDUCATION -->
 <section id="education">
   <div class="container">
-    <p class="section-label">Academic</p>
-    <h2 class="section-title">Education</h2>
+    <p class="section-label" data-i18n="education.label">Academic</p>
+    <h2 class="section-title" data-i18n="education.title">Education</h2>
     <div class="edu-grid">
       <div class="edu-card">
         <div class="edu-degree">MSc Information Technologies</div>
@@ -1624,11 +1650,11 @@ footer {
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <p class="section-label">Get in touch</p>
-    <h2 class="section-title">Contact</h2>
+    <p class="section-label" data-i18n="contact.label">Get in touch</p>
+    <h2 class="section-title" data-i18n="contact.title">Contact</h2>
     <div class="contact-grid">
       <div class="contact-intro">
-        <p>I'm open to new opportunities, collaborations, and interesting conversations about AI, data engineering, and ML. Feel free to reach out through any of the channels below.</p>
+        <p data-i18n="contact.intro">I'm open to new opportunities, collaborations, and interesting conversations about AI, data engineering, and ML. Feel free to reach out through any of the channels below.</p>
       </div>
       <div class="contact-links">
         <a href="mailto:ecedlplt9850@gmail.com" class="contact-link">
@@ -1665,8 +1691,9 @@ footer {
 </section>
 
 <footer>
-  <p>&copy; 2025 Ece Dalpolat. All Rights Reserved.</p>
+  <p data-i18n="footer.text">&copy; 2025 Ece Dalpolat. All Rights Reserved.</p>
 </footer>
 
+<script src="i18n/i18n.js"></script>
 </body>
 </html>

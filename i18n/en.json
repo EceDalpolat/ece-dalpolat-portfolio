@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Ece Dalpolat — AI Engineer & Data Scientist",
+    "description": "Portfolio of Ece Dalpolat, AI Engineer & Data Scientist"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "AI Engineer & Data Scientist",
+    "bio": "I build production AI systems for HR and talent analytics — dbt data platforms, multi-tenant agents, and structured LLM microservices. Currently pursuing an MSc at Işık University while engineering AI at Qkare.",
+    "ctaProjects": "View Projects",
+    "ctaContact": "Get in Touch"
+  },
+  "about": {
+    "label": "Background",
+    "title": "About Me",
+    "p1": "I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.",
+    "p2": "At Qkare, I own core pieces of a multi-tenant HR analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over psychometric data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.",
+    "p3": "My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&D through production B2B SaaS.",
+    "stat1": "Years of engineering experience",
+    "stat2": "dbt models in production",
+    "stat3": "Production AI systems shipped"
+  },
+  "skills": {
+    "label": "Capabilities",
+    "title": "Skills",
+    "ai": "AI & Machine Learning",
+    "data": "Data Engineering",
+    "backend": "Backend & APIs",
+    "infra": "Infrastructure",
+    "langs": "Programming Languages",
+    "testing": "Testing & Tools",
+    "tag": {
+      "structuredOutput": "Structured output",
+      "llmJudge": "LLM-as-judge",
+      "multiTenantMarts": "Multi-tenant marts"
+    }
+  },
+  "experience": {
+    "label": "Career",
+    "title": "Experience"
+  },
+  "projects": {
+    "label": "Work",
+    "title": "Projects"
+  },
+  "education": {
+    "label": "Academic",
+    "title": "Education"
+  },
+  "contact": {
+    "label": "Get in touch",
+    "title": "Contact",
+    "intro": "I'm open to new opportunities, collaborations, and interesting conversations about AI, data engineering, and ML. Feel free to reach out through any of the channels below."
+  },
+  "footer": {
+    "text": "© 2025 Ece Dalpolat. All Rights Reserved."
+  },
+  "proj": {
+    "analytics": {
+      "title": "Analytics Platform",
+      "sub": "Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack"
+    },
+    "clustering": {
+      "title": "Behavioral Clustering R&D",
+      "sub": "Qkare · Aug 2025 · Employee segmentation & talent analytics"
+    },
+    "coach": {
+      "title": "Coach Platform",
+      "sub": "Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching"
+    },
+    "analyzer": {
+      "title": "Analyzer Platform",
+      "sub": "Qkare · Apr 2025 – May 2026 · Behavioral Analytics AI Agent"
+    },
+    "kpi": {
+      "title": "KPI Advisor",
+      "sub": "Qkare · Apr 2026 – May 2026 · Position-based KPI Recommendation AI"
+    },
+    "skills": {
+      "title": "Skills Advisor",
+      "sub": "Qkare · Aug 2025 – May 2026 · AI competency dimension selection"
+    },
+    "gateway": {
+      "title": "Agent API Gateway",
+      "sub": "Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo"
+    },
+    "chatbot": {
+      "title": "QKare AI Assistant",
+      "sub": "Qkare · Jul 2025 · Corporate website chatbot"
+    }
+  }
+}

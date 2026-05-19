@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Ece Dalpolat — Yapay Zeka Mühendisi & Veri Bilimci",
+    "description": "Ece Dalpolat portföyü — Yapay Zeka Mühendisi & Veri Bilimci"
+  },
+  "nav": {
+    "about": "Hakkımda",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "education": "Eğitim",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "eyebrow": "Yapay Zeka Mühendisi & Veri Bilimci",
+    "bio": "İK ve yetenek analitiği için üretim ortamı AI sistemleri geliştiriyorum — dbt veri platformları, çok kiracılı ajanlar ve yapılandırılmış LLM mikroservisleri. Işık Üniversitesi'nde yüksek lisans yaparken Qkare'de AI mühendisliği yapıyorum.",
+    "ctaProjects": "Projeleri Gör",
+    "ctaContact": "İletişime Geç"
+  },
+  "about": {
+    "label": "Özet",
+    "title": "Hakkımda",
+    "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim.",
+    "p2": "Qkare'de çok kiracılı İK analitik yığınının temel parçalarına sahibim: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), psikometrik veri üzerinde <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
+    "p3": "Çalışmalarım yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding-free ve vektör RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı inference cascade'lerini kapsıyor — erken kümeleme Ar-Ge'sinden üretim B2B SaaS'a.",
+    "stat1": "Yıllık mühendislik deneyimi",
+    "stat2": "Üretimdeki dbt modeli",
+    "stat3": "Canlıya alınan AI sistemi"
+  },
+  "skills": {
+    "label": "Yetkinlikler",
+    "title": "Beceriler",
+    "ai": "Yapay Zeka & Makine Öğrenmesi",
+    "data": "Veri Mühendisliği",
+    "backend": "Backend & API",
+    "infra": "Altyapı",
+    "langs": "Programlama Dilleri",
+    "testing": "Test & Araçlar",
+    "tag": {
+      "structuredOutput": "Yapılandırılmış çıktı",
+      "llmJudge": "LLM-as-judge",
+      "multiTenantMarts": "Çok kiracılı mart"
+    }
+  },
+  "experience": {
+    "label": "Kariyer",
+    "title": "Deneyim"
+  },
+  "projects": {
+    "label": "İş",
+    "title": "Projeler"
+  },
+  "education": {
+    "label": "Akademik",
+    "title": "Eğitim"
+  },
+  "contact": {
+    "label": "İletişim",
+    "title": "İletişim",
+    "intro": "Yapay zeka, veri mühendisliği ve ML konularında yeni fırsatlara, iş birliklerine ve sohbetlere açığım. Aşağıdaki kanallardan ulaşabilirsin."
+  },
+  "footer": {
+    "text": "© 2025 Ece Dalpolat. Tüm hakları saklıdır."
+  },
+  "proj": {
+    "analytics": {
+      "title": "Analitik Platformu",
+      "sub": "Qkare · Kas 2025 – May 2026 · Çok kiracılı İK analitik yığını"
+    },
+    "clustering": {
+      "title": "Davranışsal Kümeleme Ar-Ge",
+      "sub": "Qkare · Ağu 2025 · Çalışan segmentasyonu & yetenek analitiği"
+    },
+    "coach": {
+      "title": "Coach Platformu",
+      "sub": "Qkare · Eyl 2025 – Kas 2025 · Çok ajanlı AI koçluk"
+    },
+    "analyzer": {
+      "title": "Analyzer Platformu",
+      "sub": "Qkare · Nis 2025 – May 2026 · Davranışsal analitik AI ajanı"
+    },
+    "kpi": {
+      "title": "KPI Advisor",
+      "sub": "Qkare · Nis 2026 – May 2026 · Pozisyon bazlı KPI öneri AI"
+    },
+    "skills": {
+      "title": "Skills Advisor",
+      "sub": "Qkare · Ağu 2025 – May 2026 · Yetkinlik boyutu seçimi AI"
+    },
+    "gateway": {
+      "title": "Agent API Gateway",
+      "sub": "Qkare · Nis 2026 – May 2026 · Çok ajanlı AI API monorepo"
+    },
+    "chatbot": {
+      "title": "QKare AI Asistan",
+      "sub": "Qkare · Tem 2025 · Kurumsal web sitesi chatbot"
+    }
+  }
+}
