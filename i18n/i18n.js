@@ -42,9 +42,17 @@
     });
   }
 
+  function i18nJsonUrl(lang) {
+    const script = document.querySelector('script[src*="i18n.js"]');
+    if (script && script.src) {
+      return new URL(`${lang}.json`, script.src).href;
+    }
+    return `i18n/${lang}.json`;
+  }
+
   async function loadLanguage(lang) {
-    const res = await fetch(`i18n/${lang}.json`);
-    if (!res.ok) throw new Error(`Failed to load i18n/${lang}.json`);
+    const res = await fetch(i18nJsonUrl(lang));
+    if (!res.ok) throw new Error(`Failed to load ${lang}.json`);
     strings = await res.json();
     currentLang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
