@@ -1361,6 +1361,71 @@ footer {
       </div>
     </div>
 
+    <!-- QKARE CHATBOT — featured -->
+    <div class="ga-project" id="qkare-chatbot">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">Production · Web</span>
+          <div class="ga-title">QKare AI Assistant</div>
+          <div class="ga-sub">Qkare · Jul 2025 · Corporate website chatbot</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">cascade layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">vector backends</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">hybrid security stack</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">RAG pipeline</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong></p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">qkare-chatbot · lead</div>
+            <div class="ga-contrib-title">Cascade inference architecture</div>
+            <div class="ga-contrib-desc">Designed the rule → semantic cache → RAG → LLM pipeline in app.py: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">qkare-chatbot</div>
+            <div class="ga-contrib-title">Semantic cache &amp; vector stores</div>
+            <div class="ga-contrib-desc">Built cache_service and milvus_service with configurable FAISS or Milvus backends; similarity-threshold tuning; cache write-back after LLM responses so recurring visitor questions skip expensive inference.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">qkare-chatbot</div>
+            <div class="ga-contrib-title">RAG &amp; web scraping layer</div>
+            <div class="ga-contrib-desc">rag_service scrapes QKare site pages (BeautifulSoup, html2text) for fresh grounding; LangChain + OpenAI assembly when rules and cache miss; keeps corporate answers aligned with public content.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">security</div>
+            <div class="ga-contrib-title">Hybrid security system</div>
+            <div class="ga-contrib-desc">security/hybrid_security.py combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">qkare-chatbot · infra</div>
+            <div class="ga-contrib-title">Production packaging</div>
+            <div class="ga-contrib-desc">Organized services/ layout (qa, cache, milvus, rag, llm); Docker Compose for Milvus + Attu admin UI; structured logging, custom exceptions, /health endpoint, and env-driven config validation in config.py.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Core ownership — enterprise chatbot stack</div>
+          <div class="ga-highlight-desc">Sole engineer on the Jul 2025 rewrite: end-to-end FastAPI chatbot with hybrid security, dual vector-store support, and four-layer inference cascade. This predates the later HR analytics and agent-gateway work at Qkare but established patterns — semantic cache, RAG grounding, and security-first request handling — reused across subsequent AI services.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">FastAPI</span>
+          <span class="ga-stack-tag">OpenAI</span>
+          <span class="ga-stack-tag">LangChain</span>
+          <span class="ga-stack-tag">FAISS</span>
+          <span class="ga-stack-tag gray">Milvus</span>
+          <span class="ga-stack-tag gray">RAG</span>
+          <span class="ga-stack-tag gray">BeautifulSoup</span>
+          <span class="ga-stack-tag gray">Docker</span>
+          <span class="ga-stack-tag gray">Hybrid security</span>
+        </div>
+      </div>
+    </div>
+
     <!-- other projects grid -->
     <div class="projects-grid">
 
