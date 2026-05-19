@@ -6,39 +6,49 @@
 <title>Ece Dalpolat — AI Engineer & Data Scientist</title>
 <meta name="description" content="Portfolio of Ece Dalpolat, AI Engineer & Data Scientist" data-i18n-meta="meta.description">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #111112;
-  --ink-2: #3a3a3c;
-  --ink-3: #6b6b6e;
-  --ink-4: #9b9b9e;
-  --surface: #fafaf8;
-  --surface-2: #f2f1ec;
-  --surface-3: #e8e6de;
-  --accent: #1a1aff;
-  --accent-light: #e8e8ff;
-  --accent-dark: #0000cc;
-  --gold: #c8960c;
-  --gold-light: #fef3d0;
-  --serif: 'DM Serif Display', Georgia, serif;
-  --sans: 'DM Sans', system-ui, sans-serif;
-  --max: 1040px;
-  --radius: 12px;
-  --radius-sm: 6px;
+  --ink: #0c0e14;
+  --ink-2: #2d3340;
+  --ink-3: #5a6270;
+  --ink-4: #8b93a1;
+  --surface: #f4f6fb;
+  --surface-2: #ffffff;
+  --surface-3: #e4e8f0;
+  --accent: #5b5ef7;
+  --accent-2: #22d3ee;
+  --accent-light: #eef0ff;
+  --accent-dark: #4346c9;
+  --gold: #d97706;
+  --gold-light: #fff7ed;
+  --serif: 'Syne', system-ui, sans-serif;
+  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --max: 1120px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 1px 2px rgba(12, 14, 20, 0.05);
+  --shadow-md: 0 8px 30px rgba(12, 14, 20, 0.08);
+  --shadow-lg: 0 24px 60px rgba(12, 14, 20, 0.12);
+  --gradient: linear-gradient(135deg, #5b5ef7 0%, #8b5cf6 45%, #22d3ee 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(91,94,247,0.08) 0%, rgba(34,211,238,0.06) 100%);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
 
 body {
   font-family: var(--sans);
   background: var(--surface);
   color: var(--ink);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(91, 94, 247, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(34, 211, 238, 0.08), transparent);
+  background-attachment: fixed;
 }
 
 /* ── NAV ── */
@@ -46,146 +56,221 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250,250,248,0.88);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--surface-3);
-  padding: 0 2rem;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid rgba(228, 232, 240, 0.8);
+  padding: 0 clamp(1rem, 4vw, 2rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 64px;
 }
 .nav-logo {
   font-family: var(--serif);
-  font-size: 18px;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; }
 .nav-links a {
-  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--ink-3);
   text-decoration: none;
-  letter-spacing: 0.01em;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--ink); }
-.nav-right { display: flex; align-items: center; gap: 1.5rem; }
-.lang-switch { display: flex; gap: 0.25rem; }
+.nav-links a:hover { color: var(--accent); }
+.nav-right { display: flex; align-items: center; gap: 1.25rem; }
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  border-radius: 999px;
+}
 .lang-btn {
   font-family: var(--sans);
-  font-size: 12px;
-  font-weight: 500;
-  padding: 0.35rem 0.6rem;
-  border: 1px solid var(--surface-3);
-  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border-radius: 999px;
   background: transparent;
-  color: var(--ink-3);
+  color: var(--ink-4);
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition: all 0.2s;
 }
-.lang-btn:hover { color: var(--ink); border-color: var(--ink-4); }
+.lang-btn:hover { color: var(--ink-2); }
 .lang-btn.active {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-light);
+  color: #fff;
+  background: var(--gradient);
+  box-shadow: 0 2px 8px rgba(91, 94, 247, 0.35);
 }
 
 /* ── HERO ── */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--surface-3);
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 80% at 20% 20%, rgba(91, 94, 247, 0.18), transparent 50%),
+    radial-gradient(ellipse 50% 60% at 90% 10%, rgba(34, 211, 238, 0.14), transparent 45%),
+    radial-gradient(ellipse 40% 50% at 60% 100%, rgba(139, 92, 246, 0.1), transparent 50%);
+  pointer-events: none;
+}
 .hero {
+  position: relative;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 6rem 2rem 5rem;
+  padding: clamp(4rem, 10vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 8vw, 6rem);
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 4rem;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
 }
-.hero-text { }
 .hero-eyebrow {
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1rem;
+  color: var(--accent-dark);
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--surface-2);
+  border: 1px solid rgba(91, 94, 247, 0.2);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
 }
 .hero-name {
   font-family: var(--serif);
-  font-size: clamp(3rem, 6vw, 5rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 1.25rem;
 }
 .hero-name em {
-  font-style: italic;
-  color: var(--ink-3);
+  font-style: normal;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-bio {
-  font-size: 17px;
-  color: var(--ink-2);
-  line-height: 1.7;
-  max-width: 560px;
+  font-size: 1.0625rem;
+  color: var(--ink-3);
+  line-height: 1.75;
+  max-width: 540px;
   margin-bottom: 2rem;
 }
 .hero-cta {
   display: flex;
-  gap: 12px;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 22px;
-  border-radius: var(--radius-sm);
+  gap: 0.4rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
   font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   cursor: pointer;
   border: none;
 }
+.btn:hover { transform: translateY(-1px); }
 .btn-primary {
-  background: var(--ink);
+  background: var(--gradient);
   color: #fff;
+  box-shadow: 0 4px 20px rgba(91, 94, 247, 0.35);
 }
-.btn-primary:hover { background: var(--ink-2); }
+.btn-primary:hover {
+  box-shadow: 0 8px 28px rgba(91, 94, 247, 0.45);
+}
 .btn-ghost {
-  background: transparent;
+  background: var(--surface-2);
   color: var(--ink-2);
   border: 1px solid var(--surface-3);
+  box-shadow: var(--shadow-sm);
 }
-.btn-ghost:hover { background: var(--surface-2); border-color: var(--surface-3); }
+.btn-ghost:hover {
+  border-color: rgba(91, 94, 247, 0.35);
+  color: var(--accent-dark);
+}
 
 .hero-photo-wrap {
   position: relative;
 }
+.hero-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: var(--gradient);
+  border-radius: 50%;
+  opacity: 0.25;
+  filter: blur(40px);
+  z-index: 0;
+}
 .hero-photo {
-  width: 220px;
-  height: 220px;
+  position: relative;
+  z-index: 1;
+  width: clamp(160px, 28vw, 240px);
+  height: clamp(160px, 28vw, 240px);
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--surface-3);
+  object-position: center top;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-lg);
+  display: none;
+}
+.hero-photo.is-loaded {
   display: block;
-  background: var(--surface-2);
 }
 .hero-photo-placeholder {
-  width: 220px;
-  height: 220px;
+  position: relative;
+  z-index: 1;
+  width: clamp(160px, 28vw, 240px);
+  height: clamp(160px, 28vw, 240px);
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-light) 0%, var(--surface-2) 100%);
-  border: 3px solid var(--surface-3);
+  background: linear-gradient(145deg, #ffffff 0%, #eef0ff 55%, #e0f7fa 100%);
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-lg);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--serif);
-  font-size: 64px;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 800;
   color: var(--accent);
-  letter-spacing: -0.02em;
 }
 
 /* ── SECTION WRAPPER ── */
@@ -194,23 +279,34 @@ nav {
   margin: 0 auto;
   padding: 0 2rem;
 }
-section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
+section {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  border-top: 1px solid var(--surface-3);
+}
+section:nth-of-type(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .section-label {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--ink-4);
-  margin-bottom: 0.5rem;
+  color: var(--accent-dark);
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--gradient-subtle);
+  border-radius: 999px;
 }
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  letter-spacing: -0.025em;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ink);
-  margin-bottom: 3rem;
-  line-height: 1.1;
+  margin-bottom: 2.75rem;
+  line-height: 1.12;
 }
 
 /* ── ABOUT ── */
@@ -232,15 +328,25 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   gap: 1.5rem;
 }
 .stat-item {
-  padding: 1.25rem 1.5rem;
+  padding: 1.35rem 1.5rem;
   background: var(--surface-2);
   border-radius: var(--radius);
   border: 1px solid var(--surface-3);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 .stat-num {
   font-family: var(--serif);
   font-size: 2.5rem;
-  color: var(--ink);
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: -0.03em;
   line-height: 1;
   margin-bottom: 4px;
@@ -261,6 +367,13 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   border: 1px solid var(--surface-3);
   border-radius: var(--radius);
   padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(91, 94, 247, 0.25);
 }
 .skill-card-title {
   font-size: 13px;
@@ -284,10 +397,10 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   color: var(--ink-2);
 }
 .skill-tag.accent {
-  background: var(--accent-light);
-  border-color: #c0c0ff;
+  background: linear-gradient(135deg, rgba(91,94,247,0.12), rgba(34,211,238,0.1));
+  border-color: rgba(91, 94, 247, 0.25);
   color: var(--accent-dark);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* ── EXPERIENCE ── */
@@ -299,27 +412,35 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   padding: 2rem 0;
   border-bottom: 1px solid var(--surface-3);
   position: relative;
+  transition: background 0.2s;
+}
+.timeline-item:hover {
+  background: linear-gradient(90deg, rgba(91,94,247,0.04), transparent);
+  margin: 0 -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: var(--radius-sm);
 }
 .timeline-item:last-child { border-bottom: none; }
 .timeline-left { padding-top: 2px; }
 .timeline-date {
-  font-size: 13px;
+  font-size: 0.8125rem;
   color: var(--ink-4);
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 4px;
 }
 .timeline-company {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--accent-dark);
 }
 .timeline-right { }
 .timeline-role {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: var(--ink);
   margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 .timeline-desc {
   font-size: 15px;
@@ -349,39 +470,43 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   gap: 1.5rem;
 }
 .project-card {
-  background: var(--surface);
+  background: var(--surface-2);
   border: 1px solid var(--surface-3);
   border-radius: var(--radius);
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 0;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 .project-card:hover {
-  border-color: var(--accent-light);
-  box-shadow: 0 4px 24px rgba(26,26,255,0.06);
+  border-color: rgba(91, 94, 247, 0.35);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 .project-card.featured {
-  border-color: var(--accent);
-  background: linear-gradient(135deg, #fafaff 0%, var(--surface) 100%);
+  border-color: rgba(91, 94, 247, 0.4);
+  background: linear-gradient(135deg, #fafbff 0%, #fff 50%, #f0fdff 100%);
   grid-column: span 2;
+  box-shadow: var(--shadow-md);
 }
 .project-card.featured::before {
   content: 'Featured';
   position: absolute;
   top: 16px;
   right: 16px;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: var(--accent);
+  background: var(--gradient);
   color: #fff;
-  padding: 3px 10px;
-  border-radius: 4px;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(91, 94, 247, 0.3);
 }
 .project-type {
   font-size: 12px;
@@ -451,68 +576,114 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
 .project-link:hover { text-decoration: underline; }
 
 .ga-inline-link {
-  color: var(--accent);
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: var(--accent-dark);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91, 94, 247, 0.4);
+  transition: color 0.2s, border-color 0.2s;
 }
-.ga-inline-link:hover { opacity: 0.85; }
+.ga-inline-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
 
 /* ── GA PROJECT (special) ── */
+#projects .section-title { margin-bottom: 2rem; }
 .ga-project {
-  border: 1.5px solid var(--accent);
-  background: #fafaff;
-  border-radius: var(--radius);
-  margin-bottom: 1.5rem;
+  position: relative;
+  background: var(--surface-2);
+  border-radius: calc(var(--radius) + 2px);
+  margin-bottom: 2rem;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--surface-3);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.ga-project::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.85;
+}
+.ga-project:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 .ga-header {
-  background: var(--ink);
+  background: linear-gradient(135deg, #0c0e14 0%, #1a1d2e 50%, #1e1b4b 100%);
   color: #fff;
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 2rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
+  overflow: hidden;
 }
-.ga-header-left { flex: 1; }
+.ga-header::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 50%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(91,94,247,0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+.ga-header-left { flex: 1; position: relative; z-index: 1; }
 .ga-badge {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: var(--accent);
-  color: #fff;
-  padding: 3px 10px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.95);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
   display: inline-block;
+  backdrop-filter: blur(8px);
 }
 .ga-title {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
   color: #fff;
-  letter-spacing: -0.02em;
-  margin-bottom: 4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.35rem;
 }
-.ga-sub { font-size: 13px; color: rgba(255,255,255,0.55); }
+.ga-sub { font-size: 0.8125rem; color: rgba(255,255,255,0.6); font-weight: 500; }
 .ga-metrics {
   display: flex;
-  gap: 1.5rem;
-  padding: 1.25rem 1.75rem;
-  background: var(--surface-2);
+  flex-wrap: wrap;
+  gap: 1.5rem 2rem;
+  padding: 1.35rem 2rem;
+  background: linear-gradient(180deg, #f8f9fd 0%, #fff 100%);
   border-bottom: 1px solid var(--surface-3);
 }
-.ga-metric { text-align: center; }
+.ga-metric { text-align: left; min-width: 4.5rem; }
 .ga-metric-num {
   font-family: var(--serif);
-  font-size: 1.75rem;
-  color: var(--ink);
-  letter-spacing: -0.02em;
+  font-size: 1.85rem;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
-.ga-metric-lbl { font-size: 11px; color: var(--ink-4); margin-top: 2px; }
-.ga-body { padding: 1.75rem; }
+.ga-metric-lbl { font-size: 0.6875rem; font-weight: 600; color: var(--ink-4); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+.ga-body { padding: 2rem; background: var(--surface-2); }
 .ga-desc {
   font-size: 15px;
   color: var(--ink-2);
@@ -529,7 +700,12 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   background: var(--surface);
   border: 1px solid var(--surface-3);
   border-radius: var(--radius-sm);
-  padding: 1rem 1.125rem;
+  padding: 1.125rem 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.ga-contrib:hover {
+  border-color: rgba(91, 94, 247, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 .ga-contrib-module {
   font-size: 11px;
@@ -551,18 +727,23 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   line-height: 1.55;
 }
 .ga-highlight {
-  background: var(--surface-2);
-  border: 1px solid var(--surface-3);
-  border-left: 3px solid var(--gold);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
+  background: var(--gradient-subtle);
+  border: 1px solid rgba(91, 94, 247, 0.15);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .ga-highlight-title {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--gold);
-  margin-bottom: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
 }
 .ga-highlight-desc {
   font-size: 14px;
@@ -656,9 +837,11 @@ section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
   transition: all 0.2s;
 }
 .contact-link:hover {
-  border-color: var(--accent);
-  background: var(--accent-light);
+  border-color: rgba(91, 94, 247, 0.4);
+  background: var(--gradient-subtle);
   color: var(--accent-dark);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
 }
 .contact-link-icon {
   width: 32px;
@@ -684,22 +867,31 @@ footer {
   border-top: 1px solid var(--surface-3);
   padding: 2.5rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--ink-4);
+  background: var(--surface-2);
 }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.8125rem; }
+  .nav-right { gap: 0.75rem; }
+}
 @media (max-width: 760px) {
-  nav { padding: 0 1rem; }
-  .nav-links { gap: 1.25rem; }
-  .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
+  nav { padding: 0 1rem; height: 56px; }
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-eyebrow { margin-left: auto; margin-right: auto; }
+  .hero-bio { margin-left: auto; margin-right: auto; }
+  .hero-cta { justify-content: center; }
   .hero-photo-wrap { order: -1; display: flex; justify-content: center; }
-  .hero-photo-placeholder, .hero-photo { width: 140px; height: 140px; font-size: 44px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
   .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .timeline-item:hover { margin: 0; padding-left: 0; padding-right: 0; }
   .project-card.featured { grid-column: span 1; }
   .container { padding: 0 1.25rem; }
-  section { padding: 3rem 0; }
+  .ga-metrics { gap: 1rem; }
+  .ga-header, .ga-body { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
 </style>
 </head>
@@ -723,6 +915,7 @@ footer {
 </nav>
 
 <!-- HERO -->
+<header class="hero-section">
 <div class="hero">
   <div class="hero-text">
     <p class="hero-eyebrow" data-i18n="hero.eyebrow">AI Engineer &amp; Data Scientist</p>
@@ -734,9 +927,21 @@ footer {
     </div>
   </div>
   <div class="hero-photo-wrap">
-    <div class="hero-photo-placeholder">E</div>
+    <!-- Add your photo: assets/profile.jpg (square, min 400×400) -->
+    <img
+      src="assets/profile.jpg"
+      alt="Ece Dalpolat"
+      class="hero-photo"
+      width="240"
+      height="240"
+      decoding="async"
+      onload="this.classList.add('is-loaded'); this.nextElementSibling.hidden = true"
+      onerror="this.hidden = true"
+    >
+    <div class="hero-photo-placeholder" aria-hidden="true">E</div>
   </div>
 </div>
+</header>
 
 <!-- ABOUT -->
 <section id="about">
@@ -988,56 +1193,56 @@ footer {
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · B2B SaaS</span>
+          <span class="ga-badge" data-i18n="proj.analytics.badge">Production · B2B SaaS</span>
           <div class="ga-title" data-i18n="proj.analytics.title">Analytics Platform</div>
           <div class="ga-sub" data-i18n="proj.analytics.sub">Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">109</div><div class="ga-metric-lbl">dbt models</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">56</div><div class="ga-metric-lbl">mart tables</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">13</div><div class="ga-metric-lbl">AI precompute marts</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">security layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">109</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m1">dbt models</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">56</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m2">mart tables</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">13</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m3">AI precompute marts</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m4">security layers</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).</p>
+        <p class="ga-desc" data-i18n-html="proj.analytics.desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).</p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt · lead</div>
-            <div class="ga-contrib-title">AI analytics layer (13 marts)</div>
-            <div class="ga-contrib-desc">Designed and built the full AI precompute layer: SWOT classification, 9-box matrix, risk shadow effect, Big Five / 4H aggregates, and EQ / sales / leadership impact-risk scores — migrating Analyzer features from in-memory Python to materialized SQL marts.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c1.module">ga-dbt · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c1.title">AI analytics layer (13 marts)</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c1.desc">Designed and built the full AI precompute layer: SWOT classification, 9-box matrix, risk shadow effect, Big Five / 4H aggregates, and EQ / sales / leadership impact-risk scores — migrating Analyzer features from in-memory Python to materialized SQL marts.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt</div>
-            <div class="ga-contrib-title">Dashboard mart pipeline</div>
-            <div class="ga-contrib-desc">Built behavioural &amp; risk scoring models, sales-potential and leadership-impact marts, employee score facts, and canonical seed refactors across staging → intermediate → marts for 8+ embedded dashboards.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c2.module">ga-dbt</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c2.title">Dashboard mart pipeline</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c2.desc">Built behavioural &amp; risk scoring models, sales-potential and leadership-impact marts, employee score facts, and canonical seed refactors across staging → intermediate → marts for 8+ embedded dashboards.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt</div>
-            <div class="ga-contrib-title">Native RLS in dbt</div>
-            <div class="ga-contrib-desc">Implemented PostgreSQL native RLS via the apply_native_rls post-hook macro, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c3.module">ga-dbt</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c3.title">Native RLS in dbt</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c3.desc">Implemented PostgreSQL native RLS via the apply_native_rls post-hook macro, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-workspace</div>
-            <div class="ga-contrib-title">Local analytics dev stack</div>
-            <div class="ga-contrib-desc">Set up local DB provisioning, dbt quick-start scripts, schema-comparison tooling, and mock-source integration so the full FDW → dbt → Superset loop runs with a single docker compose up.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c4.module">ga-workspace</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c4.title">Local analytics dev stack</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c4.desc">Set up local DB provisioning, dbt quick-start scripts, schema-comparison tooling, and mock-source integration so the full FDW → dbt → Superset loop runs with a single docker compose up.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-analytics-api</div>
-            <div class="ga-contrib-title">Multi-tenant API &amp; UAT deploy</div>
-            <div class="ga-contrib-desc">Led the multi-tenancy refactor, UAT analytics-api configuration &amp; Dockerfile, tenant-level GitLab CI security tests, and RLS alignment between the API and dbt layers.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c5.module">ga-analytics-api</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c5.title">Multi-tenant API &amp; UAT deploy</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c5.desc">Led the multi-tenancy refactor, UAT analytics-api configuration &amp; Dockerfile, tenant-level GitLab CI security tests, and RLS alignment between the API and dbt layers.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-superset · ops</div>
-            <div class="ga-contrib-title">Production unblock &amp; TR localisation</div>
-            <div class="ga-contrib-desc">Fixed schema drift (candidate_user) blocking 130+ downstream models before a live demo; stabilised Superset Docker startup; updated Turkish UI translations and filter localisation (tr-TR).</div>
+            <div class="ga-contrib-module" data-i18n="proj.analytics.c6.module">ga-superset · ops</div>
+            <div class="ga-contrib-title" data-i18n="proj.analytics.c6.title">Production unblock &amp; TR localisation</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analytics.c6.desc">Fixed schema drift (candidate_user) blocking 130+ downstream models before a live demo; stabilised Superset Docker startup; updated Turkish UI translations and filter localisation (tr-TR).</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — dbt transformation layer</div>
-          <div class="ga-highlight-desc">Primary engineer on the dbt pipeline (~109 models): from early local-dev setup and canonical score normalisation (AON, Saville, AC → STEN) through the full mart catalogue and AI precompute layer. Segment discovery and feature engineering started in <a href="#clustering-rd" class="ga-inline-link">Behavioral Clustering R&amp;D</a> (Aug 2025) before productionising scores as SQL marts. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was the data models, RLS, and making dashboards actually work end-to-end.</div>
+          <div class="ga-highlight-title" data-i18n="proj.analytics.highlightTitle">Core ownership — dbt transformation layer</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.analytics.highlightDesc">Primary engineer on the dbt pipeline (~109 models): from early local-dev setup and canonical score normalisation (AON, Saville, AC → STEN) through the full mart catalogue and AI precompute layer. Segment discovery and feature engineering started in <a href="#clustering-rd" class="ga-inline-link">Behavioral Clustering R&amp;D</a> (Aug 2025) before productionising scores as SQL marts. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was the data models, RLS, and making dashboards actually work end-to-end.</div>
         </div>
 
         <div class="ga-stack">
@@ -1059,56 +1264,56 @@ footer {
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · B2B SaaS</span>
+          <span class="ga-badge" data-i18n="proj.coach.badge">Production · B2B SaaS</span>
           <div class="ga-title" data-i18n="proj.coach.title">Coach Platform</div>
           <div class="ga-sub" data-i18n="proj.coach.sub">Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">AI agents</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">49</div><div class="ga-metric-lbl">POML prompts</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl">eval dimensions</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">product surfaces</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.coach.m1">AI agents</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">49</div><div class="ga-metric-lbl" data-i18n="proj.coach.m2">POML prompts</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl" data-i18n="proj.coach.m3">eval dimensions</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.coach.m4">product surfaces</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.coach.desc">B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">prompts · lead</div>
-            <div class="ga-contrib-title">Pattern system &amp; POML migration</div>
-            <div class="ga-contrib-desc">Implemented the advanced pattern engine (Chain-of-Thought, Tree-of-Thoughts, Planning, and 4 more) with mode-based selection; migrated all prompt files from Turkish to English and fixed naming/path inconsistencies across the 49-file POML library.</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c1.module">prompts · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c1.title">Pattern system &amp; POML migration</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c1.desc">Implemented the advanced pattern engine (Chain-of-Thought, Tree-of-Thoughts, Planning, and 4 more) with mode-based selection; migrated all prompt files from Turkish to English and fixed naming/path inconsistencies across the 49-file POML library.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">coach · lead</div>
-            <div class="ga-contrib-title">Referee Agent — LLM-as-Judge</div>
-            <div class="ga-contrib-desc">Designed and built the end-to-end evaluation system: AI Client Simulator, multi-turn Coach integration, unified 5-dimension evaluator (role/style, techniques, principles, safety, flow), dynamic conversation closure, and OpenAI Evals export.</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c2.module">coach · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c2.title">Referee Agent — LLM-as-Judge</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c2.desc">Designed and built the end-to-end evaluation system: AI Client Simulator, multi-turn Coach integration, unified 5-dimension evaluator (role/style, techniques, principles, safety, flow), dynamic conversation closure, and OpenAI Evals export.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">coach</div>
-            <div class="ga-contrib-title">Voice integration (OpenAI Realtime)</div>
-            <div class="ga-contrib-desc">Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice_config.py, and agent-chat-ui React components with Web Audio API (24 kHz PCM16).</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c3.module">coach</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c3.title">Voice integration (OpenAI Realtime)</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c3.desc">Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice_config.py, and agent-chat-ui React components with Web Audio API (24 kHz PCM16).</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">coach</div>
-            <div class="ga-contrib-title">Memory &amp; state persistence</div>
-            <div class="ga-contrib-desc">Fixed coach memory persistence (Context Messages: 0 bug), LangChain v0.3+ compatibility in coach submodule, and client-side memory optimization (last 6 messages, 40% token savings).</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c4.module">coach</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c4.title">Memory &amp; state persistence</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c4.desc">Fixed coach memory persistence (Context Messages: 0 bug), LangChain v0.3+ compatibility in coach submodule, and client-side memory optimization (last 6 messages, 40% token savings).</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">coach</div>
-            <div class="ga-contrib-title">Client simulator &amp; eval tooling</div>
-            <div class="ga-contrib-desc">Improved AI client simulator with turn-based progression guides and anti-repetition rules (49% fewer turns, score 7.88→8.2); added coaching evaluation reports and single-scenario test scripts.</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c5.module">coach</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c5.title">Client simulator &amp; eval tooling</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c5.desc">Improved AI client simulator with turn-based progression guides and anti-repetition rules (49% fewer turns, score 7.88→8.2); added coaching evaluation reports and single-scenario test scripts.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">coach · docs</div>
-            <div class="ga-contrib-title">Contributor onboarding</div>
-            <div class="ga-contrib-desc">Wrote comprehensive setup guide for new contributors (submodule init, Python 3.13+, dependency fixes) and expanded Referee Agent README with scenarios, token costs, and result JSON examples.</div>
+            <div class="ga-contrib-module" data-i18n="proj.coach.c6.module">coach · docs</div>
+            <div class="ga-contrib-title" data-i18n="proj.coach.c6.title">Contributor onboarding</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.coach.c6.desc">Wrote comprehensive setup guide for new contributors (submodule init, Python 3.13+, dependency fixes) and expanded Referee Agent README with scenarios, token costs, and result JSON examples.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — evaluation &amp; voice layer</div>
-          <div class="ga-highlight-desc">Primary engineer on coach quality assurance and early product surfaces: built the Referee Agent to objectively score coaching sessions before production rollout, and shipped the first OpenAI Realtime voice path with POML-aware prompts. Analytics, company-wide chat, and performance-data grounding were developed in parallel by the team; my focus was making the coach testable, measurable, and voice-ready.</div>
+          <div class="ga-highlight-title" data-i18n="proj.coach.highlightTitle">Core ownership — evaluation &amp; voice layer</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.coach.highlightDesc">Primary engineer on coach quality assurance and early product surfaces: built the Referee Agent to objectively score coaching sessions before production rollout, and shipped the first OpenAI Realtime voice path with POML-aware prompts. Analytics, company-wide chat, and performance-data grounding were developed in parallel by the team; my focus was making the coach testable, measurable, and voice-ready.</div>
         </div>
 
         <div class="ga-stack">
@@ -1129,56 +1334,56 @@ footer {
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · B2B SaaS</span>
+          <span class="ga-badge" data-i18n="proj.analyzer.badge">Production · B2B SaaS</span>
           <div class="ga-title" data-i18n="proj.analyzer.title">Analyzer Platform</div>
           <div class="ga-sub" data-i18n="proj.analyzer.sub">Qkare · Apr 2025 – May 2026 · Behavioral Analytics AI Agent</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">8+</div><div class="ga-metric-lbl">domain skills</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">security layers</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">microservices</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">18</div><div class="ga-metric-lbl">YAML configs</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">8+</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m1">domain skills</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m2">security layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m3">microservices</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">18</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m4">YAML configs</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language HR questions over psychometric data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.analyzer.desc">Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language HR questions over psychometric data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">analyzer · lead</div>
-            <div class="ga-contrib-title">4-layer security &amp; RLS pipeline</div>
-            <div class="ga-contrib-desc">Shipped the full RLS-security branch (33 commits): JWT auth on HTTP + WebSocket, UserContext via ContextVar, execute_rls on all SQL paths, InputGuard/OutputGuard with YAML-driven threat patterns, cross-tenant isolation guard, and QueryValidationPipeline before every LLM call.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c1.module">analyzer · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c1.title">4-layer security &amp; RLS pipeline</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c1.desc">Shipped the full RLS-security branch (33 commits): JWT auth on HTTP + WebSocket, UserContext via ContextVar, execute_rls on all SQL paths, InputGuard/OutputGuard with YAML-driven threat patterns, cross-tenant isolation guard, and QueryValidationPipeline before every LLM call.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">analyzer</div>
-            <div class="ga-contrib-title">Config bootstrap &amp; schema layer</div>
-            <div class="ga-contrib-desc">Introduced backend/core/bootstrap/ (ConfigPathResolver, agent_config, mod_loaders); consolidated application/schema; moved position_models and security types; eliminated duplicate config packages and hardcoded prompt strings.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c2.module">analyzer</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c2.title">Config bootstrap &amp; schema layer</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c2.desc">Introduced backend/core/bootstrap/ (ConfigPathResolver, agent_config, mod_loaders); consolidated application/schema; moved position_models and security types; eliminated duplicate config packages and hardcoded prompt strings.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">analyzer</div>
-            <div class="ga-contrib-title">Master prompt &amp; agent reliability</div>
-            <div class="ga-contrib-desc">Fixed master_prompt.yaml rendering (dict sections → block strings), build_master_prompt() guards, PostgreSQL TCP keepalive + stale-connection retry, SQL alias ambiguity fixes, and chat history trimming for context overflow.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c3.module">analyzer</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c3.title">Master prompt &amp; agent reliability</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c3.desc">Fixed master_prompt.yaml rendering (dict sections → block strings), build_master_prompt() guards, PostgreSQL TCP keepalive + stale-connection retry, SQL alias ambiguity fixes, and chat history trimming for context overflow.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">analyzer</div>
-            <div class="ga-contrib-title">Domain mods &amp; analysis fixes</div>
-            <div class="ga-contrib-desc">Fixed FourHProfileRiskMod runtime TypeError, resolved tools/__init__ circular import via PEP 562 lazy loading, unified SwotPatternType enums, and enhanced ProfileTransformer for employee_user_id identity validation.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c4.module">analyzer</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c4.title">Domain mods &amp; analysis fixes</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c4.desc">Fixed FourHProfileRiskMod runtime TypeError, resolved tools/__init__ circular import via PEP 562 lazy loading, unified SwotPatternType enums, and enhanced ProfileTransformer for employee_user_id identity validation.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-analyzer-api</div>
-            <div class="ga-contrib-title">Voice layer integration</div>
-            <div class="ga-contrib-desc">Langfuse trace propagation across analyzer client and chat API caller; fail-fast startup validation for analyzer service URL; global 500 error logging; improved employee ID extraction from nested survey payloads.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c5.module">ga-analyzer-api</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c5.title">Voice layer integration</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c5.desc">Langfuse trace propagation across analyzer client and chat API caller; fail-fast startup validation for analyzer service URL; global 500 error logging; improved employee ID extraction from nested survey payloads.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">analyzer · observability</div>
-            <div class="ga-contrib-title">Langfuse tracing</div>
-            <div class="ga-contrib-desc">Integrated Langfuse callbacks in AnalizciAgent and WebSocket endpoints for end-to-end LLM trace propagation; docker-compose config and utility module for observability across the analysis pipeline.</div>
+            <div class="ga-contrib-module" data-i18n="proj.analyzer.c6.module">analyzer · observability</div>
+            <div class="ga-contrib-title" data-i18n="proj.analyzer.c6.title">Langfuse tracing</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.analyzer.c6.desc">Integrated Langfuse callbacks in AnalizciAgent and WebSocket endpoints for end-to-end LLM trace propagation; docker-compose config and utility module for observability across the analysis pipeline.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — security &amp; platform foundation</div>
-          <div class="ga-highlight-desc">Primary engineer on the security and configuration foundation that made production deployment possible: merged JWT + RLS + guard pipeline into main, built the bootstrap config system agents run on, and wired observability across both analyzer engine and conversation API. ReAct agent skills, company analytics chat, and enum refactors were developed in parallel by the team; my focus was tenant-safe data access, prompt architecture, and making the dual-service stack production-ready.</div>
+          <div class="ga-highlight-title" data-i18n="proj.analyzer.highlightTitle">Core ownership — security &amp; platform foundation</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.analyzer.highlightDesc">Primary engineer on the security and configuration foundation that made production deployment possible: merged JWT + RLS + guard pipeline into main, built the bootstrap config system agents run on, and wired observability across both analyzer engine and conversation API. ReAct agent skills, company analytics chat, and enum refactors were developed in parallel by the team; my focus was tenant-safe data access, prompt architecture, and making the dual-service stack production-ready.</div>
         </div>
 
         <div class="ga-stack">
@@ -1199,56 +1404,56 @@ footer {
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · B2B SaaS</span>
+          <span class="ga-badge" data-i18n="proj.kpi.badge">Production · B2B SaaS</span>
           <div class="ga-title" data-i18n="proj.kpi.title">KPI Advisor</div>
           <div class="ga-sub" data-i18n="proj.kpi.sub">Qkare · Apr 2026 – May 2026 · Position-based KPI Recommendation AI</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">2680</div><div class="ga-metric-lbl">APQC metrics</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">1631</div><div class="ga-metric-lbl">PCF nodes</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">9</div><div class="ga-metric-lbl">prompt rules</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">pipeline steps</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2680</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m1">APQC metrics</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1631</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m2">PCF nodes</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">9</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m3">prompt rules</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m4">pipeline steps</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">AI microservice that recommends SMART-aligned KPIs for any job position — grounded in the APQC Process Classification Framework (lexical + category-prior retrieval, no vector DB), calibrated via a corporate Golden Dataset, and validated through an offline LLM-as-judge pipeline with human-in-the-loop feedback. <strong>Primary engineer on the generation engine, retrieval layer, eval pipeline, and production integration.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.kpi.desc">AI microservice that recommends SMART-aligned KPIs for any job position — grounded in the APQC Process Classification Framework (lexical + category-prior retrieval, no vector DB), calibrated via a corporate Golden Dataset, and validated through an offline LLM-as-judge pipeline with human-in-the-loop feedback. <strong>Primary engineer on the generation engine, retrieval layer, eval pipeline, and production integration.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor · lead</div>
-            <div class="ga-contrib-title">KPI generation service &amp; APQC retrieval</div>
-            <div class="ga-contrib-desc">Built the core FastAPI service: OpenAI JSON-mode structured output, hybrid lexical + category-prior retrieval over 1631 PCF nodes and 2680 metrics, diversity selection, confidence-aware fallback, and prompt assembly with domain-expert persona and corporate rules.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c1.module">kpi-advisor · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c1.title">KPI generation service &amp; APQC retrieval</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c1.desc">Built the core FastAPI service: OpenAI JSON-mode structured output, hybrid lexical + category-prior retrieval over 1631 PCF nodes and 2680 metrics, diversity selection, confidence-aware fallback, and prompt assembly with domain-expert persona and corporate rules.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor</div>
-            <div class="ga-contrib-title">Retrieval optimization &amp; prompt engineering</div>
-            <div class="ga-contrib-desc">Pre-tokenized lexical similarity for latency; modularized APQC constants and schemas; industry-specific standards in prompts (DORA, LCR/EVE, CAC/LTV); few-shot selection from Golden Dataset xlsx; Redis SHA-256 cache with graceful degradation.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c2.module">kpi-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c2.title">Retrieval optimization &amp; prompt engineering</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c2.desc">Pre-tokenized lexical similarity for latency; modularized APQC constants and schemas; industry-specific standards in prompts (DORA, LCR/EVE, CAC/LTV); few-shot selection from Golden Dataset xlsx; Redis SHA-256 cache with graceful degradation.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor</div>
-            <div class="ga-contrib-title">Offline quality pipeline</div>
-            <div class="ga-contrib-desc">Implemented step2 LLM-as-judge eval (SMART ×0.35 + Relevance ×0.40 + Clarity ×0.25), step3 Excel export for human review, and step4 feedback import into golden dataset — closing the synthetic data → eval → human flywheel loop.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c3.module">kpi-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c3.title">Offline quality pipeline</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c3.desc">Implemented step2 LLM-as-judge eval (SMART ×0.35 + Relevance ×0.40 + Clarity ×0.25), step3 Excel export for human review, and step4 feedback import into golden dataset — closing the synthetic data → eval → human flywheel loop.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor</div>
-            <div class="ga-contrib-title">Schema evolution &amp; backward compatibility</div>
-            <div class="ga-contrib-desc">Refactored PositionInput with LeadershipLevel and PositionGroup models; model_validator accepts legacy flat payloads alongside canonical nested format; optional ID field; detailed OpenAI usage logging per request.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c4.module">kpi-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c4.title">Schema evolution &amp; backward compatibility</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c4.desc">Refactored PositionInput with LeadershipLevel and PositionGroup models; model_validator accepts legacy flat payloads alongside canonical nested format; optional ID field; detailed OpenAI usage logging per request.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor · infra</div>
-            <div class="ga-contrib-title">CI/CD, testing &amp; Docker</div>
-            <div class="ga-contrib-desc">GitLab CI pipeline with pre-commit (Ruff, MyPy), pytest + coverage, smoke tests for schema integrity; multi-stage Docker with healthchecks; catalog-mode position sourcing for pipeline bootstrap.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c5.module">kpi-advisor · infra</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c5.title">CI/CD, testing &amp; Docker</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c5.desc">GitLab CI pipeline with pre-commit (Ruff, MyPy), pytest + coverage, smoke tests for schema integrity; multi-stage Docker with healthchecks; catalog-mode position sourcing for pipeline bootstrap.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ai-api-monorepo</div>
-            <div class="ga-contrib-title">CORE gateway integration</div>
-            <div class="ga-contrib-desc">Wired Streamlit UI to the agent gateway via /api/v1/agents/ga-kpi-advisor/invoke with {input}/{output} envelope, dev auth bypass headers, and monorepo endpoint configuration for local and UAT flows.</div>
+            <div class="ga-contrib-module" data-i18n="proj.kpi.c6.module">ai-api-monorepo</div>
+            <div class="ga-contrib-title" data-i18n="proj.kpi.c6.title">CORE gateway integration</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.kpi.c6.desc">Wired Streamlit UI to the agent gateway via /api/v1/agents/ga-kpi-advisor/invoke with {input}/{output} envelope, dev auth bypass headers, and monorepo endpoint configuration for local and UAT flows.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — generation engine &amp; quality flywheel</div>
-          <div class="ga-highlight-desc">Primary engineer on the KPI recommendation stack: from the initial APQC-grounded generation service through Redis caching, few-shot calibration, and the four-step offline eval pipeline. Observability refactor, Streamlit UI polish, and extended prompt rules were developed in parallel by the team; my focus was structured output quality, embedding-free retrieval, dataset flywheel, and shipping production-ready CI/CD.</div>
+          <div class="ga-highlight-title" data-i18n="proj.kpi.highlightTitle">Core ownership — generation engine &amp; quality flywheel</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.kpi.highlightDesc">Primary engineer on the KPI recommendation stack: from the initial APQC-grounded generation service through Redis caching, few-shot calibration, and the four-step offline eval pipeline. Observability refactor, Streamlit UI polish, and extended prompt rules were developed in parallel by the team; my focus was structured output quality, embedding-free retrieval, dataset flywheel, and shipping production-ready CI/CD.</div>
         </div>
 
         <div class="ga-stack">
@@ -1269,56 +1474,56 @@ footer {
     <div class="ga-project" id="skills-advisor">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · B2B SaaS</span>
+          <span class="ga-badge" data-i18n="proj.skills.badge">Production · B2B SaaS</span>
           <div class="ga-title" data-i18n="proj.skills.title">Skills Advisor</div>
           <div class="ga-sub" data-i18n="proj.skills.sub">Qkare · Aug 2025 – May 2026 · AI competency dimension selection</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">12</div><div class="ga-metric-lbl">dimensions per role</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">assessment frameworks</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">inference engines</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl">DSPy expert personas</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">12</div><div class="ga-metric-lbl" data-i18n="proj.skills.m1">dimensions per role</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.skills.m2">assessment frameworks</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.skills.m3">inference engines</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl" data-i18n="proj.skills.m4">DSPy expert personas</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.skills.desc">AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor · lead</div>
-            <div class="ga-contrib-title">Founding competency assessment system</div>
-            <div class="ga-contrib-desc">Built the initial AI-powered competency suggestion flow (Aug 2025): Ocean/Saville test types, dimension scoring with Turkish reasoning, Streamlit two-column UI, and manual dimension add/remove — establishing the product before the modular FastAPI refactor.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c1.module">skills-advisor · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c1.title">Founding competency assessment system</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c1.desc">Built the initial AI-powered competency suggestion flow (Aug 2025): Ocean/Saville test types, dimension scoring with Turkish reasoning, Streamlit two-column UI, and manual dimension add/remove — establishing the product before the modular FastAPI refactor.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor</div>
-            <div class="ga-contrib-title">Closed dictionary &amp; data layer</div>
-            <div class="ga-contrib-desc">Moved dimensions and mappings into dimensions.json with /dimensions API endpoints; injected mapping context into LLM prompts; shuffle per request to reduce positional bias; whitelist validation + dedupe + cap@12 on every response.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c2.module">skills-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c2.title">Closed dictionary &amp; data layer</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c2.desc">Moved dimensions and mappings into dimensions.json with /dimensions API endpoints; injected mapping context into LLM prompts; shuffle per request to reduce positional bias; whitelist validation + dedupe + cap@12 on every response.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor</div>
-            <div class="ga-contrib-title">DSPy SME expert ensemble</div>
-            <div class="ga-contrib-desc">Implemented dynamic SME weight system and arithmetic-mean adjudicator (Oct–Nov 2025): five parallel expert personas merged into consensus lists with category balance — alternative to single-pass LangChain for higher-stakes role assessments.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c3.module">skills-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c3.title">DSPy SME expert ensemble</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c3.desc">Implemented dynamic SME weight system and arithmetic-mean adjudicator (Oct–Nov 2025): five parallel expert personas merged into consensus lists with category balance — alternative to single-pass LangChain for higher-stakes role assessments.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor</div>
-            <div class="ga-contrib-title">LangChain path &amp; prompt variants</div>
-            <div class="ga-contrib-desc">PromptBuilder with BASIC / ONET / INSIGHTS / BOTH variants; insights.txt + mindmaps.json RAG-lite injection; PydanticOutputParser on json_object responses; use_expert_engine flag to switch engines without API contract changes.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c4.module">skills-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c4.title">LangChain path &amp; prompt variants</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c4.desc">PromptBuilder with BASIC / ONET / INSIGHTS / BOTH variants; insights.txt + mindmaps.json RAG-lite injection; PydanticOutputParser on json_object responses; use_expert_engine flag to switch engines without API contract changes.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor</div>
-            <div class="ga-contrib-title">Multi-layer caching</div>
-            <div class="ga-contrib-desc">SHA256 LLM-level cache in base_llm.py plus request-level cache in LangChainService (May 2026); switched default to gpt-4o-mini @ temperature 0 for cost/latency — identical role+test+group requests skip OpenAI entirely.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c5.module">skills-advisor</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c5.title">Multi-layer caching</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c5.desc">SHA256 LLM-level cache in base_llm.py plus request-level cache in LangChainService (May 2026); switched default to gpt-4o-mini @ temperature 0 for cost/latency — identical role+test+group requests skip OpenAI entirely.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">skills-advisor · platform</div>
-            <div class="ga-contrib-title">Production integration</div>
-            <div class="ga-contrib-desc">JWT + tenant whitelist via grid-auth; OTEL and prompt logging hooks; Docker netrc secrets for private PyPI; pairs with Agent API Gateway invoke path for downstream HR workflows.</div>
+            <div class="ga-contrib-module" data-i18n="proj.skills.c6.module">skills-advisor · platform</div>
+            <div class="ga-contrib-title" data-i18n="proj.skills.c6.title">Production integration</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.skills.c6.desc">JWT + tenant whitelist via grid-auth; OTEL and prompt logging hooks; Docker netrc secrets for private PyPI; pairs with Agent API Gateway invoke path for downstream HR workflows.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — competency selection engine</div>
-          <div class="ga-highlight-desc">Primary engineer from the first competency UI through the production FastAPI service: closed-dictionary constrained generation, DSPy multi-expert consensus, and caching strategy. O*NET API v2 client, LangChain v1 migration, dimension validation middleware, CI deploy components, and grid-observability adoption were developed in parallel by the team; my focus was making exactly-12-dimension selection reliable, explainable in Turkish, and cheap at scale.</div>
+          <div class="ga-highlight-title" data-i18n="proj.skills.highlightTitle">Core ownership — competency selection engine</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.skills.highlightDesc">Primary engineer from the first competency UI through the production FastAPI service: closed-dictionary constrained generation, DSPy multi-expert consensus, and caching strategy. O*NET API v2 client, LangChain v1 migration, dimension validation middleware, CI deploy components, and grid-observability adoption were developed in parallel by the team; my focus was making exactly-12-dimension selection reliable, explainable in Turkish, and cheap at scale.</div>
         </div>
 
         <div class="ga-stack">
@@ -1339,56 +1544,56 @@ footer {
     <div class="ga-project">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · Platform</span>
+          <span class="ga-badge" data-i18n="proj.gateway.badge">Production · Platform</span>
           <div class="ga-title" data-i18n="proj.gateway.title">Agent API Gateway</div>
           <div class="ga-sub" data-i18n="proj.gateway.sub">Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">1+</div><div class="ga-metric-lbl">production agents</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">invoke contract</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">pipeline generator</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">core layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1+</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m1">production agents</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m2">invoke contract</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m3">pipeline generator</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m4">core layers</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.gateway.desc">Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ai-api-monorepo · lead</div>
-            <div class="ga-contrib-title">Platform bootstrap &amp; gateway core</div>
-            <div class="ga-contrib-desc">Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, Cookiecutter template for new agents, and API.md integration guide for frontend teams.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c1.module">ai-api-monorepo · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c1.title">Platform bootstrap &amp; gateway core</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c1.desc">Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, Cookiecutter template for new agents, and API.md integration guide for frontend teams.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">core</div>
-            <div class="ga-contrib-title">JWT auth &amp; invoke pipeline</div>
-            <div class="ga-contrib-desc">Integrated grid-auth for token verification on every /invoke call; dev bypass vs production auth paths; streamlined API responses (operational metadata logged, not returned); enhanced agent invoke logging and error handling.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c2.module">core</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c2.title">JWT auth &amp; invoke pipeline</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c2.desc">Integrated grid-auth for token verification on every /invoke call; dev bypass vs production auth paths; streamlined API responses (operational metadata logged, not returned); enhanced agent invoke logging and error handling.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">infra</div>
-            <div class="ga-contrib-title">Per-agent Docker Compose topology</div>
-            <div class="ga-contrib-desc">Restructured compose to per-agent includes (agents/ga_kpi_advisor/docker-compose.yml); dev overlay with external KPI Advisor path; multi-stage Dockerfiles with non-root user, OCI labels, HEALTHCHECK, and build-arg versioning.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c3.module">infra</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c3.title">Per-agent Docker Compose topology</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c3.desc">Restructured compose to per-agent includes (agents/ga_kpi_advisor/docker-compose.yml); dev overlay with external KPI Advisor path; multi-stage Dockerfiles with non-root user, OCI labels, HEALTHCHECK, and build-arg versioning.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ci</div>
-            <div class="ga-contrib-title">Dynamic GitLab child pipelines</div>
-            <div class="ga-contrib-desc">Built generate_agents_pipeline.py to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c4.module">ci</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c4.title">Dynamic GitLab child pipelines</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c4.desc">Built generate_agents_pipeline.py to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor agent</div>
-            <div class="ga-contrib-title">First production agent integration</div>
-            <div class="ga-contrib-desc">Wired ga-kpi-advisor as the reference agent: httpx proxy to downstream KPI service, env-based URL config, validation error logging, and end-to-end invoke flow from Streamlit through the gateway.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c5.module">kpi-advisor agent</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c5.title">First production agent integration</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c5.desc">Wired ga-kpi-advisor as the reference agent: httpx proxy to downstream KPI service, env-based URL config, validation error logging, and end-to-end invoke flow from Streamlit through the gateway.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">kpi-advisor agent</div>
-            <div class="ga-contrib-title">Cross-service contract alignment</div>
-            <div class="ga-contrib-desc">Kept gateway payloads in sync with KPI Advisor schema evolution: leadershipLevel, positionGroup, name/definition fields, optional id — ensuring monorepo invoke examples match the downstream Pydantic models.</div>
+            <div class="ga-contrib-module" data-i18n="proj.gateway.c6.module">kpi-advisor agent</div>
+            <div class="ga-contrib-title" data-i18n="proj.gateway.c6.title">Cross-service contract alignment</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.gateway.c6.desc">Kept gateway payloads in sync with KPI Advisor schema evolution: leadershipLevel, positionGroup, name/definition fields, optional id — ensuring monorepo invoke examples match the downstream Pydantic models.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — agent gateway platform</div>
-          <div class="ga-highlight-desc">Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI pipeline generation. create_gateway_app refactor, CORS settings, and Cookiecutter agent scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate.</div>
+          <div class="ga-highlight-title" data-i18n="proj.gateway.highlightTitle">Core ownership — agent gateway platform</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.gateway.highlightDesc">Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI pipeline generation. create_gateway_app refactor, CORS settings, and Cookiecutter agent scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate.</div>
         </div>
 
         <div class="ga-stack">
@@ -1409,51 +1614,51 @@ footer {
     <div class="ga-project" id="qkare-chatbot">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">Production · Web</span>
+          <span class="ga-badge" data-i18n="proj.chatbot.badge">Production · Web</span>
           <div class="ga-title" data-i18n="proj.chatbot.title">QKare AI Assistant</div>
           <div class="ga-sub" data-i18n="proj.chatbot.sub">Qkare · Jul 2025 · Corporate website chatbot</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">cascade layers</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">vector backends</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">hybrid security stack</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">RAG pipeline</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m1">cascade layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m2">vector backends</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m3">hybrid security stack</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m4">RAG pipeline</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.chatbot.desc">FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">qkare-chatbot · lead</div>
-            <div class="ga-contrib-title">Cascade inference architecture</div>
-            <div class="ga-contrib-desc">Designed the rule → semantic cache → RAG → LLM pipeline in app.py: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message.</div>
+            <div class="ga-contrib-module" data-i18n="proj.chatbot.c1.module">qkare-chatbot · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.chatbot.c1.title">Cascade inference architecture</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.chatbot.c1.desc">Designed the rule → semantic cache → RAG → LLM pipeline in app.py: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">qkare-chatbot</div>
-            <div class="ga-contrib-title">Semantic cache &amp; vector stores</div>
-            <div class="ga-contrib-desc">Built cache_service and milvus_service with configurable FAISS or Milvus backends; similarity-threshold tuning; cache write-back after LLM responses so recurring visitor questions skip expensive inference.</div>
+            <div class="ga-contrib-module" data-i18n="proj.chatbot.c2.module">qkare-chatbot</div>
+            <div class="ga-contrib-title" data-i18n="proj.chatbot.c2.title">Semantic cache &amp; vector stores</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.chatbot.c2.desc">Built cache_service and milvus_service with configurable FAISS or Milvus backends; similarity-threshold tuning; cache write-back after LLM responses so recurring visitor questions skip expensive inference.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">qkare-chatbot</div>
-            <div class="ga-contrib-title">RAG &amp; web scraping layer</div>
-            <div class="ga-contrib-desc">rag_service scrapes QKare site pages (BeautifulSoup, html2text) for fresh grounding; LangChain + OpenAI assembly when rules and cache miss; keeps corporate answers aligned with public content.</div>
+            <div class="ga-contrib-module" data-i18n="proj.chatbot.c3.module">qkare-chatbot</div>
+            <div class="ga-contrib-title" data-i18n="proj.chatbot.c3.title">RAG &amp; web scraping layer</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.chatbot.c3.desc">rag_service scrapes QKare site pages (BeautifulSoup, html2text) for fresh grounding; LangChain + OpenAI assembly when rules and cache miss; keeps corporate answers aligned with public content.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">security</div>
-            <div class="ga-contrib-title">Hybrid security system</div>
-            <div class="ga-contrib-desc">security/hybrid_security.py combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring.</div>
+            <div class="ga-contrib-module" data-i18n="proj.chatbot.c4.module">security</div>
+            <div class="ga-contrib-title" data-i18n="proj.chatbot.c4.title">Hybrid security system</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.chatbot.c4.desc">security/hybrid_security.py combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">qkare-chatbot · infra</div>
-            <div class="ga-contrib-title">Production packaging</div>
-            <div class="ga-contrib-desc">Organized services/ layout (qa, cache, milvus, rag, llm); Docker Compose for Milvus + Attu admin UI; structured logging, custom exceptions, /health endpoint, and env-driven config validation in config.py.</div>
+            <div class="ga-contrib-module" data-i18n="proj.chatbot.c5.module">qkare-chatbot · infra</div>
+            <div class="ga-contrib-title" data-i18n="proj.chatbot.c5.title">Production packaging</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.chatbot.c5.desc">Organized services/ layout (qa, cache, milvus, rag, llm); Docker Compose for Milvus + Attu admin UI; structured logging, custom exceptions, /health endpoint, and env-driven config validation in config.py.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — enterprise chatbot stack</div>
-          <div class="ga-highlight-desc">Sole engineer on the Jul 2025 rewrite: end-to-end FastAPI chatbot with hybrid security, dual vector-store support, and four-layer inference cascade. This predates the later HR analytics and agent-gateway work at Qkare but established patterns — semantic cache, RAG grounding, and security-first request handling — reused across subsequent AI services.</div>
+          <div class="ga-highlight-title" data-i18n="proj.chatbot.highlightTitle">Core ownership — enterprise chatbot stack</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.chatbot.highlightDesc">Sole engineer on the Jul 2025 rewrite: end-to-end FastAPI chatbot with hybrid security, dual vector-store support, and four-layer inference cascade. This predates the later HR analytics and agent-gateway work at Qkare but established patterns — semantic cache, RAG grounding, and security-first request handling — reused across subsequent AI services.</div>
         </div>
 
         <div class="ga-stack">
@@ -1474,46 +1679,46 @@ footer {
     <div class="ga-project" id="clustering-rd">
       <div class="ga-header">
         <div class="ga-header-left">
-          <span class="ga-badge">R&amp;D · Research</span>
+          <span class="ga-badge" data-i18n="proj.clustering.badge">R&amp;D · Research</span>
           <div class="ga-title" data-i18n="proj.clustering.title">Behavioral Clustering R&amp;D</div>
           <div class="ga-sub" data-i18n="proj.clustering.sub">Qkare · Aug 2025 · Employee segmentation &amp; talent analytics</div>
         </div>
       </div>
       <div class="ga-metrics">
-        <div class="ga-metric"><div class="ga-metric-num">4+</div><div class="ga-metric-lbl">clustering algorithms</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">3</div><div class="ga-metric-lbl">eval metrics</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">dim-reduction methods</div></div>
-        <div class="ga-metric"><div class="ga-metric-num">6</div><div class="ga-metric-lbl">analysis modules</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4+</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m1">clustering algorithms</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">3</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m2">eval metrics</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m3">dim-reduction methods</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">6</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m4">analysis modules</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
+        <p class="ga-desc" data-i18n-html="proj.clustering.desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd · lead</div>
-            <div class="ga-contrib-title">Feature engineering pipeline</div>
-            <div class="ga-contrib-desc">Built feature_engineering.py to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization.</div>
+            <div class="ga-contrib-module" data-i18n="proj.clustering.c1.module">clustering-rd · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.clustering.c1.title">Feature engineering pipeline</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.clustering.c1.desc">Built feature_engineering.py to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">Multi-algorithm clustering comparison</div>
-            <div class="ga-contrib-desc">Implemented clustering_model.py and advanced_model.py to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection.</div>
+            <div class="ga-contrib-module" data-i18n="proj.clustering.c2.module">clustering-rd</div>
+            <div class="ga-contrib-title" data-i18n="proj.clustering.c2.title">Multi-algorithm clustering comparison</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.clustering.c2.desc">Implemented clustering_model.py and advanced_model.py to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">EDA &amp; dimensionality reduction</div>
-            <div class="ga-contrib-desc">EDA.py for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization.</div>
+            <div class="ga-contrib-module" data-i18n="proj.clustering.c3.module">clustering-rd</div>
+            <div class="ga-contrib-title" data-i18n="proj.clustering.c3.title">EDA &amp; dimensionality reduction</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.clustering.c3.desc">EDA.py for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">clustering-rd</div>
-            <div class="ga-contrib-title">AutoML &amp; multi-cluster analysis</div>
-            <div class="ga-contrib-desc">autoMl1.py for automated model search experiments; multi_cluster_analysis.py for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts.</div>
+            <div class="ga-contrib-module" data-i18n="proj.clustering.c4.module">clustering-rd</div>
+            <div class="ga-contrib-title" data-i18n="proj.clustering.c4.title">AutoML &amp; multi-cluster analysis</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.clustering.c4.desc">autoMl1.py for automated model search experiments; multi_cluster_analysis.py for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts.</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Core ownership — comparative clustering research</div>
-          <div class="ga-highlight-desc">Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.</div>
+          <div class="ga-highlight-title" data-i18n="proj.clustering.highlightTitle">Core ownership — comparative clustering research</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.clustering.highlightDesc">Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.</div>
         </div>
 
         <div class="ga-stack">
