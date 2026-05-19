@@ -1013,6 +1013,76 @@ footer {
       </div>
     </div>
 
+    <!-- GRID COACH — featured -->
+    <div class="ga-project">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">Production · B2B SaaS</span>
+          <div class="ga-title">GridCoach Platform</div>
+          <div class="ga-sub">Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">AI agents</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">49</div><div class="ga-metric-lbl">POML prompts</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl">eval dimensions</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">product surfaces</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong></p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-prompts · lead</div>
+            <div class="ga-contrib-title">Pattern system &amp; POML migration</div>
+            <div class="ga-contrib-desc">Implemented the advanced pattern engine (Chain-of-Thought, Tree-of-Thoughts, Planning, and 4 more) with mode-based selection; migrated all prompt files from Turkish to English and fixed naming/path inconsistencies across the 49-file POML library.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-coach · lead</div>
+            <div class="ga-contrib-title">Referee Agent — LLM-as-Judge</div>
+            <div class="ga-contrib-desc">Designed and built the end-to-end evaluation system: AI Client Simulator, multi-turn Grid Coach integration, unified 5-dimension evaluator (role/style, techniques, principles, safety, flow), dynamic conversation closure, and OpenAI Evals export.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-coach</div>
+            <div class="ga-contrib-title">Voice integration (OpenAI Realtime)</div>
+            <div class="ga-contrib-desc">Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice_config.py, and agent-chat-ui React components with Web Audio API (24 kHz PCM16).</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-coach</div>
+            <div class="ga-contrib-title">Memory &amp; state persistence</div>
+            <div class="ga-contrib-desc">Fixed coach memory persistence (Context Messages: 0 bug), LangChain v0.3+ compatibility in grid-coach submodule, and client-side memory optimization (last 6 messages, 40% token savings).</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-coach</div>
+            <div class="ga-contrib-title">Client simulator &amp; eval tooling</div>
+            <div class="ga-contrib-desc">Improved AI client simulator with turn-based progression guides and anti-repetition rules (49% fewer turns, score 7.88→8.2); added coaching evaluation reports and single-scenario test scripts.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">grid-coach · docs</div>
+            <div class="ga-contrib-title">Contributor onboarding</div>
+            <div class="ga-contrib-desc">Wrote comprehensive setup guide for new contributors (submodule init, Python 3.13+, dependency fixes) and expanded Referee Agent README with scenarios, token costs, and result JSON examples.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Core ownership — evaluation &amp; voice layer</div>
+          <div class="ga-highlight-desc">Primary engineer on coach quality assurance and early product surfaces: built the Referee Agent to objectively score coaching sessions before production rollout, and shipped the first OpenAI Realtime voice path with POML-aware prompts. Analytics, company-wide chat, and performance-data grounding were developed in parallel by the team; my focus was making the coach testable, measurable, and voice-ready.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">LangGraph</span>
+          <span class="ga-stack-tag">FastAPI</span>
+          <span class="ga-stack-tag">POML</span>
+          <span class="ga-stack-tag">OpenAI Realtime</span>
+          <span class="ga-stack-tag gray">Langfuse</span>
+          <span class="ga-stack-tag gray">Streamlit</span>
+          <span class="ga-stack-tag gray">Parquet / pandas</span>
+          <span class="ga-stack-tag gray">WebSocket</span>
+          <span class="ga-stack-tag gray">UV workspace</span>
+        </div>
+      </div>
+    </div>
+
     <!-- other projects grid -->
     <div class="projects-grid">
 
