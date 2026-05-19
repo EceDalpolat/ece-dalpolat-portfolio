@@ -958,44 +958,44 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">security layers</div></div>
       </div>
       <div class="ga-body">
-        <p class="ga-desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security.</p>
+        <p class="ga-desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).</p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt · lead</div>
+            <div class="ga-contrib-title">AI analytics layer (13 marts)</div>
+            <div class="ga-contrib-desc">Designed and built the full AI precompute layer: SWOT classification, 9-box matrix, risk shadow effect, Big Five / 4H aggregates, and EQ / sales / leadership impact-risk scores — migrating Grid Analyzer features from in-memory Python to materialized SQL marts.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt</div>
+            <div class="ga-contrib-title">Dashboard mart pipeline</div>
+            <div class="ga-contrib-desc">Built behavioural &amp; risk scoring models, sales-potential and leadership-impact marts, employee score facts, and canonical seed refactors across staging → intermediate → marts for 8+ embedded dashboards.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt</div>
+            <div class="ga-contrib-title">Native RLS in dbt</div>
+            <div class="ga-contrib-desc">Implemented PostgreSQL native RLS via the apply_native_rls post-hook macro, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-workspace</div>
+            <div class="ga-contrib-title">Local analytics dev stack</div>
+            <div class="ga-contrib-desc">Set up local DB provisioning, dbt quick-start scripts, schema-comparison tooling, and mock-source integration so the full FDW → dbt → Superset loop runs with a single docker compose up.</div>
+          </div>
+          <div class="ga-contrib">
             <div class="ga-contrib-module">ga-analytics-api</div>
-            <div class="ga-contrib-title">Guest token infrastructure</div>
-            <div class="ga-contrib-desc">JWT validation → Superset admin API → guest token chain. Role/tenant dashboard map, dashboard_url return, SQL injection validation, error detail masking.</div>
+            <div class="ga-contrib-title">Multi-tenant API &amp; UAT deploy</div>
+            <div class="ga-contrib-desc">Led the multi-tenancy refactor, UAT analytics-api configuration &amp; Dockerfile, tenant-level GitLab CI security tests, and RLS alignment between the API and dbt layers.</div>
           </div>
           <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-analytics-api</div>
-            <div class="ga-contrib-title">grid-auth migration</div>
-            <div class="ga-contrib-desc">Replaced custom auth.py with the internal grid-auth package. Merged 3 JSON config files into one, wrote 36 parametric pytest tests, fixed soft-fail bug.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt</div>
-            <div class="ga-contrib-title">AI analytics layer</div>
-            <div class="ga-contrib-desc">Designed 13 AI precompute mart models: SWOT classification, 9-box matrix, risk shadow effect, EQ/sales/leadership impact-risk scores.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt</div>
-            <div class="ga-contrib-title">Downstream unlock — schema fixes</div>
-            <div class="ga-contrib-desc">Removed missing source columns (candidate_user, color_code) that were silently blocking 130+ downstream models. Unblocked a live customer demo.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-dbt</div>
-            <div class="ga-contrib-title">Native RLS integration</div>
-            <div class="ga-contrib-desc">PostgreSQL native RLS via dbt post-hook. apply_native_rls macro, supervisor_id access map, and RLS smoke tests across all mart tables.</div>
-          </div>
-          <div class="ga-contrib">
-            <div class="ga-contrib-module">ga-superset</div>
-            <div class="ga-contrib-title">Turkish localisation</div>
-            <div class="ga-contrib-desc">Fixed PO translation files, patched frontend JS bundles for time expressions, applied toLocaleLowerCase('tr-TR') in filter components for correct Turkish character search.</div>
+            <div class="ga-contrib-module">ga-superset · ops</div>
+            <div class="ga-contrib-title">Production unblock &amp; TR localisation</div>
+            <div class="ga-contrib-desc">Fixed schema drift (candidate_user) blocking 130+ downstream models before a live demo; stabilised Superset Docker startup; updated Turkish UI translations and filter localisation (tr-TR).</div>
           </div>
         </div>
 
         <div class="ga-highlight">
-          <div class="ga-highlight-title">Notable debugging — silent empty mart</div>
-          <div class="ga-highlight-desc">With FORCE ROW LEVEL SECURITY active, dbt build reported "Succeeded" while every mart table had 0 rows. The dbt role lacked BYPASSRLS, so CREATE TABLE AS SELECT saw no rows — no error, no warning. The bug only surfaced on blank dashboard charts in production.</div>
+          <div class="ga-highlight-title">Core ownership — dbt transformation layer</div>
+          <div class="ga-highlight-desc">Primary engineer on the dbt pipeline (~109 models): from early local-dev setup and canonical score normalisation (AON, Saville, AC → STEN) through the full mart catalogue and AI precompute layer. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was the data models, RLS, and making dashboards actually work end-to-end.</div>
         </div>
 
         <div class="ga-stack">
