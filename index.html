@@ -1291,6 +1291,76 @@ footer {
       </div>
     </div>
 
+    <!-- SKILLS ADVISOR — featured -->
+    <div class="ga-project" id="skills-advisor">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">Production · B2B SaaS</span>
+          <div class="ga-title">Skills Advisor</div>
+          <div class="ga-sub">Qkare · Aug 2025 – May 2026 · AI competency dimension selection</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">12</div><div class="ga-metric-lbl">dimensions per role</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">assessment frameworks</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl">inference engines</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl">DSPy expert personas</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong></p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor · lead</div>
+            <div class="ga-contrib-title">Founding competency assessment system</div>
+            <div class="ga-contrib-desc">Built the initial AI-powered competency suggestion flow (Aug 2025): Ocean/Saville test types, dimension scoring with Turkish reasoning, Streamlit two-column UI, and manual dimension add/remove — establishing the product before the modular FastAPI refactor.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor</div>
+            <div class="ga-contrib-title">Closed dictionary &amp; data layer</div>
+            <div class="ga-contrib-desc">Moved dimensions and mappings into dimensions.json with /dimensions API endpoints; injected mapping context into LLM prompts; shuffle per request to reduce positional bias; whitelist validation + dedupe + cap@12 on every response.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor</div>
+            <div class="ga-contrib-title">DSPy SME expert ensemble</div>
+            <div class="ga-contrib-desc">Implemented dynamic SME weight system and arithmetic-mean adjudicator (Oct–Nov 2025): five parallel expert personas merged into consensus lists with category balance — alternative to single-pass LangChain for higher-stakes role assessments.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor</div>
+            <div class="ga-contrib-title">LangChain path &amp; prompt variants</div>
+            <div class="ga-contrib-desc">PromptBuilder with BASIC / ONET / INSIGHTS / BOTH variants; insights.txt + mindmaps.json RAG-lite injection; PydanticOutputParser on json_object responses; use_expert_engine flag to switch engines without API contract changes.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor</div>
+            <div class="ga-contrib-title">Multi-layer caching</div>
+            <div class="ga-contrib-desc">SHA256 LLM-level cache in base_llm.py plus request-level cache in LangChainService (May 2026); switched default to gpt-4o-mini @ temperature 0 for cost/latency — identical role+test+group requests skip OpenAI entirely.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">skills-advisor · platform</div>
+            <div class="ga-contrib-title">Production integration</div>
+            <div class="ga-contrib-desc">JWT + tenant whitelist via grid-auth; OTEL and prompt logging hooks; Docker netrc secrets for private PyPI; pairs with Agent API Gateway invoke path for downstream HR workflows.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Core ownership — competency selection engine</div>
+          <div class="ga-highlight-desc">Primary engineer from the first competency UI through the production FastAPI service: closed-dictionary constrained generation, DSPy multi-expert consensus, and caching strategy. O*NET API v2 client, LangChain v1 migration, dimension validation middleware, CI deploy components, and grid-observability adoption were developed in parallel by the team; my focus was making exactly-12-dimension selection reliable, explainable in Turkish, and cheap at scale.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">FastAPI</span>
+          <span class="ga-stack-tag">LangChain</span>
+          <span class="ga-stack-tag">DSPy</span>
+          <span class="ga-stack-tag">OpenAI JSON mode</span>
+          <span class="ga-stack-tag gray">Streamlit</span>
+          <span class="ga-stack-tag gray">JWT / grid-auth</span>
+          <span class="ga-stack-tag gray">O*NET API</span>
+          <span class="ga-stack-tag gray">LangSmith</span>
+          <span class="ga-stack-tag gray">In-process cache</span>
+        </div>
+      </div>
+    </div>
+
     <!-- AGENT GATEWAY — featured -->
     <div class="ga-project">
       <div class="ga-header">
