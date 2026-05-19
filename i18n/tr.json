@@ -43,15 +43,99 @@
   },
   "experience": {
     "label": "Kariyer",
-    "title": "Deneyim"
+    "title": "Deneyim",
+    "e1": {
+      "date": "Haz 2025 – Devam",
+      "role": "Yapay Zeka Mühendisi",
+      "desc": "Qkare İK AI platformunda ana mühendis: <strong>dbt dönüşüm katmanı</strong> (109+ model, RLS, AI ön hesaplama mart'ları), <strong>davranışsal analitik ajanlar</strong> (LangChain ReAct, kiracı-güvenli SQL) ve danışman mikroservisleri (KPI &amp; yetkinlik seçimi). <strong>Agent API gateway</strong>, kurumsal chatbot (RAG + semantik önbellek) ve CI/Docker altyapısını kurdum."
+    },
+    "e2": {
+      "date": "Oca 2025 – Devam",
+      "role": "Öğretim Asistanı",
+      "desc": "Veri bilimi ve makine öğrenmesi üzerine haftalık dersler verdim. Uygulamalı proje süreçlerinde katılımcılara rehberlik ettim, değerlendirme yaptım ve öğrenme süreçlerini destekledim."
+    },
+    "e3": {
+      "date": "Oca 2024 – Haz 2025",
+      "role": "Lisansüstü Araştırma Görevlisi",
+      "desc": "Öğretim üyesi gelişimine destek oldum ve yazılım laboratuvar dersleri verdim. Veri bilimi ve derin öğrenme odaklı yazılım projeleri geliştiren öğrencilere danışmanlık yaptım."
+    },
+    "e4": {
+      "date": "Oca 2024 – Haz 2025",
+      "role": "Araştırma Veri Bilimci",
+      "desc": "Bal değer zincirleri boyunca veri topladım ve işledim. Python, TensorFlow ve scikit-learn ile derin öğrenme modelleri geliştirdim ve optimize ettim. Dış sistemlerle uyum için API entegrasyonları yaptım."
+    },
+    "e5": {
+      "date": "Kas 2023 – Oca 2024",
+      "role": "Yazılım Test Mühendisi (Gönüllü)",
+      "desc": "Selenium ve TestComplete ile otomasyon testleri geliştirdim. Kullanıcı gereksinimlerini karşılayan, hatasız ve işlevsel yazılım için manuel testler yürüttüm."
+    },
+    "e6": {
+      "date": "Eki – Kas 2023",
+      "role": "Yazılım Mühendisi (Gönüllü)",
+      "desc": "Java, Eclipse/IntelliJ IDEA ve SQL ile ölçeklenebilir yazılım çözümleri geliştirdim. Ulusal araştırma ortamında yazılım geliştirme süreçlerinde deneyim kazandım."
+    },
+    "e7": {
+      "date": "Tem – Eyl 2022",
+      "role": "Yazılım Mühendisi (Gönüllü)",
+      "desc": "ASP.NET MVC, C#, SQL Server ve Visual Studio ile uygulama geliştirdim. Aktif yazılım projelerinde ekip iletişimi ve iş birliği becerilerini geliştirdim."
+    }
   },
   "projects": {
     "label": "İş",
     "title": "Projeler"
   },
+  "cards": {
+    "c1": {
+      "type": "AI · Backend",
+      "title": "CVAnalyzerAI — Özgeçmiş Analiz Platformu",
+      "desc": "MCP ve birden fazla AI servisi kullanan akıllı özgeçmiş analiz platformu. LLM ve yapılandırılmış ayrıştırma ile CV'lerden güçlü/zayıf yönler ve iş uyumu çıkarır. Claude'a MCP ile entegre.",
+      "impact": "İK ekiplerinin inceleme süresini kısaltmasına ve adaylar hakkında AI destekli içgörü elde etmesine yardımcı olur.",
+      "link": "GitHub →"
+    },
+    "c2": {
+      "type": "Bilgisayarlı Görü",
+      "title": "Anten Davranış Analizi",
+      "desc": "DeepLabCut ile böcek anten hareketlerini analiz ederek biyolojik görüntülerden davranış kalıpları çıkardım. Anahtar noktaları etiketledim, özel modeller eğittim ve hareket eğilimlerini inceledim.",
+      "impact": "Entomoloji deneylerinde yüksek doğruluklu davranış çalışmalarını mümkün kıldı."
+    },
+    "c3": {
+      "type": "Derin Öğrenme",
+      "title": "Polen Sınıflandırma",
+      "desc": "Polen görüntülerini %90'ın üzerinde doğrulukla sınıflandıran derin öğrenme modeli. Etiketli veri seti oluşturdum, veri artırma uyguladım ve CNN modelleri eğittim.",
+      "impact": "Tarım araştırmacılarının polen tipi tanımayı otomatikleştirmesine destek oldu."
+    },
+    "c4": {
+      "type": "Makine Öğrenmesi",
+      "title": "Pazarlama Kampanyası Tahmini",
+      "desc": "Bankacılık pazarlama kampanyalarında müşteri abonelik davranışını tahmin eden motor. Özellik mühendisliği, SMOTE ile sınıf dengesizliği ve Streamlit arayüzü.",
+      "impact": "Maliyet etkin kampanya yürütümü için doğru hedeflemeyi sağladı."
+    },
+    "c5": {
+      "type": "AI · Tarım-Gıda",
+      "title": "TOP4HONEYCHAINS — Akıllı Tarım-Gıda",
+      "desc": "Bal değer zincirlerinde izlenebilirlik ve kalite güvencesi için ML çözümleri. Saha verisi topladım, tahmin modelleri eğittim ve RESTful uç noktalar oluşturdum.",
+      "impact": "Tarım-gıda paydaşları arasında şeffaflığı artırdı ve kalite takibini kolaylaştırdı."
+    },
+    "c6": {
+      "type": "Veri Bilimi",
+      "title": "Öğrenci Başarı Analizi",
+      "desc": "Veri analizi ve ML ile akademik performans faktörlerini belirledim. Yaşam tarzı ve akademik değişkenlere göre öğrenci başarısını tahmin eden GUI aracı geliştirdim.",
+      "impact": "Eğitim politikası ve müdahaleler için uygulanabilir içgörüler sundu."
+    }
+  },
   "education": {
     "label": "Akademik",
-    "title": "Eğitim"
+    "title": "Eğitim",
+    "e1": {
+      "degree": "Yüksek Lisans — Bilgi Teknolojileri",
+      "years": "2022 – Devam",
+      "desc": "Veri Bilimi ve Makine Öğrenmesi uzmanlığı. Tez: arıcılık ve bal hasadında süreçleri otomatikleştirmek için makine öğrenmesi."
+    },
+    "e2": {
+      "degree": "Lisans — Yazılım Mühendisliği",
+      "years": "2018 – 2023",
+      "desc": "Yazılım geliştirme, algoritmalar, veritabanı sistemleri ve yazılım test metodolojileri temeli."
+    }
   },
   "contact": {
     "label": "İletişim",

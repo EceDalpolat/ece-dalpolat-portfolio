@@ -43,15 +43,99 @@
   },
   "experience": {
     "label": "Career",
-    "title": "Experience"
+    "title": "Experience",
+    "e1": {
+      "date": "Jun 2025 – Present",
+      "role": "AI Engineer",
+      "desc": "Primary engineer on Qkare's HR AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot (RAG + semantic cache), and supporting CI/Docker infrastructure."
+    },
+    "e2": {
+      "date": "Jan 2025 – Present",
+      "role": "Teaching Assistant",
+      "desc": "Conduct weekly lectures on data science and machine learning. Guide and evaluate participants during hands-on project implementations and support learning processes."
+    },
+    "e3": {
+      "date": "Jan 2024 – Jun 2025",
+      "role": "Graduate Research Assistant",
+      "desc": "Assisted in faculty development and taught software lab courses. Supervised students developing software projects with a focus on data science and deep learning."
+    },
+    "e4": {
+      "date": "Jan 2024 – Jun 2025",
+      "role": "Research Data Scientist",
+      "desc": "Collected and processed data across honey value chains. Developed and optimized deep learning models using Python, TensorFlow, and scikit-learn. Performed API integrations for model compatibility with external systems."
+    },
+    "e5": {
+      "date": "Nov 2023 – Jan 2024",
+      "role": "Software Engineer in Test (Volunteer)",
+      "desc": "Developed automation tests using Selenium and TestComplete. Conducted manual testing to ensure error-free, functional software products meeting user requirements."
+    },
+    "e6": {
+      "date": "Oct – Nov 2023",
+      "role": "Software Engineer (Volunteer)",
+      "desc": "Built effective and scalable software solutions using Java, Eclipse/IntelliJ IDEA, and SQL. Gained experience in software development processes within a national research environment."
+    },
+    "e7": {
+      "date": "Jul – Sep 2022",
+      "role": "Software Engineer (Volunteer)",
+      "desc": "Managed application development using ASP.NET MVC, C#, SQL Server, and Visual Studio. Developed team communication and collaboration skills in active software projects."
+    }
   },
   "projects": {
     "label": "Work",
     "title": "Projects"
   },
+  "cards": {
+    "c1": {
+      "type": "AI · Backend",
+      "title": "CVAnalyzerAI — Resume Analysis Platform",
+      "desc": "Intelligent resume analysis platform using MCP and multiple AI services. Analyzes CVs to extract strengths, weaknesses, and job-fit insights using LLMs and structured parsing. Integrated into Claude via MCP.",
+      "impact": "Helps HR teams reduce review time and gain AI-driven insights about candidates.",
+      "link": "GitHub →"
+    },
+    "c2": {
+      "type": "Computer Vision",
+      "title": "Antenna Behaviour Analysis",
+      "desc": "Analyzed insect antenna movement using DeepLabCut to extract behaviour patterns from biological footage. Labeled keypoints, trained custom models, and analyzed movement trends.",
+      "impact": "Enabled high-accuracy behavioural studies in entomological experiments."
+    },
+    "c3": {
+      "type": "Deep Learning",
+      "title": "Pollen Classification",
+      "desc": "Built a deep learning model to classify pollen images with over 90% accuracy. Created a labeled dataset, applied data augmentation, and trained CNN models.",
+      "impact": "Assisted agricultural researchers in automating pollen type recognition."
+    },
+    "c4": {
+      "type": "Machine Learning",
+      "title": "Marketing Campaign Prediction",
+      "desc": "Prediction engine for banking marketing campaigns to forecast customer subscription behaviour. Applied feature engineering, handled class imbalance with SMOTE, and built a Streamlit interface.",
+      "impact": "Enabled accurate targeting for cost-effective campaign execution."
+    },
+    "c5": {
+      "type": "AI · AgriFood",
+      "title": "TOP4HONEYCHAINS — Smart Agri-Food",
+      "desc": "ML solutions in honey value chains for traceability and quality assurance. Collected field data, trained predictive models, and created RESTful endpoints.",
+      "impact": "Improved transparency across agri-food stakeholders and streamlined quality tracking."
+    },
+    "c6": {
+      "type": "Data Science",
+      "title": "Student Success Analysis",
+      "desc": "Identified academic performance factors using data analysis and ML. Built a GUI tool that predicts student success based on multiple lifestyle and academic variables.",
+      "impact": "Provided actionable insights for educational policy and interventions."
+    }
+  },
   "education": {
     "label": "Academic",
-    "title": "Education"
+    "title": "Education",
+    "e1": {
+      "degree": "MSc Information Technologies",
+      "years": "2022 – Present",
+      "desc": "Specialisation in Data Science and Machine Learning. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction."
+    },
+    "e2": {
+      "degree": "BSc Software Engineering",
+      "years": "2018 – 2023",
+      "desc": "Foundation in software development, algorithms, database systems, and software testing methodologies."
+    }
   },
   "contact": {
     "label": "Get in touch",
