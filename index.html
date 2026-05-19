@@ -701,7 +701,7 @@ footer {
   <div class="hero-text">
     <p class="hero-eyebrow">AI Engineer &amp; Data Scientist</p>
     <h1 class="hero-name">Ece<br><em>Dalpolat</em></h1>
-    <p class="hero-bio">I build intelligent systems — from LLM pipelines and multi-tenant analytics platforms to deep learning models for real-world classification. Currently pursuing an MSc at Işık University while engineering AI at Qkare.</p>
+    <p class="hero-bio">I build production AI systems for HR and talent analytics — dbt data platforms, multi-tenant agents, and structured LLM microservices. Currently pursuing an MSc at Işık University while engineering AI at Qkare.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="#contact" class="btn btn-ghost">Get in Touch</a>
@@ -719,9 +719,9 @@ footer {
     <h2 class="section-title">About Me</h2>
     <div class="about-grid">
       <div class="about-body">
-        <p>I'm an AI Engineer and data science enthusiast currently pursuing a Master's degree in Information Technologies at Işık University. I hold a Bachelor's degree in Software Engineering from Kırklareli University.</p>
-        <p>In my current role at Qkare, I work extensively with Large Language Models, semantic search, and vector databases to build intelligent systems capable of contextual understanding and natural language interaction. I design modular, scalable architectures for AI services and integrate MCP to ensure compatibility with various LLM clients.</p>
-        <p>My commitment to continuous learning is reflected in the diverse projects I've contributed to, certifications I've earned in AI and ML, and my active participation in technical communities.</p>
+        <p>I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.</p>
+        <p>At Qkare, I own core pieces of a multi-tenant HR analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over psychometric data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.</p>
+        <p>My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&amp;D through production B2B SaaS.</p>
       </div>
       <div class="about-stats">
         <div class="stat-item">
@@ -733,8 +733,8 @@ footer {
           <div class="stat-lbl">dbt models in production</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">5+</div>
-          <div class="stat-lbl">End-to-end AI projects shipped</div>
+          <div class="stat-num">8+</div>
+          <div class="stat-lbl">Production AI systems shipped</div>
         </div>
       </div>
     </div>
@@ -751,13 +751,16 @@ footer {
         <div class="skill-card-title">AI &amp; Machine Learning</div>
         <div class="skill-tags">
           <span class="skill-tag accent">LLMs</span>
-          <span class="skill-tag accent">DSPy</span>
           <span class="skill-tag accent">LangChain</span>
-          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag accent">LangGraph</span>
+          <span class="skill-tag accent">DSPy</span>
+          <span class="skill-tag accent">RAG</span>
+          <span class="skill-tag">Structured output</span>
+          <span class="skill-tag">LLM-as-judge</span>
+          <span class="skill-tag">FAISS / Milvus</span>
+          <span class="skill-tag">OpenAI API</span>
           <span class="skill-tag">scikit-learn</span>
-          <span class="skill-tag">CNN / DenseNet</span>
-          <span class="skill-tag">Hugging Face</span>
-          <span class="skill-tag">Semantic Search</span>
+          <span class="skill-tag">TensorFlow</span>
         </div>
       </div>
       <div class="skill-card">
@@ -766,8 +769,9 @@ footer {
           <span class="skill-tag accent">dbt Core</span>
           <span class="skill-tag accent">PostgreSQL</span>
           <span class="skill-tag accent">Apache Superset</span>
+          <span class="skill-tag accent">Native RLS</span>
           <span class="skill-tag">FDW</span>
-          <span class="skill-tag">Row-Level Security</span>
+          <span class="skill-tag">Multi-tenant marts</span>
           <span class="skill-tag">Pandas</span>
           <span class="skill-tag">NumPy</span>
         </div>
@@ -776,12 +780,14 @@ footer {
         <div class="skill-card-title">Backend &amp; APIs</div>
         <div class="skill-tags">
           <span class="skill-tag accent">FastAPI</span>
+          <span class="skill-tag accent">Pydantic</span>
           <span class="skill-tag">Python</span>
-          <span class="skill-tag">ANTLR</span>
-          <span class="skill-tag">MCP</span>
+          <span class="skill-tag">httpx</span>
+          <span class="skill-tag">WebSocket</span>
           <span class="skill-tag">REST APIs</span>
           <span class="skill-tag">JWT</span>
-          <span class="skill-tag">ASP.NET</span>
+          <span class="skill-tag">MCP</span>
+          <span class="skill-tag">ANTLR</span>
         </div>
       </div>
       <div class="skill-card">
@@ -791,8 +797,9 @@ footer {
           <span class="skill-tag accent">Kubernetes</span>
           <span class="skill-tag">Argo Workflows</span>
           <span class="skill-tag">GitLab CI/CD</span>
-          <span class="skill-tag">Redis / Celery</span>
-          <span class="skill-tag">Kustomize</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">OpenTelemetry</span>
+          <span class="skill-tag">Langfuse</span>
         </div>
       </div>
       <div class="skill-card">
@@ -810,11 +817,12 @@ footer {
         <div class="skill-card-title">Testing &amp; Tools</div>
         <div class="skill-tags">
           <span class="skill-tag">pytest</span>
-          <span class="skill-tag">Selenium</span>
+          <span class="skill-tag">ruff / mypy</span>
+          <span class="skill-tag">pre-commit</span>
           <span class="skill-tag">Git</span>
-          <span class="skill-tag">DeepLabCut</span>
-          <span class="skill-tag">OpenCV</span>
           <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">DeepLabCut</span>
         </div>
       </div>
     </div>
@@ -836,10 +844,10 @@ footer {
         <div class="timeline-right">
           <div class="timeline-role">AI Engineer</div>
           <div class="timeline-desc">
-            <p>Lead development of <strong>CVAnalyzerAI</strong>, a resume analysis platform using DSPy and Hugging Face. Design modular, scalable architectures for AI services and integrate MCP for compatibility with LLM clients (Claude, OpenAI). Implement ANTLR-based parsers to extract structured information from unstructured text.</p>
+            <p>Primary engineer on Qkare's HR AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot (RAG + semantic cache), and supporting CI/Docker infrastructure.</p>
           </div>
           <div class="timeline-tags">
-            <span class="tl-tag">LLMs</span><span class="tl-tag">DSPy</span><span class="tl-tag">FastAPI</span><span class="tl-tag">MCP</span><span class="tl-tag">Docker</span><span class="tl-tag">K8s</span>
+            <span class="tl-tag">dbt</span><span class="tl-tag">LangChain</span><span class="tl-tag">FastAPI</span><span class="tl-tag">DSPy</span><span class="tl-tag">PostgreSQL RLS</span><span class="tl-tag">Docker</span><span class="tl-tag">K8s</span>
           </div>
         </div>
       </div>
