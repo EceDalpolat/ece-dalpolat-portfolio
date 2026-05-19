@@ -1,261 +1,1181 @@
-
-
-
-
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <meta name="description" content="">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ece Dalpolat — AI Engineer & Data Scientist</title>
+<meta name="description" content="Portfolio of Ece Dalpolat, AI Engineer & Data Scientist">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
-  <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header kısmı */
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .profile-photo {
-    width: 150px; /* İstediğiniz genişliği ayarlayın */
-    height: 150px; /* İstediğiniz yüksekliği ayarlayın */
-    border-radius: 50%; /* Dairesel yapar */
-    border: 2px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    margin-top: 10px;
+:root {
+  --ink: #111112;
+  --ink-2: #3a3a3c;
+  --ink-3: #6b6b6e;
+  --ink-4: #9b9b9e;
+  --surface: #fafaf8;
+  --surface-2: #f2f1ec;
+  --surface-3: #e8e6de;
+  --accent: #1a1aff;
+  --accent-light: #e8e8ff;
+  --accent-dark: #0000cc;
+  --gold: #c8960c;
+  --gold-light: #fef3d0;
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --max: 1040px;
+  --radius: 12px;
+  --radius-sm: 6px;
 }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            font-weight: bold;
-        }
+html { scroll-behavior: smooth; }
 
-        /* Bölümler */
-        .section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1000px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
+body {
+  font-family: var(--sans);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
 
-        .section h2 {
-            color: #333;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #2980b9;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250,250,248,0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--surface-3);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a {
+  font-size: 14px;
+  color: var(--ink-3);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--ink); }
 
-        .section p, .section ul {
-            font-size: 18px;
-            color: #555;
-        }
+/* ── HERO ── */
+.hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 6rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-text { }
+.hero-eyebrow {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+.hero-name em {
+  font-style: italic;
+  color: var(--ink-3);
+}
+.hero-bio {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--ink-2); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-2);
+  border: 1px solid var(--surface-3);
+}
+.btn-ghost:hover { background: var(--surface-2); border-color: var(--surface-3); }
 
-        .section ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
+.hero-photo-wrap {
+  position: relative;
+}
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--surface-3);
+  display: block;
+  background: var(--surface-2);
+}
+.hero-photo-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--surface-2) 100%);
+  border: 3px solid var(--surface-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 64px;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
 
-        .section h3 {
-            color: #2980b9;
-            font-size: 1.3em;
-            margin-bottom: 5px;
-        }
+/* ── SECTION WRAPPER ── */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+section { padding: 5rem 0; border-top: 1px solid var(--surface-3); }
 
-        /* Linkler */
-        a {
-            color: #2980b9;
-            text-decoration: none;
-        }
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 0.5rem;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 3rem;
+  line-height: 1.1;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+/* ── ABOUT ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.about-body {
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.8;
+}
+.about-body p + p { margin-top: 1rem; }
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.stat-item {
+  padding: 1.25rem 1.5rem;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--surface-3);
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-lbl {
+  font-size: 13px;
+  color: var(--ink-3);
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #333;
-            color: #fff;
-            margin-top: 20px;}
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.skill-card {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.skill-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 1rem;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.skill-tag {
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  color: var(--ink-2);
+}
+.skill-tag.accent {
+  background: var(--accent-light);
+  border-color: #c0c0ff;
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+/* ── EXPERIENCE ── */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--surface-3);
+  position: relative;
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-left { padding-top: 2px; }
+.timeline-date {
+  font-size: 13px;
+  color: var(--ink-4);
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.timeline-company {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.timeline-right { }
+.timeline-role {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+.timeline-desc {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+.timeline-desc p + p { margin-top: 0.5rem; }
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.75rem;
+}
+.tl-tag {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  color: var(--ink-3);
+}
+
+/* ── PROJECTS ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.project-card:hover {
+  border-color: var(--accent-light);
+  box-shadow: 0 4px 24px rgba(26,26,255,0.06);
+}
+.project-card.featured {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, #fafaff 0%, var(--surface) 100%);
+  grid-column: span 2;
+}
+.project-card.featured::before {
+  content: 'Featured';
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.project-type {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 0.5rem;
+}
+.project-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+.project-impact {
+  font-size: 14px;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border-left: 2px solid var(--accent);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--surface-3);
+}
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+}
+.tech-pill {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: 3px;
+  color: var(--ink-3);
+  font-weight: 500;
+}
+.project-link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+.project-link:hover { text-decoration: underline; }
+
+/* ── GA PROJECT (special) ── */
+.ga-project {
+  border: 1.5px solid var(--accent);
+  background: #fafaff;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+.ga-header {
+  background: var(--ink);
+  color: #fff;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.ga-header-left { flex: 1; }
+.ga-badge {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.ga-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.ga-sub { font-size: 13px; color: rgba(255,255,255,0.55); }
+.ga-metrics {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--surface-3);
+}
+.ga-metric { text-align: center; }
+.ga-metric-num {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.ga-metric-lbl { font-size: 11px; color: var(--ink-4); margin-top: 2px; }
+.ga-body { padding: 1.75rem; }
+.ga-desc {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.ga-contributions {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.ga-contrib {
+  background: var(--surface);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.125rem;
+}
+.ga-contrib-module {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.ga-contrib-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.ga-contrib-desc {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+.ga-highlight {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.ga-highlight-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.ga-highlight-desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.ga-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ga-stack-tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--accent-light);
+  border: 1px solid #c0c0ff;
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+.ga-stack-tag.gray {
+  background: var(--surface-2);
+  border-color: var(--surface-3);
+  color: var(--ink-3);
+}
+
+/* ── EDUCATION ── */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.edu-card {
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.edu-degree {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.edu-school {
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.edu-years {
+  font-size: 13px;
+  color: var(--ink-4);
+  margin-bottom: 0.75rem;
+}
+.edu-desc {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
+
+/* ── CONTACT ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-intro {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.75;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--surface-3);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.contact-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent-dark);
+}
+.contact-link-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+  border: 1px solid var(--surface-3);
+}
+.contact-link-label { flex: 1; }
+.contact-link-sub {
+  font-size: 12px;
+  color: var(--ink-4);
+  font-weight: 400;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--surface-3);
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-4);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 760px) {
+  nav { padding: 0 1rem; }
+  .nav-links { gap: 1.25rem; }
+  .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem; gap: 2rem; }
+  .hero-photo-wrap { order: -1; display: flex; justify-content: center; }
+  .hero-photo-placeholder, .hero-photo { width: 140px; height: 140px; font-size: 44px; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .project-card.featured { grid-column: span 1; }
+  .container { padding: 0 1.25rem; }
+  section { padding: 3rem 0; }
+}
 </style>
-
 </head>
-
 <body>
 
-    <header>
-  
-        <h1>Ece Dalpolat</h1>
-      <h1 >Sofware Engineer & Data Scientist</h1>
+<nav>
+  <a href="#" class="nav-logo">Ece Dalpolat</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    </header>
-   <section class="section">
-        <h2>About Me</h2>
-        <p>
-           Hello! I'm Ece Dalpolat, a dedicated AI Engineer and data science enthusiast currently pursuing a Master's degree in Information Technologies. I hold a Bachelor's degree in Software Engineering from Kırklareli University and am actively expanding my expertise in data science and machine learning at Işık University.
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">AI Engineer &amp; Data Scientist</p>
+    <h1 class="hero-name">Ece<br><em>Dalpolat</em></h1>
+    <p class="hero-bio">I build intelligent systems — from LLM pipelines and multi-tenant analytics platforms to deep learning models for real-world classification. Currently pursuing an MSc at Işık University while engineering AI at Qkare.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-placeholder">E</div>
+  </div>
+</div>
 
-In my current role as an AI Engineer, I work extensively with Large Language Models (LLMs), semantic search, and vector databases to build intelligent systems capable of contextual understanding and natural language interaction. My responsibilities include developing and optimizing deep learning models, integrating external APIs, and deploying AI services in scalable and containerized environments using Docker and Kubernetes.
-
-I have a strong foundation in modern AI tools and frameworks including FastAPI, DSPy, ANTLR, and LangChain. My work emphasizes efficiency, modularity, and explainability in AI systems. I am passionate about building innovative solutions that bridge the gap between raw data and real-world applications.
-
-My commitment to continuous learning is reflected in the diverse projects I've contributed to, certifications I've earned in AI and ML, and my active participation in technical communities. I thrive in collaborative environments where I can experiment, learn, and deliver high-impact solutions.
-        </p>
-    </section>
-
-    <section class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: Python, SQL, JavaScript, HTML, CSS</li>
-            <li>Frameworks & Tools: PyCharm, TensorFlow, NumPy, Pandas, Seaborn, Matplotlib, Git, FastAPI,ASP.NET,</li>
-            <li>Machine Learning: Data preprocessing, model training, evaluation, deep learning (CNN, DenseNet121)</li>
-            <li>Web Development: HTML5, CSS3, JavaScript</li>
-        <li>Data Analysis & Visualization: Data analysis, data visualization</li>
-        <li>Frameworks & Tools: TensorFlow, scikit-learn, Pandas, Matplotlib</li>
-        <li>API Development & Integration: API development, API integration</li>
-        <li>Software Testing: Manual and automated testing</li>
-        <li>Data Collection & Processing: Data collection, data processing</li>
-        </ul>
-    </section>
-
-    <section class="section">
-       <h2>Experience</h2>
-        <h3>AI Engineer @ QKARE</h3>
-        <p>June 2025 - Present:   
-<p>
-At Qkare, I work as an AI Engineer focusing on the development and deployment of intelligent systems powered by Large Language Models (LLMs). I lead initiatives such as <strong>CVAnalyzerAI</strong>, a robust resume analysis platform that leverages external APIs and custom LLM pipelines (using <strong>DSPy, FastAPI, and Hugging Face</strong>) to evaluate candidate suitability and job matching.  
-</p>
-<p>
-My responsibilities include designing modular, scalable architectures for AI services, integrating <strong>MCP (Model Context Protocol)</strong> to ensure compatibility with various LLM clients (e.g., Claude, OpenAI), and implementing ANTLR-based parsers to extract structured information from unstructured text. I also manage containerization and deployment using <strong>Docker and Kubernetes</strong>, ensuring production-readiness and CI/CD compatibility through tools like GitLab and Docker Desktop.
-</p>
-<p>
-My role bridges model engineering and full-stack AI deployment—transforming prototypes into real-world AI services that enhance decision-making in recruitment workflows.
-</p>
-          
-      <h2>Experience</h2>
-        <h3>Teaching Assistant @ Miuul</h3>
-        <p>January 2025 - Present: Conduct weekly lectures and deliver presentations on data
-science and machine learning (ML) topics. Guide and
-evaluate participants during hands-on project
-implementations. Support learning processes 
-        
-        <h3>Graduate Research Assistant @ Işık University</h3>
-        <p>January 2024 - June 2025: Assist in faculty development and teach software lab courses. Worked on supervising and helping students develop their software projects, especially focusing on data science and deep learning projects.</p>
-  
-        <h3>Research Data Scientist @ Top4honeychains</h3>
-        <p>January 2024 - June 2025: Data Collection and Processing: I collect and process data related to honey value chains and apply various engineering techniques to ensure quality data. Model Development: I develop and optimize models using deep learning and machine learning, effectively using tools such as Python, TensorFlow and scikit-learn. API Integration: I perform API integrations to ensure that the models are compatible with other systems.</p>
-   
-        <h3>Software Engineer in Test (Volunteer) @ Erik Labs </h3>
-        <p>November 2023 - January 2024: Automation Testing: Using test automation tools (e.g. Selenium, TestComplete), I developed automation tests to speed up testing processes and increase repeatability. By writing test scripts, I increased the efficiency of testing processes and ensured the quality of the software. Manual Testing: Using manual testing methods, I tested software applications to ensure error-free and functional software products that meet user requirements. I identified and reported defects and proposed solutions. Knowledge and Skills: I gained in-depth knowledge of software testing strategies, test case generation, defect reporting and software development life cycle (SDLC). I contributed to improving testing processes and enhancing software quality.</p>
-
-        <h3>Software Engineer (Volunteer) @ TÜBİTAK BİLGEM YTE</h3>
-        <p>October 2023 - November 2023: ava, Eclipse/IntelliJ IDEA, SQL. Using these tools, I created effective and scalable software solutions and gained experience in software development processes.</p>
-
-        <h3>Software Engineer (Volunteer) @ Aphel</h3>
-        <p>July 2022 - September 2022: I managed the application development process using ASP.NET MVC, C#, SQL Server, Visual Studio. I developed team communication and collaboration skills to work efficiently in software projects.</p>
-
-
-    </section>
-
-   <section class="section">
-  <h2>Projects</h2>
-
-  <h3>CVAnalyzerAI – AI-Powered Resume Analysis Platform</h3>
-  <p><strong>Description:</strong> CVAnalyzerAI is an intelligent resume analysis platform built with Model Context Protocol (MCP) and multiple AI services. It analyzes CVs to extract strengths, weaknesses, and job-fit insights using LLMs and structured parsing.</p>
-  <p><strong>Technologies:</strong> Python, FastAPI, Docker, Kubernetes, ANTLR, DSPy, Hugging Face, Tavily API, Brave API, Firecrawl</p>
-  <p><strong>What I Did:</strong> Built an end-to-end AI system with containerization and MCP support, integrated multiple external APIs, and developed a robust FastAPI backend with caching and logging.</p>
-  <p><strong>Impact:</strong> Helps HR teams reduce review time and gain AI-driven insights about candidates. Integrated into Claude via MCP.</p>
-  <p><strong>Repo:</strong> <a href="https://github.com/EceDalpolat/cvAnalizerAI" target="_blank">View on GitHub</a></p>
-
-  <h3>Antenna Behavior Analysis with DeepLabCut</h3>
-  <p><strong>Description:</strong> Analyzed insect antenna movement using DeepLabCut to extract behavior patterns from biological footage.</p>
-  <p><strong>Technologies:</strong> DeepLabCut, Python, OpenCV</p>
-  <p><strong>What I Did:</strong> Labeled keypoints, trained custom models, and analyzed movement trends.</p>
-  <p><strong>Impact:</strong> Enabled high-accuracy behavioral studies in entomological experiments.</p>
-
-  <h3>Pollen Classification using Deep Learning</h3>
-  <p><strong>Description:</strong> Built a deep learning model to classify pollen images with over 90% accuracy.</p>
-  <p><strong>Technologies:</strong> Python, TensorFlow, CNN, DenseNet121</p>
-  <p><strong>What I Did:</strong> Created a labeled dataset, applied data augmentation, and trained CNN models.</p>
-  <p><strong>Impact:</strong> Assisted agricultural researchers in automating pollen type recognition.</p>
-
-  <h3>Intelligent Marketing Campaign Prediction System</h3>
-  <p><strong>Description:</strong> A prediction engine for banking marketing campaigns using ML to forecast customer subscription behavior.</p>
-  <p><strong>Technologies:</strong> Python, scikit-learn, XGBoost, Streamlit</p>
-  <p><strong>What I Did:</strong> Applied feature engineering, handled class imbalance with SMOTE, and built a Streamlit interface.</p>
-  <p><strong>Impact:</strong> Enabled accurate targeting for cost-effective campaign execution.</p>
-
-  <h3>TOP4HONEYCHAINS – Smart Agri-Food System</h3>
-  <p><strong>Description:</strong> Developed ML solutions in honey value chains for traceability and quality assurance.</p>
-  <p><strong>Technologies:</strong> Python, TensorFlow, scikit-learn, REST APIs</p>
-  <p><strong>What I Did:</strong> Collected field data, trained predictive models, and created RESTful endpoints.</p>
-  <p><strong>Impact:</strong> Improved transparency across agri-food stakeholders and streamlined quality tracking.</p>
-
-  <h3>Student Success Analysis</h3>
-  <p><strong>Description:</strong> Identified academic performance factors using data analysis and ML.</p>
-  <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Tkinter</p>
-  <p><strong>What I Did:</strong> Built a GUI tool that predicts student success based on multiple lifestyle and academic variables.</p>
-  <p><strong>Impact:</strong> Provided actionable insights for educational policy and interventions.</p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <p class="section-label">Background</p>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>I'm an AI Engineer and data science enthusiast currently pursuing a Master's degree in Information Technologies at Işık University. I hold a Bachelor's degree in Software Engineering from Kırklareli University.</p>
+        <p>In my current role at Qkare, I work extensively with Large Language Models, semantic search, and vector databases to build intelligent systems capable of contextual understanding and natural language interaction. I design modular, scalable architectures for AI services and integrate MCP to ensure compatibility with various LLM clients.</p>
+        <p>My commitment to continuous learning is reflected in the diverse projects I've contributed to, certifications I've earned in AI and ML, and my active participation in technical communities.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-num">3+</div>
+          <div class="stat-lbl">Years of engineering experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">109</div>
+          <div class="stat-lbl">dbt models in production</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5+</div>
+          <div class="stat-lbl">End-to-end AI projects shipped</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-    <section class="section">
-        <h2>Education</h2>
-        <h3>Master’s in Information Technologies @ Işık University</h3>
-        <p>2022 - Present: Specialization in Data Science and Machine Learning, working on advanced deep learning algorithms for classification tasks. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction.</p>
-        <h3>Bachelor’s in SoftwareEngineering @ Kirklareli University</h3>
-        <p>2018 - 2023: Specialization in Data Science and Machine Learning, working on advanced deep learning algorithms for classification tasks. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction.</p>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label">Capabilities</p>
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-title">AI &amp; Machine Learning</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">LLMs</span>
+          <span class="skill-tag accent">DSPy</span>
+          <span class="skill-tag accent">LangChain</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">scikit-learn</span>
+          <span class="skill-tag">CNN / DenseNet</span>
+          <span class="skill-tag">Hugging Face</span>
+          <span class="skill-tag">Semantic Search</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Data Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">dbt Core</span>
+          <span class="skill-tag accent">PostgreSQL</span>
+          <span class="skill-tag accent">Apache Superset</span>
+          <span class="skill-tag">FDW</span>
+          <span class="skill-tag">Row-Level Security</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Backend &amp; APIs</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">FastAPI</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">ANTLR</span>
+          <span class="skill-tag">MCP</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">JWT</span>
+          <span class="skill-tag">ASP.NET</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Infrastructure</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">Docker</span>
+          <span class="skill-tag accent">Kubernetes</span>
+          <span class="skill-tag">Argo Workflows</span>
+          <span class="skill-tag">GitLab CI/CD</span>
+          <span class="skill-tag">Redis / Celery</span>
+          <span class="skill-tag">Kustomize</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Programming Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag accent">Python</span>
+          <span class="skill-tag accent">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C#</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-card-title">Testing &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">pytest</span>
+          <span class="skill-tag">Selenium</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">DeepLabCut</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">Streamlit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Career</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
 
-    </section>
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jun 2025 – Present</div>
+          <div class="timeline-company">Qkare</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">AI Engineer</div>
+          <div class="timeline-desc">
+            <p>Lead development of <strong>CVAnalyzerAI</strong>, a resume analysis platform using DSPy and Hugging Face. Design modular, scalable architectures for AI services and integrate MCP for compatibility with LLM clients (Claude, OpenAI). Implement ANTLR-based parsers to extract structured information from unstructured text.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">LLMs</span><span class="tl-tag">DSPy</span><span class="tl-tag">FastAPI</span><span class="tl-tag">MCP</span><span class="tl-tag">Docker</span><span class="tl-tag">K8s</span>
+          </div>
+        </div>
+      </div>
 
-    <section class="section">
-        <h2>Contact</h2>
-      <p>
-            Email: <a href="mailto:ecedlplt9850@gmail.com">ecedlplt9850@gmail.com</a>
-        </p>
-        <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/ece-dalpolat-0265a0221/">Ece Dalpolat</a>
-        </p>
-        <p>
-            GitHub: <a href="https://github.com/your-github-profile">GitHub Profile</a>
-        </p>
-       <p>
-            Medium: <a href="https://medium.com/@ecedlplt9850">Medium Profile</a>
-        </p>
-    </section>
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2025 – Present</div>
+          <div class="timeline-company">Miuul</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Teaching Assistant</div>
+          <div class="timeline-desc">
+            <p>Conduct weekly lectures on data science and machine learning. Guide and evaluate participants during hands-on project implementations and support learning processes.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">Data Science</span><span class="tl-tag">Machine Learning</span><span class="tl-tag">Teaching</span>
+          </div>
+        </div>
+      </div>
 
-    <footer>
-        <p>&copy; 2024 Ece Dalpolat. All Rights Reserved.</p>
-    </footer>
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2024 – Jun 2025</div>
+          <div class="timeline-company">Işık University</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Graduate Research Assistant</div>
+          <div class="timeline-desc">
+            <p>Assisted in faculty development and taught software lab courses. Supervised students developing software projects with a focus on data science and deep learning.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">Deep Learning</span><span class="tl-tag">Research</span><span class="tl-tag">Teaching</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jan 2024 – Jun 2025</div>
+          <div class="timeline-company">Top4Honeychains</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Research Data Scientist</div>
+          <div class="timeline-desc">
+            <p>Collected and processed data across honey value chains. Developed and optimized deep learning models using Python, TensorFlow, and scikit-learn. Performed API integrations for model compatibility with external systems.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">Python</span><span class="tl-tag">TensorFlow</span><span class="tl-tag">scikit-learn</span><span class="tl-tag">API Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Nov 2023 – Jan 2024</div>
+          <div class="timeline-company">Erik Labs</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Software Engineer in Test (Volunteer)</div>
+          <div class="timeline-desc">
+            <p>Developed automation tests using Selenium and TestComplete. Conducted manual testing to ensure error-free, functional software products meeting user requirements.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">Selenium</span><span class="tl-tag">TestComplete</span><span class="tl-tag">Manual Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Oct – Nov 2023</div>
+          <div class="timeline-company">TÜBİTAK BİLGEM YTE</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Software Engineer (Volunteer)</div>
+          <div class="timeline-desc">
+            <p>Built effective and scalable software solutions using Java, Eclipse/IntelliJ IDEA, and SQL. Gained experience in software development processes within a national research environment.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">Java</span><span class="tl-tag">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-left">
+          <div class="timeline-date">Jul – Sep 2022</div>
+          <div class="timeline-company">Aphel</div>
+        </div>
+        <div class="timeline-right">
+          <div class="timeline-role">Software Engineer (Volunteer)</div>
+          <div class="timeline-desc">
+            <p>Managed application development using ASP.NET MVC, C#, SQL Server, and Visual Studio. Developed team communication and collaboration skills in active software projects.</p>
+          </div>
+          <div class="timeline-tags">
+            <span class="tl-tag">ASP.NET MVC</span><span class="tl-tag">C#</span><span class="tl-tag">SQL Server</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label">Work</p>
+    <h2 class="section-title">Projects</h2>
+
+    <!-- GRID ANALYTICS — featured -->
+    <div class="ga-project">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">Production · B2B SaaS</span>
+          <div class="ga-title">Grid Analytics Platform</div>
+          <div class="ga-sub">Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">109</div><div class="ga-metric-lbl">dbt models</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">56</div><div class="ga-metric-lbl">mart tables</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">13</div><div class="ga-metric-lbl">AI precompute marts</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">security layers</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security.</p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-analytics-api</div>
+            <div class="ga-contrib-title">Guest token infrastructure</div>
+            <div class="ga-contrib-desc">JWT validation → Superset admin API → guest token chain. Role/tenant dashboard map, dashboard_url return, SQL injection validation, error detail masking.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-analytics-api</div>
+            <div class="ga-contrib-title">grid-auth migration</div>
+            <div class="ga-contrib-desc">Replaced custom auth.py with the internal grid-auth package. Merged 3 JSON config files into one, wrote 36 parametric pytest tests, fixed soft-fail bug.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt</div>
+            <div class="ga-contrib-title">AI analytics layer</div>
+            <div class="ga-contrib-desc">Designed 13 AI precompute mart models: SWOT classification, 9-box matrix, risk shadow effect, EQ/sales/leadership impact-risk scores.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt</div>
+            <div class="ga-contrib-title">Downstream unlock — schema fixes</div>
+            <div class="ga-contrib-desc">Removed missing source columns (candidate_user, color_code) that were silently blocking 130+ downstream models. Unblocked a live customer demo.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-dbt</div>
+            <div class="ga-contrib-title">Native RLS integration</div>
+            <div class="ga-contrib-desc">PostgreSQL native RLS via dbt post-hook. apply_native_rls macro, supervisor_id access map, and RLS smoke tests across all mart tables.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ga-superset</div>
+            <div class="ga-contrib-title">Turkish localisation</div>
+            <div class="ga-contrib-desc">Fixed PO translation files, patched frontend JS bundles for time expressions, applied toLocaleLowerCase('tr-TR') in filter components for correct Turkish character search.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Notable debugging — silent empty mart</div>
+          <div class="ga-highlight-desc">With FORCE ROW LEVEL SECURITY active, dbt build reported "Succeeded" while every mart table had 0 rows. The dbt role lacked BYPASSRLS, so CREATE TABLE AS SELECT saw no rows — no error, no warning. The bug only surfaced on blank dashboard charts in production.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">dbt Core 1.11</span>
+          <span class="ga-stack-tag">PostgreSQL 16</span>
+          <span class="ga-stack-tag">Apache Superset 6</span>
+          <span class="ga-stack-tag">FastAPI</span>
+          <span class="ga-stack-tag gray">Kubernetes</span>
+          <span class="ga-stack-tag gray">Argo Workflows</span>
+          <span class="ga-stack-tag gray">Redis / Celery</span>
+          <span class="ga-stack-tag gray">FDW</span>
+          <span class="ga-stack-tag gray">Native RLS</span>
+          <span class="ga-stack-tag gray">JWT</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- other projects grid -->
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="project-type">AI · Backend</div>
+        <div class="project-title">CVAnalyzerAI — Resume Analysis Platform</div>
+        <div class="project-desc">Intelligent resume analysis platform using MCP and multiple AI services. Analyzes CVs to extract strengths, weaknesses, and job-fit insights using LLMs and structured parsing. Integrated into Claude via MCP.</div>
+        <div class="project-impact">Helps HR teams reduce review time and gain AI-driven insights about candidates.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">DSPy</span>
+            <span class="tech-pill">ANTLR</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">MCP</span>
+          </div>
+          <a href="https://github.com/EceDalpolat/cvAnalizerAI" target="_blank" class="project-link">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Computer Vision</div>
+        <div class="project-title">Antenna Behaviour Analysis</div>
+        <div class="project-desc">Analyzed insect antenna movement using DeepLabCut to extract behaviour patterns from biological footage. Labeled keypoints, trained custom models, and analyzed movement trends.</div>
+        <div class="project-impact">Enabled high-accuracy behavioural studies in entomological experiments.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">DeepLabCut</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Deep Learning</div>
+        <div class="project-title">Pollen Classification</div>
+        <div class="project-desc">Built a deep learning model to classify pollen images with over 90% accuracy. Created a labeled dataset, applied data augmentation, and trained CNN models.</div>
+        <div class="project-impact">Assisted agricultural researchers in automating pollen type recognition.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">TensorFlow</span>
+            <span class="tech-pill">CNN</span>
+            <span class="tech-pill">DenseNet121</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Machine Learning</div>
+        <div class="project-title">Marketing Campaign Prediction</div>
+        <div class="project-desc">Prediction engine for banking marketing campaigns to forecast customer subscription behaviour. Applied feature engineering, handled class imbalance with SMOTE, and built a Streamlit interface.</div>
+        <div class="project-impact">Enabled accurate targeting for cost-effective campaign execution.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">scikit-learn</span>
+            <span class="tech-pill">XGBoost</span>
+            <span class="tech-pill">Streamlit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">AI · AgriFood</div>
+        <div class="project-title">TOP4HONEYCHAINS — Smart Agri-Food</div>
+        <div class="project-desc">ML solutions in honey value chains for traceability and quality assurance. Collected field data, trained predictive models, and created RESTful endpoints.</div>
+        <div class="project-impact">Improved transparency across agri-food stakeholders and streamlined quality tracking.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">TensorFlow</span>
+            <span class="tech-pill">scikit-learn</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-type">Data Science</div>
+        <div class="project-title">Student Success Analysis</div>
+        <div class="project-desc">Identified academic performance factors using data analysis and ML. Built a GUI tool that predicts student success based on multiple lifestyle and academic variables.</div>
+        <div class="project-impact">Provided actionable insights for educational policy and interventions.</div>
+        <div class="project-footer">
+          <div class="project-tech">
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">scikit-learn</span>
+            <span class="tech-pill">Tkinter</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <p class="section-label">Academic</p>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-degree">MSc Information Technologies</div>
+        <div class="edu-school">Işık University</div>
+        <div class="edu-years">2022 – Present</div>
+        <div class="edu-desc">Specialisation in Data Science and Machine Learning. Thesis focuses on using machine learning to automate processes in beekeeping and honey extraction.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">BSc Software Engineering</div>
+        <div class="edu-school">Kırklareli University</div>
+        <div class="edu-years">2018 – 2023</div>
+        <div class="edu-desc">Foundation in software development, algorithms, database systems, and software testing methodologies.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Get in touch</p>
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-intro">
+        <p>I'm open to new opportunities, collaborations, and interesting conversations about AI, data engineering, and ML. Feel free to reach out through any of the channels below.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:ecedlplt9850@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉</div>
+          <div class="contact-link-label">
+            <div>Email</div>
+            <div class="contact-link-sub">ecedlplt9850@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/ece-dalpolat-0265a0221/" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div class="contact-link-label">
+            <div>LinkedIn</div>
+            <div class="contact-link-sub">ece-dalpolat</div>
+          </div>
+        </a>
+        <a href="https://github.com/EceDalpolat" target="_blank" class="contact-link">
+          <div class="contact-link-icon">gh</div>
+          <div class="contact-link-label">
+            <div>GitHub</div>
+            <div class="contact-link-sub">EceDalpolat</div>
+          </div>
+        </a>
+        <a href="https://medium.com/@ecedlplt9850" target="_blank" class="contact-link">
+          <div class="contact-link-icon">M</div>
+          <div class="contact-link-label">
+            <div>Medium</div>
+            <div class="contact-link-sub">@ecedlplt9850</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Ece Dalpolat. All Rights Reserved.</p>
+</footer>
 
 </body>
-
-</html> 
+</html>
