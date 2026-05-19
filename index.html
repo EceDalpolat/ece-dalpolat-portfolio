@@ -1223,6 +1223,76 @@ footer {
       </div>
     </div>
 
+    <!-- AGENT GATEWAY — featured -->
+    <div class="ga-project">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge">Production · Platform</span>
+          <div class="ga-title">Agent API Gateway</div>
+          <div class="ga-sub">Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">1+</div><div class="ga-metric-lbl">production agents</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">invoke contract</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl">pipeline generator</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl">core layers</div></div>
+      </div>
+      <div class="ga-body">
+        <p class="ga-desc">Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong></p>
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ai-api-monorepo · lead</div>
+            <div class="ga-contrib-title">Platform bootstrap &amp; gateway core</div>
+            <div class="ga-contrib-desc">Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, Cookiecutter template for new agents, and API.md integration guide for frontend teams.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">core</div>
+            <div class="ga-contrib-title">JWT auth &amp; invoke pipeline</div>
+            <div class="ga-contrib-desc">Integrated grid-auth for token verification on every /invoke call; dev bypass vs production auth paths; streamlined API responses (operational metadata logged, not returned); enhanced agent invoke logging and error handling.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">infra</div>
+            <div class="ga-contrib-title">Per-agent Docker Compose topology</div>
+            <div class="ga-contrib-desc">Restructured compose to per-agent includes (agents/ga_kpi_advisor/docker-compose.yml); dev overlay with external KPI Advisor path; multi-stage Dockerfiles with non-root user, OCI labels, HEALTHCHECK, and build-arg versioning.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">ci</div>
+            <div class="ga-contrib-title">Dynamic GitLab child pipelines</div>
+            <div class="ga-contrib-desc">Built generate_agents_pipeline.py to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">kpi-advisor agent</div>
+            <div class="ga-contrib-title">First production agent integration</div>
+            <div class="ga-contrib-desc">Wired ga-kpi-advisor as the reference agent: httpx proxy to downstream KPI service, env-based URL config, validation error logging, and end-to-end invoke flow from Streamlit through the gateway.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module">kpi-advisor agent</div>
+            <div class="ga-contrib-title">Cross-service contract alignment</div>
+            <div class="ga-contrib-desc">Kept gateway payloads in sync with KPI Advisor schema evolution: leadershipLevel, positionGroup, name/definition fields, optional id — ensuring monorepo invoke examples match the downstream Pydantic models.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title">Core ownership — agent gateway platform</div>
+          <div class="ga-highlight-desc">Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI pipeline generation. create_gateway_app refactor, CORS settings, and Cookiecutter agent scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">FastAPI</span>
+          <span class="ga-stack-tag">httpx</span>
+          <span class="ga-stack-tag">Pydantic v2</span>
+          <span class="ga-stack-tag">Cookiecutter</span>
+          <span class="ga-stack-tag gray">JWT / grid-auth</span>
+          <span class="ga-stack-tag gray">OpenTelemetry</span>
+          <span class="ga-stack-tag gray">Docker Compose</span>
+          <span class="ga-stack-tag gray">GitLab CI</span>
+          <span class="ga-stack-tag gray">Gateway pattern</span>
+        </div>
+      </div>
+    </div>
+
     <!-- other projects grid -->
     <div class="projects-grid">
 
