@@ -918,21 +918,20 @@ footer {
 /* ── PREMIUM PROJECTS ── */
 .premium-project {
   display: flex;
-  background: var(--surface-2);
+  background: white;
   border-radius: 1.5rem;
   overflow: hidden;
   border: 1px solid var(--surface-3);
   margin-bottom: 4rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 .pp-left {
-  background: var(--surface-2);
-  color: var(--ink);
+  background: #0F243B;
+  color: white;
   width: 42%;
   padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid var(--surface-3);
 }
 .pp-badges {
   display: flex;
@@ -940,40 +939,34 @@ footer {
   margin-bottom: 1.5rem;
 }
 .pp-badge {
-  background: var(--surface);
-  color: var(--ink-2);
+  background: rgba(255,255,255,0.1);
+  color: white;
   font-size: 11px;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 4px 12px;
   border-radius: 20px;
-  border: 1px solid var(--surface-3);
 }
 .pp-badge.featured {
-  background: var(--accent-light);
-  color: var(--accent);
-  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(255,255,255,0.2);
 }
 .pp-subtitle {
   font-size: 11px;
-  font-weight: 700;
-  color: var(--accent);
+  color: #D48C70;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1rem;
 }
 .pp-title {
   font-size: 2rem;
-  font-family: var(--display);
-  font-weight: 700;
+  font-family: var(--font-serif);
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: var(--ink);
+  color: white;
 }
 .pp-desc {
   font-size: 15px;
-  color: var(--ink-3);
+  color: rgba(255,255,255,0.8);
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -984,8 +977,8 @@ footer {
   margin-bottom: 2.5rem;
 }
 .pp-metric {
-  background: var(--surface);
-  border: 1px solid var(--surface-3);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
@@ -994,15 +987,14 @@ footer {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: var(--ink);
-  font-family: var(--display);
+  color: white;
+  font-family: var(--font-serif);
 }
 .pp-metric-lbl {
   font-size: 10px;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--ink-4);
+  color: rgba(255,255,255,0.6);
 }
 .pp-features {
   display: flex;
@@ -1015,14 +1007,13 @@ footer {
   align-items: center;
   gap: 1rem;
   font-size: 11px;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--ink-2);
+  color: rgba(255,255,255,0.8);
 }
 .pp-fnum {
-  background: var(--accent-light);
-  color: var(--accent);
+  background: rgba(255,255,255,0.1);
+  color: white;
   width: 24px;
   height: 24px;
   display: flex;
@@ -1030,10 +1021,9 @@ footer {
   justify-content: center;
   border-radius: 50%;
   font-size: 10px;
-  font-weight: 700;
 }
 .pp-right {
-  background: var(--surface);
+  background: #FAF8F5;
   width: 58%;
   padding: 3.5rem 3rem;
   display: flex;
@@ -1046,22 +1036,15 @@ footer {
   margin-bottom: 3rem;
 }
 .pp-box {
-  background: var(--surface-2);
-  border: 1px solid var(--surface-3);
+  background: white;
+  border: 1px solid #EAE3D8;
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.pp-box:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
 }
 .pp-box-title {
   font-size: 10px;
-  font-weight: 700;
-  color: var(--accent);
+  color: #D48C70;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1rem;
@@ -1083,8 +1066,7 @@ footer {
 }
 .pp-stack-title {
   font-size: 10px;
-  font-weight: 700;
-  color: var(--ink-4);
+  color: #8C949D;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 1rem;
@@ -1095,20 +1077,18 @@ footer {
   gap: 0.5rem;
 }
 .pp-tag {
-  background: var(--surface-2);
-  border: 1px solid var(--surface-3);
-  color: var(--ink-3);
+  background: white;
+  border: 1px solid #EAE3D8;
+  color: var(--ink-2);
   font-size: 11px;
   padding: 4px 12px;
   border-radius: 20px;
-  font-weight: 500;
-  font-family: var(--sans);
+  font-family: var(--font-mono);
 }
 
 @media (max-width: 900px) {
   .premium-project { flex-direction: column; }
-  .pp-left { width: 100%; border-right: none; border-bottom: 1px solid var(--surface-3); padding: 2.5rem 1.5rem; }
-  .pp-right { width: 100%; padding: 2.5rem 1.5rem; }
+  .pp-left, .pp-right { width: 100%; padding: 2.5rem 1.5rem; }
   .pp-grid { grid-template-columns: 1fr; }
 }
 
