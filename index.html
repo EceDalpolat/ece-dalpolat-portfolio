@@ -914,6 +914,34 @@ footer {
   .ga-metrics { gap: 1rem; }
   .ga-header, .ga-body { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
+
+.ga-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .ga-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.ga-projects-grid .ga-project {
+  margin-bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ga-projects-grid .ga-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.ga-projects-grid .ga-stack {
+  margin-top: auto;
+}
+
 </style>
 </head>
 <body>
@@ -1208,6 +1236,7 @@ footer {
     <p class="section-label" data-i18n="projects.label">Work</p>
     <h2 class="section-title" data-i18n="projects.title">Projects</h2>
 
+    <div class="ga-projects-grid">
     <!-- ANALYTICS — featured -->
     <div class="ga-project">
       <div class="ga-header">
@@ -1752,6 +1781,8 @@ footer {
           <span class="ga-stack-tag gray">joblib</span>
         </div>
       </div>
+    </div>
+
     </div>
 
     <!-- other projects grid -->
