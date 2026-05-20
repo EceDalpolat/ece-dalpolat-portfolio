@@ -578,6 +578,7 @@ section:nth-of-type(even) {
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "header body"
+    "desc body"
     "metrics body";
 }
 @media (max-width: 900px) {
@@ -585,6 +586,7 @@ section:nth-of-type(even) {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
+      "desc"
       "metrics"
       "body";
   }
@@ -666,6 +668,10 @@ section:nth-of-type(even) {
   border-right: 1px solid var(--surface-3);
 }
 @media (max-width: 900px) {
+  .ga-desc {
+    border-right: none;
+    padding: 1.5rem 1.5rem 0;
+  }
   .ga-metrics {
     flex-direction: row;
     flex-wrap: wrap;
@@ -698,7 +704,10 @@ section:nth-of-type(even) {
 }
 
 .ga-desc {
+  grid-area: desc;
   font-size: 15px;
+  padding: 1.5rem 2rem 0;
+  border-right: 1px solid var(--surface-3);
   color: var(--ink-2);
   line-height: 1.75;
   margin-bottom: 1.5rem;
@@ -1267,8 +1276,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">13</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m3">AI precompute marts</div></div>
         <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.analytics.m4">security layers</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.analytics.desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).</p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.analytics.desc">End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).</p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1338,8 +1347,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl" data-i18n="proj.coach.m3">eval dimensions</div></div>
         <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.coach.m4">product surfaces</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.coach.desc">B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.coach.desc">B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1408,8 +1417,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m3">microservices</div></div>
         <div class="ga-metric"><div class="ga-metric-num">18</div><div class="ga-metric-lbl" data-i18n="proj.analyzer.m4">YAML configs</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.analyzer.desc">Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language HR questions over psychometric data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.analyzer.desc">Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language HR questions over psychometric data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1478,8 +1487,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">9</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m3">prompt rules</div></div>
         <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.kpi.m4">pipeline steps</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.kpi.desc">AI microservice that recommends SMART-aligned KPIs for any job position — grounded in the APQC Process Classification Framework (lexical + category-prior retrieval, no vector DB), calibrated via a corporate Golden Dataset, and validated through an offline LLM-as-judge pipeline with human-in-the-loop feedback. <strong>Primary engineer on the generation engine, retrieval layer, eval pipeline, and production integration.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.kpi.desc">AI microservice that recommends SMART-aligned KPIs for any job position — grounded in the APQC Process Classification Framework (lexical + category-prior retrieval, no vector DB), calibrated via a corporate Golden Dataset, and validated through an offline LLM-as-judge pipeline with human-in-the-loop feedback. <strong>Primary engineer on the generation engine, retrieval layer, eval pipeline, and production integration.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1548,8 +1557,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.skills.m3">inference engines</div></div>
         <div class="ga-metric"><div class="ga-metric-num">5</div><div class="ga-metric-lbl" data-i18n="proj.skills.m4">DSPy expert personas</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.skills.desc">AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.skills.desc">AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1618,8 +1627,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m3">pipeline generator</div></div>
         <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.gateway.m4">core layers</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.gateway.desc">Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.gateway.desc">Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1688,8 +1697,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m3">hybrid security stack</div></div>
         <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.chatbot.m4">RAG pipeline</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.chatbot.desc">FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.chatbot.desc">FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
@@ -1753,8 +1762,8 @@ footer {
         <div class="ga-metric"><div class="ga-metric-num">2</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m3">dim-reduction methods</div></div>
         <div class="ga-metric"><div class="ga-metric-num">6</div><div class="ga-metric-lbl" data-i18n="proj.clustering.m4">analysis modules</div></div>
       </div>
+      <p class="ga-desc" data-i18n-html="proj.clustering.desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
       <div class="ga-body">
-        <p class="ga-desc" data-i18n-html="proj.clustering.desc">Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong></p>
 
         <div class="ga-contributions">
           <div class="ga-contrib">
