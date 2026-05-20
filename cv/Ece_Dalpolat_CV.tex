@@ -1,0 +1,166 @@
+% Overleaf: main.tex | pdfLaTeX
+% ATS-friendly: plain text, standard sections, clear headings
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1.4cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Clean sans — regular weight
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{1.2em}%
+  {\large\textbf{\MakeUppercase{#1}}}\\[0.2em]
+  \hrule
+  \vspace{0.6em}%
+}
+\newcommand{\jobentry}[4]{%
+  \textbf{#1} \hfill {\small #2}\\
+  \textit{#3} \hfill {\small #4}\\[0.2em]
+}
+
+\begin{document}
+
+% ── Header ──
+\begin{center}
+  {\LARGE \textbf{Ece Dalpolat}}\\[0.4em]
+  {\large AI Engineer \& Data Scientist}\\[0.4em]
+  {\small
+  +90 552 360 9850 \,|\, ecedlplt9850@gmail.com \,|\, Istanbul\\[0.2em]
+  \href{https://ecedalpolat.github.io/ece-dalpolat-portfolio/}{Portfolio} \,|\,
+  \href{https://github.com/EceDalpolat}{GitHub} \,|\,
+  \href{https://www.linkedin.com/in/ece-dalpolat-0265a0221/}{LinkedIn}
+  }
+\end{center}
+
+\vspace{-0.5em}
+\cvsection{Profile}
+
+AI Engineer and Data Scientist who builds production AI systems---not just demos. At Qkare, I own real systems used by corporate customers: the dbt data layer that feeds dashboards, LangChain/LangGraph agents that answer questions over psychometric data, and FastAPI services that recommend KPIs and job competencies with validated JSON output.
+
+What I do day-to-day: model data in SQL (109+ dbt models, native PostgreSQL row-level security, Superset), design LLM pipelines (RAG, semantic cache, prompt-injection guards), ship microservices behind a shared agent gateway, and measure quality with LLM-as-judge evals before release. I take problems from messy requirements to Docker/Kubernetes deployment with CI, tenant isolation, and cost-aware inference.
+
+% ── Experience ──
+\cvsection{Experience}
+
+\jobentry{AI Engineer}{Jun 2025 -- Present}{Qkare}{Istanbul}
+\begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt, itemsep=2pt]
+  \item Lead: dbt layer, production AI agents/advisors, gateway, and security across 8+ shipped systems.
+\end{itemize}
+\vspace{0.6em}
+
+\jobentry{Teaching Assistant}{Jan 2025 -- Present}{Miuul}{Remote}
+\begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt, itemsep=2pt]
+  \item Data science and machine learning lectures; project mentoring and evaluation.
+\end{itemize}
+\vspace{0.6em}
+
+\jobentry{Graduate Research Assistant}{Jan 2024 -- Jun 2025}{Işık University}{Istanbul}
+\begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt, itemsep=2pt]
+  \item Software labs; supervised data science and deep learning projects.
+\end{itemize}
+\vspace{0.6em}
+
+\jobentry{Research Data Scientist}{Jan 2024 -- Jun 2025}{Top4Honeychains}{}
+\begin{itemize}[leftmargin=1.5em, nosep, topsep=2pt, itemsep=2pt]
+  \item Honey value-chain ETL, TensorFlow/scikit-learn models, REST API integrations.
+\end{itemize}
+
+% ── Projects ──
+\cvsection{Projects}
+
+\textbf{Analytics Platform} \,|\, \textit{Qkare} \hfill Nov 2025 -- May 2026\\
+End-to-end HR analytics: PostgreSQL FDW, 109 dbt models, 56 marts, 13 AI precompute tables, native RLS, Superset. Lead: dbt layer.
+\vspace{0.5em}
+
+\textbf{Analyzer Platform} \,|\, \textit{Qkare} \hfill Apr 2025 -- May 2026\\
+LangChain ReAct agent on psychometric marts; 4-layer security, JWT+RLS, Langfuse. Lead: security and config bootstrap.
+\vspace{0.5em}
+
+\textbf{Coach Platform} \,|\, \textit{Qkare} \hfill Sep 2025 -- Nov 2025\\
+Multi-agent coaching (LangGraph, POML, OpenAI Realtime). Referee Agent (LLM-as-judge), voice stack, eval tooling.
+\vspace{0.5em}
+
+\textbf{Skills Advisor} \,|\, \textit{Qkare} \hfill Aug 2025 -- May 2026\\
+12 competency dimensions from closed dictionary; LangChain or DSPy ensemble. Primary engineer.
+\vspace{0.5em}
+
+\textbf{KPI Advisor} \,|\, \textit{Qkare} \hfill Apr 2026 -- May 2026\\
+SMART KPIs via APQC PCF; lexical retrieval, Golden Dataset, LLM-as-judge pipeline. Primary engineer.
+\vspace{0.5em}
+
+\textbf{Agent API Gateway} \,|\, \textit{Qkare} \hfill Apr 2026 -- May 2026\\
+FastAPI monorepo, unified invoke API, JWT, per-agent Docker/CI. Platform lead.
+\vspace{0.5em}
+
+\textbf{QKare AI Assistant} \,|\, \textit{Qkare} \hfill Jul 2025\\
+Corporate chatbot: rule, semantic cache (FAISS/Milvus), RAG, LLM; hybrid security. Sole author.
+\vspace{0.5em}
+
+\textbf{Behavioral Clustering R\&D} \,|\, \textit{Qkare} \hfill Aug 2025\\
+K-Means, DBSCAN, GMM; PCA/t-SNE; fed Analytics marts. Sole author.
+\vspace{0.5em}
+
+\textbf{CVAnalyzerAI} \hfill 2025\\
+MCP resume analysis (FastAPI, DSPy, ANTLR). github.com/EceDalpolat/cvAnalizerAI
+\vspace{0.5em}
+
+\textbf{TOP4HONEYCHAINS} \hfill 2024--2025\\
+Honey traceability ML, REST APIs, time-series forecasting.
+\vspace{0.5em}
+
+\textbf{Marketing Campaign Prediction}\\
+Bank campaign model: SMOTE, XGBoost, Streamlit.
+\vspace{0.5em}
+
+\textbf{Pollen Classification}\\
+CNN classifier, 90\%+ accuracy; data augmentation.
+\vspace{0.5em}
+
+\textbf{Antenna Behaviour Analysis}\\
+DeepLabCut keypoint tracking; movement analysis.
+\vspace{0.5em}
+
+\textbf{Student Success Analysis}\\
+Random Forest on academic features; Tkinter GUI.
+
+% ── Skills ──
+\cvsection{Skills}
+
+\textbf{AI/LLM:} LangChain, LangGraph, DSPy, RAG, OpenAI API, Pydantic, LLM-as-judge\\[0.2em]
+\textbf{Data:} dbt Core, PostgreSQL, Apache Superset, Pandas, SQL\\[0.2em]
+\textbf{Backend:} FastAPI, httpx, WebSocket, JWT, MCP, REST\\[0.2em]
+\textbf{Infra:} Docker, Kubernetes, GitLab CI/CD, Redis, OpenTelemetry, Langfuse\\[0.2em]
+\textbf{Languages:} Python, SQL, JavaScript, Java, C\#
+
+% ── Education ──
+\cvsection{Education}
+
+\textbf{MSc Information Technologies} \hfill 2022 -- Present\\
+Işık University --- GPA 3.57. Thesis: ML in beekeeping and honey extraction.
+\vspace{0.5em}
+
+\textbf{BSc Software Engineering} \hfill 2018 -- 2023\\
+Kırklareli University --- GPA 2.71
+
+% ── Certificates ──
+\cvsection{Certificates}
+
+Miuul Data Scientist Bootcamp; Miuul Machine Learning; Miuul Generative AI; Udemy LangChain/RAG; BTK SQL; Huawei HCCDA-AI
+
+\vspace{0.8em}
+\begin{center}
+  {\small Turkish (native) \,|\, English (B2)}
+\end{center}
+
+\end{document}
