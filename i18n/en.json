@@ -8,6 +8,7 @@
     "experience": "Experience",
     "projects": "Projects",
     "education": "Education",
+    "certificates": "Certificates",
     "contact": "Contact"
   },
   "hero": {
@@ -142,6 +143,11 @@
     "label": "Get in touch",
     "title": "Contact",
     "intro": "I'm open to new opportunities, collaborations, and interesting conversations about AI, data engineering, and ML. Feel free to reach out through any of the channels below."
+  },
+  "certificates": {
+    "label": "Credentials",
+    "title": "Certificates",
+    "btk": "Applied SQL"
   },
   "footer": {
     "text": "© 2025 Ece Dalpolat. All Rights Reserved."

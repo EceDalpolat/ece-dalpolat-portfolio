@@ -8,6 +8,7 @@
     "experience": "Deneyim",
     "projects": "Projeler",
     "education": "Eğitim",
+    "certificates": "Sertifikalar",
     "contact": "İletişim"
   },
   "hero": {
@@ -142,6 +143,11 @@
     "label": "İletişim",
     "title": "İletişim",
     "intro": "Yapay zeka, veri mühendisliği ve ML konularında yeni fırsatlara, iş birliklerine ve sohbetlere açığım. Aşağıdaki kanallardan ulaşabilirsin."
+  },
+  "certificates": {
+    "label": "Yetkinlikler",
+    "title": "Sertifikalar",
+    "btk": "Uygulamalı SQL"
   },
   "footer": {
     "text": "© 2025 Ece Dalpolat. Tüm hakları saklıdır."
