@@ -117,12 +117,6 @@
       "title": "TOP4HONEYCHAINS — Akıllı Tarım-Gıda",
       "desc": "Bal değer zincirlerinde izlenebilirlik ve kalite güvencesi için ML çözümleri. Saha verisi topladım, tahmin modelleri eğittim ve RESTful uç noktalar oluşturdum.",
       "impact": "Tarım-gıda paydaşları arasında şeffaflığı artırdı ve kalite takibini kolaylaştırdı."
-    },
-    "c6": {
-      "type": "Veri Bilimi",
-      "title": "Öğrenci Başarı Analizi",
-      "desc": "Veri analizi ve ML ile akademik performans faktörlerini belirledim. Yaşam tarzı ve akademik değişkenlere göre öğrenci başarısını tahmin eden GUI aracı geliştirdim.",
-      "impact": "Eğitim politikası ve müdahaleler için uygulanabilir içgörüler sundu."
     }
   },
   "education": {

@@ -117,12 +117,6 @@
       "title": "TOP4HONEYCHAINS — Smart Agri-Food",
       "desc": "ML solutions in honey value chains for traceability and quality assurance. Collected field data, trained predictive models, and created RESTful endpoints.",
       "impact": "Improved transparency across agri-food stakeholders and streamlined quality tracking."
-    },
-    "c6": {
-      "type": "Data Science",
-      "title": "Student Success Analysis",
-      "desc": "Identified academic performance factors using data analysis and ML. Built a GUI tool that predicts student success based on multiple lifestyle and academic variables.",
-      "impact": "Provided actionable insights for educational policy and interventions."
     }
   },
   "education": {
