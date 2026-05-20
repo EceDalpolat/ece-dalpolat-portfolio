@@ -21,9 +21,9 @@
   "about": {
     "label": "Background",
     "title": "About Me",
-    "p1": "I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.",
-    "p2": "At Qkare, I own core pieces of a multi-tenant enterprise analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over domain-specific behavioral data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.",
-    "p3": "My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&D through production B2B SaaS.",
+    "p1": "I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University. My work focuses on connecting data, models, and production systems in one flow.",
+    "p2": "At Qkare, I own core pieces of a multi-tenant enterprise analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over behavioral data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.",
+    "p3": "My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge evaluation pipelines, and cost-aware inference cascades — from early clustering R&D through production B2B SaaS.",
     "stat1": "Years of engineering experience",
     "stat2": "dbt models in production",
     "stat3": "Production AI systems shipped"
@@ -49,37 +49,37 @@
     "e1": {
       "date": "Jun 2025 – Present",
       "role": "AI Engineer",
-      "desc": "Primary engineer on Qkare's B2B AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot (RAG + semantic cache), and supporting CI/Docker infrastructure."
+      "desc": "Primary engineer on Qkare's B2B AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot, and supporting CI/Docker infrastructure."
     },
     "e2": {
       "date": "Jan 2025 – Present",
       "role": "Teaching Assistant",
-      "desc": "Conduct weekly lectures on data science and machine learning. Guide and evaluate participants during hands-on project implementations and support learning processes."
+      "desc": "Conduct weekly lectures on data science and machine learning. Guide participants through hands-on projects, evaluate submissions, and support the learning process."
     },
     "e3": {
       "date": "Jan 2024 – Jun 2025",
       "role": "Graduate Research Assistant",
-      "desc": "Assisted in faculty development and taught software lab courses. Supervised students developing software projects with a focus on data science and deep learning."
+      "desc": "Assisted faculty development and taught software lab courses. Supervised students building software projects with a focus on data science and deep learning."
     },
     "e4": {
       "date": "Jan 2024 – Jun 2025",
       "role": "Research Data Scientist",
-      "desc": "Collected and processed data across honey value chains. Developed and optimized deep learning models using Python, TensorFlow, and scikit-learn. Performed API integrations for model compatibility with external systems."
+      "desc": "Collected and processed data across honey value chains. Developed and optimized deep learning models using Python, TensorFlow, and scikit-learn, and integrated them with external systems through APIs."
     },
     "e5": {
       "date": "Nov 2023 – Jan 2024",
       "role": "Software Engineer in Test (Volunteer)",
-      "desc": "Developed automation tests using Selenium and TestComplete. Conducted manual testing to ensure error-free, functional software products meeting user requirements."
+      "desc": "Developed automation tests using Selenium and TestComplete. Conducted manual testing to keep software stable, functional, and aligned with user requirements."
     },
     "e6": {
       "date": "Oct – Nov 2023",
       "role": "Software Engineer (Volunteer)",
-      "desc": "Built effective and scalable software solutions using Java, Eclipse/IntelliJ IDEA, and SQL. Gained experience in software development processes within a national research environment."
+      "desc": "Built scalable software solutions using Java, Eclipse/IntelliJ IDEA, and SQL. Contributed to software development work in a national research environment."
     },
     "e7": {
       "date": "Jul – Sep 2022",
       "role": "Software Engineer (Volunteer)",
-      "desc": "Managed application development using ASP.NET MVC, C#, SQL Server, and Visual Studio. Developed team communication and collaboration skills in active software projects."
+      "desc": "Developed applications using ASP.NET MVC, C#, SQL Server, and Visual Studio. Strengthened team communication and collaboration skills in active software projects."
     }
   },
   "projects": {

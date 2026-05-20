@@ -21,9 +21,9 @@
   "about": {
     "label": "Özet",
     "title": "Hakkımda",
-    "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim.",
-    "p2": "Qkare'de çok kiracılı kurumsal analitik yığınının temel parçalarına sahibim: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), davranışsal veri üzerinde <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
-    "p3": "Çalışmalarım yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding-free ve vektör RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı inference cascade'lerini kapsıyor — erken kümeleme Ar-Ge'sinden üretim B2B SaaS'a.",
+    "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim. Çalışmalarım veri, model ve üretim katmanını tek akışta birleştirmeye odaklanıyor.",
+    "p2": "Qkare'de çok kiracılı kurumsal analitik yığınının ana parçalarını sahipleniyorum: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), davranışsal veri üzerinde çalışan <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
+    "p3": "İşlerim yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding-free ve vektör RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı inference cascade'leri kapsıyor. Yani erken Ar-Ge'den üretim B2B SaaS'a kadar uçtan uca sistem kuruyorum.",
     "stat1": "Yıllık mühendislik deneyimi",
     "stat2": "Üretimdeki dbt modeli",
     "stat3": "Canlıya alınan AI sistemi"
@@ -49,37 +49,37 @@
     "e1": {
       "date": "Haz 2025 – Devam",
       "role": "Yapay Zeka Mühendisi",
-      "desc": "Qkare B2B AI platformunda ana mühendis: <strong>dbt dönüşüm katmanı</strong> (109+ model, RLS, AI ön hesaplama mart'ları), <strong>davranışsal analitik ajanlar</strong> (LangChain ReAct, kiracı-güvenli SQL) ve danışman mikroservisleri (KPI &amp; yetkinlik seçimi). <strong>Agent API gateway</strong>, kurumsal chatbot (RAG + semantik önbellek) ve CI/Docker altyapısını kurdum."
+      "desc": "Qkare B2B AI platformunda ana mühendis olarak çalışıyorum: <strong>dbt dönüşüm katmanı</strong> (109+ model, RLS, AI ön hesaplama mart'ları), <strong>davranışsal analitik ajanlar</strong> (LangChain ReAct, kiracı-güvenli SQL) ve danışman mikroservisleri (KPI &amp; yetkinlik seçimi). <strong>Agent API gateway</strong>, kurumsal chatbot ve CI/Docker altyapısını da kurdum."
     },
     "e2": {
       "date": "Oca 2025 – Devam",
       "role": "Öğretim Asistanı",
-      "desc": "Veri bilimi ve makine öğrenmesi üzerine haftalık dersler verdim. Uygulamalı proje süreçlerinde katılımcılara rehberlik ettim, değerlendirme yaptım ve öğrenme süreçlerini destekledim."
+      "desc": "Veri bilimi ve makine öğrenmesi üzerine haftalık dersler verdim. Uygulamalı proje süreçlerinde katılımcılara rehberlik ettim, değerlendirme yaptım ve öğrenme sürecini destekledim."
     },
     "e3": {
       "date": "Oca 2024 – Haz 2025",
       "role": "Lisansüstü Araştırma Görevlisi",
-      "desc": "Öğretim üyesi gelişimine destek oldum ve yazılım laboratuvar dersleri verdim. Veri bilimi ve derin öğrenme odaklı yazılım projeleri geliştiren öğrencilere danışmanlık yaptım."
+      "desc": "Öğretim üyesi çalışmalarına destek oldum ve yazılım laboratuvar dersleri yürüttüm. Veri bilimi ve derin öğrenme odaklı projelerde öğrencilere teknik danışmanlık yaptım."
     },
     "e4": {
       "date": "Oca 2024 – Haz 2025",
       "role": "Araştırma Veri Bilimci",
-      "desc": "Bal değer zincirleri boyunca veri topladım ve işledim. Python, TensorFlow ve scikit-learn ile derin öğrenme modelleri geliştirdim ve optimize ettim. Dış sistemlerle uyum için API entegrasyonları yaptım."
+      "desc": "Bal değer zincirleri boyunca veri topladım ve işledim. Python, TensorFlow ve scikit-learn ile derin öğrenme modelleri geliştirdim, optimize ettim ve dış sistemlerle uyum için API entegrasyonları yaptım."
     },
     "e5": {
       "date": "Kas 2023 – Oca 2024",
       "role": "Yazılım Test Mühendisi (Gönüllü)",
-      "desc": "Selenium ve TestComplete ile otomasyon testleri geliştirdim. Kullanıcı gereksinimlerini karşılayan, hatasız ve işlevsel yazılım için manuel testler yürüttüm."
+      "desc": "Selenium ve TestComplete ile otomasyon testleri geliştirdim. Kullanıcı gereksinimlerini karşılayan, stabil ve işlevsel yazılım için manuel testler yürüttüm."
     },
     "e6": {
       "date": "Eki – Kas 2023",
       "role": "Yazılım Mühendisi (Gönüllü)",
-      "desc": "Java, Eclipse/IntelliJ IDEA ve SQL ile ölçeklenebilir yazılım çözümleri geliştirdim. Ulusal araştırma ortamında yazılım geliştirme süreçlerinde deneyim kazandım."
+      "desc": "Java, Eclipse/IntelliJ IDEA ve SQL ile ölçeklenebilir yazılım çözümleri geliştirdim. Ulusal araştırma ortamında yazılım geliştirme süreçlerine katkı verdim."
     },
     "e7": {
       "date": "Tem – Eyl 2022",
       "role": "Yazılım Mühendisi (Gönüllü)",
-      "desc": "ASP.NET MVC, C#, SQL Server ve Visual Studio ile uygulama geliştirdim. Aktif yazılım projelerinde ekip iletişimi ve iş birliği becerilerini geliştirdim."
+      "desc": "ASP.NET MVC, C#, SQL Server ve Visual Studio ile uygulama geliştirdim. Aktif yazılım projelerinde ekip iletişimi ve iş birliği becerilerimi geliştirdim."
     }
   },
   "projects": {
