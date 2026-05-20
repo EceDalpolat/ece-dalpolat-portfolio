@@ -157,32 +157,32 @@
       "title": "Analytics Platform",
       "sub": "Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack",
       "badge": "Production · B2B SaaS",
-      "desc": "End-to-end analytics platform for talent management — ingesting complex behavioral and cognitive data via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).",
-      "highlightTitle": "Core ownership — dbt transformation layer",
-      "highlightDesc": "Primary engineer on the dbt pipeline (~109 models): from early local-dev setup and canonical score normalisation (AON, Saville, AC → STEN) through the full mart catalogue and AI precompute layer. Segment discovery and feature engineering started in <a href=\"#clustering-rd\" class=\"ga-inline-link\">Behavioral Clustering R&amp;D</a> (Aug 2025) before productionising scores as SQL marts. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was the data models, RLS, and making dashboards actually work end-to-end.",
+      "desc": "End-to-end analytics platform for talent management — ingesting complex behavioral and cognitive data via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong>, responsible for modeling, security, and the live delivery path.",
+      "highlightTitle": "My contribution — transformation, security, delivery",
+      "highlightDesc": "My core responsibility was turning fragmented assessment data into a production-grade decision layer. I standardized AON, Saville, and Assessment Center scores, built the mart structure, enforced tenant isolation with native RLS, and stabilized the end-to-end dashboard flow. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was data modeling, security, and delivery consistency.",
       "m1": "dbt models",
       "m2": "mart tables",
       "m3": "AI precompute marts",
       "m4": "security layers",
       "c1": {
         "module": "ga-dbt · lead",
-        "title": "AI analytics layer (13 marts)",
-        "desc": "Designed and built the full AI precompute layer: SWOT classification, 9-box matrix, risk shadow effect, Big Five / 4H aggregates, and EQ / sales / leadership impact-risk scores — migrating Analyzer features from in-memory Python to materialized SQL marts."
+        "title": "Problem",
+        "desc": "The problem was fragmentation: assessment data lived in separate systems, and non-technical teams could not reliably turn it into fast, trustworthy insights. Without a single decision layer, reporting and interpretation stayed inconsistent."
       },
       "c2": {
         "module": "ga-dbt",
-        "title": "Dashboard mart pipeline",
-        "desc": "Built behavioural &amp; risk scoring models, sales-potential and leadership-impact marts, employee score facts, and canonical seed refactors across staging → intermediate → marts for 8+ embedded dashboards."
+        "title": "My contribution",
+        "desc": "I consolidated the data into one analytics backbone: the dbt transformation layer, canonical score normalization, AI precompute marts, and reusable fact/seed structures for reporting. That made the same dataset consistent across both analysis and dashboarding."
       },
       "c3": {
         "module": "ga-dbt",
-        "title": "Native RLS in dbt",
-        "desc": "Implemented PostgreSQL native RLS via the native RLS deployment macros, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer."
+        "title": "Impact",
+        "desc": "Native RLS made tenant isolation reliable and enabled secure reporting at 100+ model scale. It removed the dependency issues that were blocking production and directly unlocked live dashboard usage."
       },
       "c4": {
         "module": "ga-workspace",
-        "title": "Local analytics dev stack",
-        "desc": "Set up local DB provisioning, dbt quick-start scripts, schema-comparison tooling, and mock-source integration so the full FDW → dbt → Superset loop runs with a single docker compose up."
+        "title": "Solution",
+        "desc": "I packaged the FDW → dbt → Superset loop so it could run with a single command: local DB provisioning, quick-start scripts, schema comparison tools, and mock-source integration to speed up development."
       },
       "c5": {
         "module": "ga-analytics-api",

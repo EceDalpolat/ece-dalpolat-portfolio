@@ -157,32 +157,32 @@
       "title": "Analitik Platformu",
       "sub": "Qkare · Kas 2025 – May 2026 · Çok kiracılı İK analitik yığını",
       "badge": "Üretim · B2B SaaS",
-      "desc": "Yetenek yönetimi için uçtan uca analitik platform — psikometrik değerlendirme verilerini (AON bilişsel, Saville davranışsal, Assessment Center) PostgreSQL FDW ile alıp 3 katmanlı dbt hattından dönüştürerek, kiracı ve kullanıcı bazlı Row-Level Security ile gömülü Superset panoları sunar. <strong>dbt dönüşüm katmanının birincil sahibi</strong> (~109 model, 56 mart, 13 AI ön hesaplama tablosu).",
-      "highlightTitle": "Temel sahiplik — dbt dönüşüm katmanı",
-      "highlightDesc": "dbt hattında (~109 model) birincil mühendis: erken yerel geliştirme kurulumu ve kanonik skor normalizasyonundan (AON, Saville, AC → STEN) tam mart kataloğu ve AI ön hesaplama katmanına kadar. Segment keşfi ve özellik mühendisliği, skorları SQL mart olarak üretime almadan önce <a href=\"#clustering-rd\" class=\"ga-inline-link\">Davranışsal Kümeleme Ar-Ge</a> (Ağu 2025) ile başladı. Platform iskeleti (K8s, CI, guest-token API) ekip tarafından paralel kuruldu; odak noktam veri modelleri, RLS ve panoların uçtan uca çalışmasıydı.",
+      "desc": "Yetenek yönetimi için uçtan uca analitik platform — psikometrik değerlendirme verilerini (AON bilişsel, Saville davranışsal, Assessment Center) PostgreSQL FDW ile alıp 3 katmanlı dbt hattında işleyerek kiracı ve kullanıcı bazlı Row-Level Security ile Superset panoları sunar. <strong>dbt dönüşüm katmanının birincil sahibi</strong> olarak modelleme, güvenlik ve canlı kullanım akışını ben üstlendim.",
+      "highlightTitle": "Katkımın özeti — dönüşüm, güvenlik, canlıya alma",
+      "highlightDesc": "Bu projede ana sorumluluğum, dağınık değerlendirme verisini üretim kalitesinde karar katmanına dönüştürmekti. AON, Saville ve Assessment Center skorlarını standartlaştırdım, mart yapısını kurdum, native RLS ile kiracı izolasyonunu sağladım ve dashboard'ların uçtan uca çalışmasını stabil hale getirdim. Platform iskeleti (K8s, CI, guest-token API) ekip tarafından paralel geliştirildi; benim odağım veri modeli, güvenlik ve üretim akışının tutarlılığıydı.",
       "m1": "dbt modeli",
       "m2": "mart tablosu",
       "m3": "AI ön hesaplama mart'ı",
       "m4": "güvenlik katmanı",
       "c1": {
         "module": "ga-dbt · lead",
-        "title": "AI analitik katmanı (13 mart)",
-        "desc": "Tam AI ön hesaplama katmanını tasarlayıp kurdum: SWOT sınıflandırması, 9-box matrisi, risk gölge etkisi, Big Five / 4H toplulaştırmaları ve EQ / satış / liderlik etki-risk skorları — Analyzer özelliklerini bellek içi Python'dan materialize SQL mart'lara taşıdım."
+        "title": "Problem",
+        "desc": "Problem şuydu: değerlendirme verileri farklı sistemlerde duruyor, teknik olmayan ekipler ise bu verilerden hızlı ve güvenilir içgörü çıkaramıyordu. Tekil bir karar katmanı olmadığı için rapor üretimi ve yorumlama süreci dağınık kalıyordu."
       },
       "c2": {
         "module": "ga-dbt",
-        "title": "Dashboard mart hattı",
-        "desc": "Davranışsal &amp; risk skorlama modelleri, satış potansiyeli ve liderlik etkisi mart'ları, çalışan skor fact'leri ve 8+ gömülü dashboard için staging → intermediate → marts boyunca kanonik seed refaktörleri."
+        "title": "Katkım",
+        "desc": "Veriyi tek bir analitik omurgada topladım: dbt dönüşüm katmanı, kanonik skor normalizasyonu, AI ön-hesaplama mart'ları ve raporlama için yeniden kullanılabilir fact/seed yapıları kurdum. Böylece aynı veri seti hem analiz hem de dashboard tarafında tutarlı kullanılabildi."
       },
       "c3": {
         "module": "ga-dbt",
-        "title": "dbt içinde native RLS",
-        "desc": "doğal RLS dağıtım makroları, access_map_employee görünürlük tablosu ve çapraz kiracı smoke test'leri ile PostgreSQL native RLS; tüm mart katmanını bloke eden RLS bağımlılık sorunlarını giderdim."
+        "title": "Etki",
+        "desc": "Native RLS sayesinde kiracı izolasyonunu güvenceye aldım ve 100+ model ölçeğinde güvenli raporlama mümkün hale geldi. Bu, üretim öncesinde blokaj oluşturan RLS bağımlılıklarını kaldırarak dashboard'ların canlı kullanımına doğrudan katkı sağladı."
       },
       "c4": {
         "module": "ga-workspace",
-        "title": "Yerel analitik geliştirme yığını",
-        "desc": "Yerel DB provisioning, dbt hızlı başlangıç script'leri, şema karşılaştırma araçları ve mock-source entegrasyonu — tek docker compose up ile tam FDW → dbt → Superset döngüsü."
+        "title": "Çözüm",
+        "desc": "FDW → dbt → Superset döngüsünü tek komutla ayağa kalkacak şekilde paketledim: yerel DB provisioning, hızlı başlangıç script'leri, şema karşılaştırma araçları ve mock-source entegrasyonu ile geliştirme akışını hızlandırdım."
       },
       "c5": {
         "module": "ga-analytics-api",
