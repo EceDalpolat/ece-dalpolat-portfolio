@@ -199,64 +199,64 @@
       "title": "Behavioral Clustering R&D",
       "sub": "Qkare · Aug 2025 · Employee segmentation & talent analytics",
       "badge": "R&amp;D · Research",
-      "desc": "Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for enterprise analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong>",
-      "highlightTitle": "Core ownership — comparative clustering research",
-      "highlightDesc": "Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.",
+      "desc": "Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. <strong>Sole author — I built the full pipeline from exploration to model comparison.</strong>",
+      "highlightTitle": "My contribution — segmentation pipeline",
+      "highlightDesc": "My main job in this R&amp;D track was to make raw behavioral data usable for comparative segmentation. I combined feature engineering, multi-algorithm benchmarking, dimensionality reduction, and segment profiling into one offline analytics flow. The outputs fed the mart structure and AI precompute layers in the Analytics Platform.",
       "m1": "clustering algorithms",
       "m2": "eval metrics",
       "m3": "dim-reduction methods",
       "m4": "analysis modules",
       "c1": {
         "module": "clustering-rd · lead",
-        "title": "Feature engineering pipeline",
-        "desc": "Built feature engineering pipelines to transform raw behavioral inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization."
+        "title": "Problem",
+        "desc": "The problem was fragmentation: behavioral data was split across sources, and there was no fair way to compare different clustering methods on the same dataset. That made segmentation decisions hard to explain, hard to reproduce, and hard to trust."
       },
       "c2": {
         "module": "clustering-rd",
-        "title": "Multi-algorithm clustering comparison",
-        "desc": "Implemented modular clustering pipelines to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection."
+        "title": "My contribution",
+        "desc": "I built the feature engineering pipeline, scaling, joblib serialization, and multi-algorithm benchmark flow. That made K-Means, hierarchical, DBSCAN, and GMM directly comparable on one dataset and tied the analysis to a single experiment backbone."
       },
       "c3": {
         "module": "clustering-rd",
-        "title": "EDA &amp; dimensionality reduction",
-        "desc": "exploratory data analysis modules for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization."
+        "title": "Impact",
+        "desc": "PCA and t-SNE visualizations made segment separation visible, while silhouette, Calinski-Harabasz, and Davies-Bouldin scores made the selection process objective. The segment profiles became decision-ready outputs instead of just charts."
       },
       "c4": {
         "module": "clustering-rd",
-        "title": "AutoML &amp; multi-cluster analysis",
-        "desc": "automated model search modules for automated model search experiments; cross-algorithm analysis tools for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts."
+        "title": "Solution",
+        "desc": "I combined exploration, modeling, and reporting into one script-based flow: EDA modules, dimensionality reduction, benchmark tools, and CSV/HTML output layers. That made the research reproducible and portable into the wider platform."
       }
     },
     "coach": {
       "title": "Coach Platform",
       "sub": "Qkare · Sep 2025 – Nov 2025 · Multi-Agent AI Coaching",
       "badge": "Production · B2B SaaS",
-      "desc": "B2B corporate AI coaching platform — multi-agent orchestration (Companion, Coach, Advisor, Mentor) with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>Built the evaluation framework, early voice stack, and POML prompt foundation.</strong>",
-      "highlightTitle": "Core ownership — evaluation &amp; voice layer",
-      "highlightDesc": "Primary engineer on coach quality assurance and early product surfaces: built the Referee Agent to objectively score coaching sessions before production rollout, and shipped the first OpenAI Realtime voice path with POML-aware prompts. Analytics, company-wide chat, and performance-data grounding were developed in parallel by the team; my focus was making the coach testable, measurable, and voice-ready.",
+      "desc": "B2B corporate AI coaching platform — multi-agent orchestration with LangGraph, modular POML prompts, Parquet-grounded personalization, real-time voice via OpenAI Realtime API, and HR analytics dashboards. <strong>I owned the evaluation framework, the early voice stack, and the POML foundation.</strong>",
+      "highlightTitle": "My contribution — evaluation and voice layer",
+      "highlightDesc": "My main task in this project was to make the coach testable and measurable before production rollout. I built the Referee Agent for session quality scoring, shipped the first OpenAI Realtime voice path, and established the POML prompt structure. Analytics and performance-data integration moved in parallel by the team; my focus was quality assurance and interaction plumbing.",
       "m1": "AI agents",
       "m2": "POML prompts",
       "m3": "eval dimensions",
       "m4": "product surfaces",
       "c1": {
         "module": "prompts · lead",
-        "title": "Pattern system &amp; POML migration",
-        "desc": "Implemented the advanced pattern engine (Chain-of-Thought, Tree-of-Thoughts, Planning, and 4 more) with mode-based selection; migrated all prompt files from Turkish to English and fixed naming/path inconsistencies across the 49-file POML library."
+        "title": "Problem",
+        "desc": "The problem was that coaching flows depended too much on manual review, and neither the voice experience nor the prompt structure could be trusted before production. That made product behavior difficult to measure."
       },
       "c2": {
         "module": "coach · lead",
-        "title": "Referee Agent — LLM-as-Judge",
-        "desc": "Designed and built the end-to-end evaluation system: AI Client Simulator, multi-turn Coach integration, unified 5-dimension evaluator (role/style, techniques, principles, safety, flow), dynamic conversation closure, and OpenAI Evals export."
+        "title": "My contribution",
+        "desc": "I built the LLM-as-Judge pipeline with the Referee Agent, combining the AI Client Simulator, multi-turn Coach integration, and the 5-dimension evaluation structure. I also made the POML prompt architecture and the voice path work together."
       },
       "c3": {
         "module": "coach",
-        "title": "Voice integration (OpenAI Realtime)",
-        "desc": "Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice configuration modules, and agent-chat-ui React components with Web Audio API (24 kHz PCM16)."
+        "title": "Impact",
+        "desc": "The evaluation automation made session quality measurable, and the client simulator produced shorter, more consistent test flows. The real-time voice layer also turned the coach from a text-only tool into an interactive product."
       },
       "c4": {
         "module": "coach",
-        "title": "Memory &amp; state persistence",
-        "desc": "Fixed coach memory persistence (Context Messages: 0 bug), LangChain v0.3+ compatibility in coach submodule, and client-side memory optimization (last 6 messages, 40% token savings)."
+        "title": "Solution",
+        "desc": "I separated the pattern engine, POML migration, voice bridge, and memory persistence into modular components. That made the coach easier to test and easier to extend in production."
       },
       "c5": {
         "module": "coach",
@@ -357,32 +357,32 @@
       "title": "Skills Advisor",
       "sub": "Qkare · Aug 2025 – May 2026 · AI competency dimension selection",
       "badge": "Production · B2B SaaS",
-      "desc": "AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for domain experts. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong>",
-      "highlightTitle": "Core ownership — competency selection engine",
-      "highlightDesc": "Primary engineer from the first competency UI through the production FastAPI service: closed-dictionary constrained generation, DSPy multi-expert consensus, and caching strategy. O*NET API v2 client, LangChain v1 migration, dimension validation middleware, CI deploy components, and grid-observability adoption were developed in parallel by the team; my focus was making exactly-12-dimension selection reliable, explainable in Turkish, and cheap at scale.",
+      "desc": "AI advisor that selects exactly 12 competency dimensions from a closed dictionary for any job title — supporting Ocean and Saville frameworks, with Turkish rationales for domain experts. <strong>I led the founding product, closed-dictionary pipeline, and caching strategy.</strong>",
+      "highlightTitle": "My contribution — competency selection engine",
+      "highlightDesc": "The goal here was to make 12-dimension selection reliable, explainable, and cheap. I designed the closed-dictionary data layer, Turkish rationales, caching strategy, and both inference paths. O*NET integration and observability moved in parallel by the team.",
       "m1": "dimensions per role",
       "m2": "assessment frameworks",
       "m3": "inference engines",
       "m4": "DSPy expert personas",
       "c1": {
         "module": "skills-advisor · lead",
-        "title": "Founding competency assessment system",
-        "desc": "Built the initial AI-powered competency suggestion flow (Aug 2025): Ocean/Saville test types, dimension scoring with Turkish reasoning, Streamlit two-column UI, and manual dimension add/remove — establishing the product before the modular FastAPI refactor."
+        "title": "Problem",
+        "desc": "The problem was that competency dimensions for a role were often chosen subjectively. Existing processes were inconsistent and weak at producing Turkish explanations."
       },
       "c2": {
         "module": "skills-advisor",
-        "title": "Closed dictionary &amp; data layer",
-        "desc": "Moved dimensions and mappings into dimensions.json with /dimensions API endpoints; injected mapping context into LLM prompts; shuffle per request to reduce positional bias; whitelist validation + dedupe + cap@12 on every response."
+        "title": "My contribution",
+        "desc": "I built the closed-dictionary data layer, served the dimension mappings through an API, and injected context into LLM prompts. I also implemented caching, validation, and repeatable selection logic."
       },
       "c3": {
         "module": "skills-advisor",
-        "title": "DSPy SME expert ensemble",
-        "desc": "Implemented dynamic SME weight system and arithmetic-mean adjudicator (Oct–Nov 2025): five parallel expert personas merged into consensus lists with category balance — alternative to single-pass LangChain for higher-stakes role assessments."
+        "title": "Impact",
+        "desc": "I moved competency selection out of subjective judgment and into a measurable workflow. That made the same job title produce consistent, explainable, Turkish rationale-backed dimension recommendations."
       },
       "c4": {
         "module": "skills-advisor",
-        "title": "LangChain path &amp; prompt variants",
-        "desc": "PromptBuilder with BASIC / ONET / INSIGHTS / BOTH variants; insights.txt + mindmaps.json RAG-lite injection; PydanticOutputParser on json_object responses; use_expert_engine flag to switch engines without API contract changes."
+        "title": "Solution",
+        "desc": "I implemented two inference paths: single-pass JSON mode and a DSPy expert ensemble. That gave the selection engine flexibility across speed, explainability, and cost."
       },
       "c5": {
         "module": "skills-advisor",
@@ -399,32 +399,32 @@
       "title": "Agent API Gateway",
       "sub": "Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo",
       "badge": "Production · Platform",
-      "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong>",
-      "highlightTitle": "Core ownership — agent gateway platform",
-      "highlightDesc": "Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI pipeline generation. create_gateway_app refactor, CORS settings, and Cookiecutter agent scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate.",
+      "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. <strong>I led platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong>",
+      "highlightTitle": "My contribution — platform contract and deployment",
+      "highlightDesc": "My main task was to make the shared entry point for the agent ecosystem production-ready. I built the monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI generation. The rest of the team iterated on create_gateway_app, CORS, and scaffolding improvements in parallel; my focus was the contract and deployment topology.",
       "m1": "production agents",
       "m2": "invoke contract",
       "m3": "pipeline generator",
       "m4": "core layers",
       "c1": {
         "module": "ai-api-monorepo · lead",
-        "title": "Platform bootstrap &amp; gateway core",
-        "desc": "Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in the application entry point, Cookiecutter template for new agents, and API documentation integration guide for frontend teams."
+        "title": "Problem",
+        "desc": "The problem was that each agent integration created repeated boilerplate and rising maintenance cost without a shared auth and deployment pattern. New services needed a common entry point."
       },
       "c2": {
         "module": "core",
-        "title": "JWT auth &amp; invoke pipeline",
-        "desc": "Integrated grid-auth for token verification on every /invoke call; dev bypass vs production auth paths; streamlined API responses (operational metadata logged, not returned); enhanced agent invoke logging and error handling."
+        "title": "My contribution",
+        "desc": "I built the shared gateway core: router factory, invoke schemas, JWT verification, per-agent container structure, and dynamic CI generation. That made the base scaffolding manageable from one place."
       },
       "c3": {
         "module": "infra",
-        "title": "Per-agent Docker Compose topology",
-        "desc": "Restructured compose to per-agent includes (agents/ga_kpi_advisor/docker-compose.yml); dev overlay with external KPI Advisor path; multi-stage Dockerfiles with non-root user, OCI labels, HEALTHCHECK, and build-arg versioning."
+        "title": "Impact",
+        "desc": "The gateway reduced integration cost by unifying different AI services behind one standard invoke flow. With the container and auth contract clear, teams could ship agents faster."
       },
       "c4": {
         "module": "ci",
-        "title": "Dynamic GitLab child pipelines",
-        "desc": "Built pipeline generation scripts to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds."
+        "title": "Solution",
+        "desc": "I designed per-agent Docker Compose, dynamic GitLab child pipelines, and one invoke contract. That turned the gateway into a low-friction platform for new services."
       },
       "c5": {
         "module": "kpi-advisor agent",
@@ -441,32 +441,32 @@
       "title": "QKare AI Assistant",
       "sub": "Qkare · Jul 2025 · Corporate website chatbot",
       "badge": "Production · Web",
-      "desc": "FastAPI chatbot for the QKare corporate website — answers visitor questions about the company through a cost-optimized cascade: rule-based QA matching first, then semantic cache (FAISS or Milvus), then web-scraping RAG over live site content, and finally OpenAI for open-ended replies. Hybrid security (local pattern + AI analysis) guards against prompt injection. <strong>Sole author — full rewrite from architecture through Docker deployment.</strong>",
-      "highlightTitle": "Core ownership — enterprise chatbot stack",
-      "highlightDesc": "Sole engineer on the Jul 2025 rewrite: end-to-end FastAPI chatbot with hybrid security, dual vector-store support, and four-layer inference cascade. This predates the later HR analytics and agent-gateway work at Qkare but established patterns — semantic cache, RAG grounding, and security-first request handling — reused across subsequent AI services.",
+      "desc": "FastAPI chatbot for the QKare corporate website — answers visitor questions through a cost-controlled cascade: rule-based matching first, then semantic cache (FAISS or Milvus), then live content RAG, and finally OpenAI for open-ended replies. <strong>I rewrote it end to end, including architecture and Docker deployment.</strong>",
+      "highlightTitle": "My contribution — enterprise chatbot stack",
+      "highlightDesc": "My main task in this rewrite was to build a production-ready, security-first chatbot backbone. I shipped hybrid security, dual vector-store support, and the four-layer inference cascade. The semantic cache and RAG patterns established here were reused in later AI services.",
       "m1": "cascade layers",
       "m2": "vector backends",
       "m3": "hybrid security stack",
       "m4": "RAG pipeline",
       "c1": {
         "module": "qkare-chatbot · lead",
-        "title": "Cascade inference architecture",
-        "desc": "Designed the rule → semantic cache → RAG → LLM pipeline in the main orchestration layer: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message."
+        "title": "Problem",
+        "desc": "The problem was that visitor questions needed fast answers, but calling the LLM directly was expensive and the site content changed often. A static FAQ alone was not enough."
       },
       "c2": {
         "module": "qkare-chatbot",
-        "title": "Semantic cache &amp; vector stores",
-        "desc": "Built cache_service and milvus_service with configurable FAISS or Milvus backends; similarity-threshold tuning; cache write-back after LLM responses so recurring visitor questions skip expensive inference."
+        "title": "My contribution",
+        "desc": "I built the rule → semantic cache → RAG → LLM flow. I also designed the cache services, FAISS/Milvus options, and the retrieval layer grounded in live site context."
       },
       "c3": {
         "module": "qkare-chatbot",
-        "title": "RAG &amp; web scraping layer",
-        "desc": "rag_service scrapes QKare site pages (BeautifulSoup, html2text) for fresh grounding; LangChain + OpenAI assembly when rules and cache miss; keeps corporate answers aligned with public content."
+        "title": "Impact",
+        "desc": "This setup reduced cost for repeat questions, kept answers aligned with current site content, and added a security layer against prompt injection. The product reached the level of a true corporate website assistant."
       },
       "c4": {
         "module": "security",
-        "title": "Hybrid security system",
-        "desc": "hybrid security modules combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring."
+        "title": "Solution",
+        "desc": "I implemented hybrid security modules, configurable prompt-injection thresholds, and production packaging. That turned the chatbot into both an economical and secure service."
       },
       "c5": {
         "module": "qkare-chatbot · infra",
