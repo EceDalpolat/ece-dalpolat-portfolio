@@ -177,7 +177,7 @@
       "c3": {
         "module": "ga-dbt",
         "title": "Native RLS in dbt",
-        "desc": "Implemented PostgreSQL native RLS via the apply_native_rls post-hook macro, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer."
+        "desc": "Implemented PostgreSQL native RLS via the native RLS deployment macros, access_map_employee visibility table, and cross-tenant smoke tests — fixing RLS dependency issues that blocked the entire mart layer."
       },
       "c4": {
         "module": "ga-workspace",
@@ -209,22 +209,22 @@
       "c1": {
         "module": "clustering-rd · lead",
         "title": "Feature engineering pipeline",
-        "desc": "Built feature_engineering.py to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization."
+        "desc": "Built feature engineering pipelines to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization."
       },
       "c2": {
         "module": "clustering-rd",
         "title": "Multi-algorithm clustering comparison",
-        "desc": "Implemented clustering_model.py and advanced_model.py to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection."
+        "desc": "Implemented modular clustering pipelines to run K-Means, hierarchical, DBSCAN, and GMM on the same dataset; scored each run with silhouette, Calinski-Harabasz, and Davies-Bouldin indices for side-by-side selection."
       },
       "c3": {
         "module": "clustering-rd",
         "title": "EDA &amp; dimensionality reduction",
-        "desc": "EDA.py for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization."
+        "desc": "exploratory data analysis modules for exploratory profiling; PCA and t-SNE projections with matplotlib, seaborn, and Plotly — dual-channel reporting (static PNG + interactive HTML) for segment visualization."
       },
       "c4": {
         "module": "clustering-rd",
         "title": "AutoML &amp; multi-cluster analysis",
-        "desc": "autoMl1.py for automated model search experiments; multi_cluster_analysis.py for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts."
+        "desc": "automated model search modules for automated model search experiments; cross-algorithm analysis tools for cross-algorithm segment comparison and H2O/sklearn output export to CSV artifacts."
       }
     },
     "coach": {
@@ -251,7 +251,7 @@
       "c3": {
         "module": "coach",
         "title": "Voice integration (OpenAI Realtime)",
-        "desc": "Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice_config.py, and agent-chat-ui React components with Web Audio API (24 kHz PCM16)."
+        "desc": "Pioneered real-time voice coaching: WebSocket voice server, RealtimeVoiceSession bridge, POML system prompts in voice path, voice configuration modules, and agent-chat-ui React components with Web Audio API (24 kHz PCM16)."
       },
       "c4": {
         "module": "coach",
@@ -293,12 +293,12 @@
       "c3": {
         "module": "analyzer",
         "title": "Master prompt &amp; agent reliability",
-        "desc": "Fixed master_prompt.yaml rendering (dict sections → block strings), build_master_prompt() guards, PostgreSQL TCP keepalive + stale-connection retry, SQL alias ambiguity fixes, and chat history trimming for context overflow."
+        "desc": "Fixed master prompt configurations rendering (dict sections → block strings), build_master_prompt() guards, PostgreSQL TCP keepalive + stale-connection retry, SQL alias ambiguity fixes, and chat history trimming for context overflow."
       },
       "c4": {
         "module": "analyzer",
         "title": "Domain mods &amp; analysis fixes",
-        "desc": "Fixed FourHProfileRiskMod runtime TypeError, resolved tools/__init__ circular import via PEP 562 lazy loading, unified SwotPatternType enums, and enhanced ProfileTransformer for employee_user_id identity validation."
+        "desc": "Fixed FourHProfileRiskMod runtime TypeError, resolved module initialization circular import via PEP 562 lazy loading, unified SwotPatternType enums, and enhanced ProfileTransformer for employee_user_id identity validation."
       },
       "c5": {
         "module": "ga-analyzer-api",
@@ -387,7 +387,7 @@
       "c5": {
         "module": "skills-advisor",
         "title": "Multi-layer caching",
-        "desc": "SHA256 LLM-level cache in base_llm.py plus request-level cache in LangChainService (May 2026); switched default to gpt-4o-mini @ temperature 0 for cost/latency — identical role+test+group requests skip OpenAI entirely."
+        "desc": "SHA256 LLM-level cache in core LLM processing modules plus request-level cache in LangChainService (May 2026); switched default to gpt-4o-mini @ temperature 0 for cost/latency — identical role+test+group requests skip OpenAI entirely."
       },
       "c6": {
         "module": "skills-advisor · platform",
@@ -409,7 +409,7 @@
       "c1": {
         "module": "ai-api-monorepo · lead",
         "title": "Platform bootstrap &amp; gateway core",
-        "desc": "Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, Cookiecutter template for new agents, and API.md integration guide for frontend teams."
+        "desc": "Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in the application entry point, Cookiecutter template for new agents, and API documentation integration guide for frontend teams."
       },
       "c2": {
         "module": "core",
@@ -424,7 +424,7 @@
       "c4": {
         "module": "ci",
         "title": "Dynamic GitLab child pipelines",
-        "desc": "Built generate_agents_pipeline.py to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds."
+        "desc": "Built pipeline generation scripts to scan agents/ for Dockerfiles and emit per-agent CI child pipelines; added GitLab CI + pre-commit (Ruff, MyPy); iterated trigger-agents, Docker host, and job dependency rules for reliable builds."
       },
       "c5": {
         "module": "kpi-advisor agent",
@@ -451,7 +451,7 @@
       "c1": {
         "module": "qkare-chatbot · lead",
         "title": "Cascade inference architecture",
-        "desc": "Designed the rule → semantic cache → RAG → LLM pipeline in app.py: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message."
+        "desc": "Designed the rule → semantic cache → RAG → LLM pipeline in the main orchestration layer: instant QA hits for FAQs, embedding similarity for repeat questions, scraped site context when knowledge is stale, and LLM only when earlier layers miss — minimizing cost per message."
       },
       "c2": {
         "module": "qkare-chatbot",
@@ -466,12 +466,12 @@
       "c4": {
         "module": "security",
         "title": "Hybrid security system",
-        "desc": "security/hybrid_security.py combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring."
+        "desc": "hybrid security modules combines local regex patterns and AI-based threat analysis; PromptInjectionError handling, configurable thresholds, and get_security_metrics for production monitoring."
       },
       "c5": {
         "module": "qkare-chatbot · infra",
         "title": "Production packaging",
-        "desc": "Organized services/ layout (qa, cache, milvus, rag, llm); Docker Compose for Milvus + Attu admin UI; structured logging, custom exceptions, /health endpoint, and env-driven config validation in config.py."
+        "desc": "Organized services/ layout (qa, cache, milvus, rag, llm); Docker Compose for Milvus + Attu admin UI; structured logging, custom exceptions, /health endpoint, and env-driven config validation in centralized configuration modules."
       }
     }
   }

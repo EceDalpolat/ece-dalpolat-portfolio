@@ -177,7 +177,7 @@
       "c3": {
         "module": "ga-dbt",
         "title": "dbt içinde native RLS",
-        "desc": "apply_native_rls post-hook makrosu, access_map_employee görünürlük tablosu ve çapraz kiracı smoke test'leri ile PostgreSQL native RLS; tüm mart katmanını bloke eden RLS bağımlılık sorunlarını giderdim."
+        "desc": "doğal RLS dağıtım makroları, access_map_employee görünürlük tablosu ve çapraz kiracı smoke test'leri ile PostgreSQL native RLS; tüm mart katmanını bloke eden RLS bağımlılık sorunlarını giderdim."
       },
       "c4": {
         "module": "ga-workspace",
@@ -209,22 +209,22 @@
       "c1": {
         "module": "clustering-rd · lead",
         "title": "Özellik mühendisliği hattı",
-        "desc": "feature_engineering.py ile ham İK/değerlendirme girdilerini ölçeklenmiş, modele hazır matrislere dönüştürdüm — tutarlı ön işleme ve joblib serileştirmesiyle keşif verisi ile kümeleme modüllerini bağladım."
+        "desc": "Özellik mühendisliği (feature engineering) boru hatları ile ham İK/değerlendirme girdilerini ölçeklenmiş, modele hazır matrislere dönüştürdüm — tutarlı ön işleme ve joblib serileştirmesiyle keşif verisi ile kümeleme modüllerini bağladım."
       },
       "c2": {
         "module": "clustering-rd",
         "title": "Çok algoritmalı kümeleme karşılaştırması",
-        "desc": "clustering_model.py ve advanced_model.py ile aynı veri kümesinde K-Means, hiyerarşik, DBSCAN ve GMM; her çalıştırmayı silhouette, Calinski-Harabasz ve Davies-Bouldin ile puanlayarak yan yana seçim."
+        "desc": "Modüler kümeleme algoritmaları ile aynı veri kümesinde K-Means, hiyerarşik, DBSCAN ve GMM; her çalıştırmayı silhouette, Calinski-Harabasz ve Davies-Bouldin ile puanlayarak yan yana seçim."
       },
       "c3": {
         "module": "clustering-rd",
         "title": "EDA &amp; boyut indirgeme",
-        "desc": "Keşifsel profilleme için EDA.py; matplotlib, seaborn ve Plotly ile PCA ve t-SNE projeksiyonları — segment görselleştirmesi için çift kanallı raporlama (statik PNG + etkileşimli HTML)."
+        "desc": "Keşifsel veri analizi modülleri kullanılarak; matplotlib, seaborn ve Plotly ile PCA ve t-SNE projeksiyonları — segment görselleştirmesi için çift kanallı raporlama (statik PNG + etkileşimli HTML)."
       },
       "c4": {
         "module": "clustering-rd",
         "title": "AutoML &amp; çok küme analizi",
-        "desc": "Otomatik model arama deneyleri için autoMl1.py; çapraz algoritma segment karşılaştırması ve H2O/sklearn çıktısını CSV artefaktlarına aktarmak için multi_cluster_analysis.py."
+        "desc": "Otomatik model arama deneyleri için otomatik model arama modülleri; çapraz algoritma segment karşılaştırması ve H2O/sklearn çıktısını CSV artefaktlarına aktarmak için çapraz algoritma analiz araçları geliştirdim."
       }
     },
     "coach": {
@@ -251,7 +251,7 @@
       "c3": {
         "module": "coach",
         "title": "Ses entegrasyonu (OpenAI Realtime)",
-        "desc": "Gerçek zamanlı ses koçluğuna öncülük: WebSocket ses sunucusu, RealtimeVoiceSession köprüsü, ses yolunda POML sistem prompt'ları, voice_config.py ve Web Audio API (24 kHz PCM16) ile agent-chat-ui React bileşenleri."
+        "desc": "Gerçek zamanlı ses koçluğuna öncülük: WebSocket ses sunucusu, RealtimeVoiceSession köprüsü, ses yolunda POML sistem prompt'ları, ses konfigürasyon modülleri ve Web Audio API (24 kHz PCM16) ile agent-chat-ui React bileşenleri."
       },
       "c4": {
         "module": "coach",
@@ -293,12 +293,12 @@
       "c3": {
         "module": "analyzer",
         "title": "Master prompt &amp; ajan güvenilirliği",
-        "desc": "master_prompt.yaml render'ını düzelttim (dict bölümleri → block string), build_master_prompt() guard'ları, PostgreSQL TCP keepalive + bayat bağlantı yeniden denemesi, SQL alias belirsizlik düzeltmeleri ve bağlam taşması için sohbet geçmişi kırpma."
+        "desc": "Ana prompt (master prompt) yapılandırmalarının derlenmesini düzelttim (dict bölümleri → block string), build_master_prompt() guard'ları, PostgreSQL TCP keepalive + bayat bağlantı yeniden denemesi, SQL alias belirsizlik düzeltmeleri ve bağlam taşması için sohbet geçmişi kırpma."
       },
       "c4": {
         "module": "analyzer",
         "title": "Domain mod'ları &amp; analiz düzeltmeleri",
-        "desc": "FourHProfileRiskMod runtime TypeError düzeltmesi, PEP 562 lazy loading ile tools/__init__ döngüsel import çözümü, SwotPatternType enum birleştirmesi ve employee_user_id kimlik doğrulaması için ProfileTransformer geliştirmesi."
+        "desc": "FourHProfileRiskMod runtime TypeError düzeltmesi, PEP 562 lazy loading ile modül ilklendirme (init) döngüsel import çözümü, SwotPatternType enum birleştirmesi ve employee_user_id kimlik doğrulaması için ProfileTransformer geliştirmesi."
       },
       "c5": {
         "module": "ga-analyzer-api",
@@ -387,7 +387,7 @@
       "c5": {
         "module": "skills-advisor",
         "title": "Çok katmanlı önbellekleme",
-        "desc": "base_llm.py'de SHA256 LLM düzeyi önbellek ve LangChainService'te istek düzeyi önbellek (May 2026); maliyet/gecikme için varsayılanı gpt-4o-mini @ temperature 0 yaptım — aynı rol+test+grup istekleri OpenAI'ı tamamen atlar."
+        "desc": "Çekirdek LLM işlem modüllerinde SHA256 LLM düzeyi önbellek ve LangChainService'te istek düzeyi önbellek (May 2026); maliyet/gecikme için varsayılanı gpt-4o-mini @ temperature 0 yaptım — aynı rol+test+grup istekleri OpenAI'ı tamamen atlar."
       },
       "c6": {
         "module": "skills-advisor · platform",
@@ -409,7 +409,7 @@
       "c1": {
         "module": "ai-api-monorepo · lead",
         "title": "Platform bootstrap &amp; gateway çekirdeği",
-        "desc": "İlk monorepo yapısını kurdum: çekirdek router factory, InvokeRequest/InvokeResponse şemaları, main.py'de agent kaydı, yeni agent'lar için Cookiecutter şablonu ve frontend ekipleri için API.md entegrasyon rehberi."
+        "desc": "İlk monorepo yapısını kurdum: çekirdek router factory, InvokeRequest/InvokeResponse şemaları, uygulama giriş noktasında agent kaydı, yeni agent'lar için Cookiecutter şablonu ve frontend ekipleri için API dokümantasyonu entegrasyon rehberi."
       },
       "c2": {
         "module": "core",
@@ -424,7 +424,7 @@
       "c4": {
         "module": "ci",
         "title": "Dinamik GitLab child pipeline'ları",
-        "desc": "agents/ altında Dockerfile tarayıp agent başına CI child pipeline üreten generate_agents_pipeline.py; GitLab CI + pre-commit (Ruff, MyPy); güvenilir build'ler için trigger-agents, Docker host ve iş bağımlılık kurallarını iterasyonla geliştirdim."
+        "desc": "agents/ altında Dockerfile tarayıp agent başına CI child pipeline üreten pipeline (boru hattı) üretim betikleri; GitLab CI + pre-commit (Ruff, MyPy); güvenilir build'ler için trigger-agents, Docker host ve iş bağımlılık kurallarını iterasyonla geliştirdim."
       },
       "c5": {
         "module": "kpi-advisor agent",
@@ -451,7 +451,7 @@
       "c1": {
         "module": "qkare-chatbot · lead",
         "title": "Cascade inference mimarisi",
-        "desc": "app.py'de kural → semantik önbellek → RAG → LLM hattını tasarladım: SSS için anında QA isabetleri, tekrarlayan sorular için embedding benzerliği, bilgi bayatladığında kazınmış site bağlamı ve önceki katmanlar kaçırdığında yalnızca LLM — mesaj başına maliyeti minimize eder."
+        "desc": "Ana orkestrasyon katmanında kural → semantik önbellek → RAG → LLM hattını tasarladım: SSS için anında QA isabetleri, tekrarlayan sorular için embedding benzerliği, bilgi bayatladığında kazınmış site bağlamı ve önceki katmanlar kaçırdığında yalnızca LLM — mesaj başına maliyeti minimize eder."
       },
       "c2": {
         "module": "qkare-chatbot",
@@ -466,12 +466,12 @@
       "c4": {
         "module": "security",
         "title": "Hibrit güvenlik sistemi",
-        "desc": "security/hybrid_security.py yerel regex kalıpları ile AI tabanlı tehdit analizini birleştirir; PromptInjectionError işleme, yapılandırılabilir eşikler ve üretim izleme için get_security_metrics."
+        "desc": "Hibrit güvenlik modülleri, yerel regex kalıpları ile AI tabanlı tehdit analizini birleştirir; PromptInjectionError işleme, yapılandırılabilir eşikler ve üretim izleme için get_security_metrics."
       },
       "c5": {
         "module": "qkare-chatbot · infra",
         "title": "Üretim paketleme",
-        "desc": "services/ düzeni (qa, cache, milvus, rag, llm); Milvus + Attu admin UI için Docker Compose; yapılandırılmış loglama, özel exception'lar, /health uç noktası ve config.py'de ortam tabanlı config doğrulaması."
+        "desc": "services/ düzeni (qa, cache, milvus, rag, llm); Milvus + Attu admin UI için Docker Compose; yapılandırılmış loglama, özel exception'lar, /health uç noktası ve merkezi konfigürasyon modüllerinde ortam tabanlı config doğrulaması."
       }
     }
   }
