@@ -12,7 +12,7 @@
   },
   "hero": {
     "eyebrow": "AI Engineer & Data Scientist",
-    "bio": "I build production AI systems for HR and talent analytics — dbt data platforms, multi-tenant agents, and structured LLM microservices. Currently pursuing an MSc at Işık University while engineering AI at Qkare.",
+    "bio": "I'm a production AI engineer: I take data to models, models to secure services, and services into live products. Not demos — measurable, documented, scalable systems. Currently pursuing an MSc at Işık University.",
     "ctaProjects": "View Projects",
     "ctaCV": "View CV",
     "ctaContact": "Get in Touch"
