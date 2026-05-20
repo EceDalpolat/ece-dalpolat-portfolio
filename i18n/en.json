@@ -22,7 +22,7 @@
     "label": "Background",
     "title": "About Me",
     "p1": "I'm an AI Engineer and data science enthusiast pursuing a Master's in Information Technologies at Işık University, with a Bachelor's in Software Engineering from Kırklareli University.",
-    "p2": "At Qkare, I own core pieces of a multi-tenant HR analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over psychometric data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.",
+    "p2": "At Qkare, I own core pieces of a multi-tenant enterprise analytics stack: the <strong>dbt transformation layer</strong> (109+ models, native PostgreSQL RLS, AI precompute marts), production <strong>LangChain / LangGraph agents</strong> over domain-specific behavioral data, and advisor microservices for KPIs and competency selection. I also built the <strong>agent API gateway</strong> that standardizes auth, invoke contracts, and observability across downstream AI services.",
     "p3": "My work spans structured LLM output (JSON mode, Pydantic validation), embedding-free and vector RAG patterns, LLM-as-judge eval pipelines, and cost-aware inference cascades — from early clustering R&D through production B2B SaaS.",
     "stat1": "Years of engineering experience",
     "stat2": "dbt models in production",
@@ -49,7 +49,7 @@
     "e1": {
       "date": "Jun 2025 – Present",
       "role": "AI Engineer",
-      "desc": "Primary engineer on Qkare's HR AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot (RAG + semantic cache), and supporting CI/Docker infrastructure."
+      "desc": "Primary engineer on Qkare's B2B AI platform: <strong>dbt transformation layer</strong> (109+ models, RLS, AI precompute marts), <strong>behavioral analytics agents</strong> (LangChain ReAct, tenant-safe SQL), and advisor microservices (KPI &amp; competency selection). Built the <strong>agent API gateway</strong>, corporate chatbot (RAG + semantic cache), and supporting CI/Docker infrastructure."
     },
     "e2": {
       "date": "Jan 2025 – Present",
@@ -91,7 +91,7 @@
       "type": "AI · Backend",
       "title": "CVAnalyzerAI — Resume Analysis Platform",
       "desc": "Intelligent resume analysis platform using MCP and multiple AI services. Analyzes CVs to extract strengths, weaknesses, and job-fit insights using LLMs and structured parsing. Integrated into Claude via MCP.",
-      "impact": "Helps HR teams reduce review time and gain AI-driven insights about candidates.",
+      "impact": "Helps business teams reduce review time and gain AI-driven insights about candidates.",
       "link": "GitHub →"
     },
     "c2": {
@@ -157,7 +157,7 @@
       "title": "Analytics Platform",
       "sub": "Qkare · Nov 2025 – May 2026 · Multi-tenant HR Analytics Stack",
       "badge": "Production · B2B SaaS",
-      "desc": "End-to-end analytics platform for talent management — ingesting psychometric assessment data (AON cognitive, Saville behavioural, Assessment Center) via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).",
+      "desc": "End-to-end analytics platform for talent management — ingesting complex behavioral and cognitive data via PostgreSQL FDW, transforming it through a 3-layer dbt pipeline, and serving embedded Superset dashboards with per-tenant, per-user Row-Level Security. <strong>Primary owner of the dbt transformation layer</strong> (~109 models, 56 marts, 13 AI precompute tables).",
       "highlightTitle": "Core ownership — dbt transformation layer",
       "highlightDesc": "Primary engineer on the dbt pipeline (~109 models): from early local-dev setup and canonical score normalisation (AON, Saville, AC → STEN) through the full mart catalogue and AI precompute layer. Segment discovery and feature engineering started in <a href=\"#clustering-rd\" class=\"ga-inline-link\">Behavioral Clustering R&amp;D</a> (Aug 2025) before productionising scores as SQL marts. Platform scaffolding (K8s, CI, guest-token API) was built in parallel by the team; my focus was the data models, RLS, and making dashboards actually work end-to-end.",
       "m1": "dbt models",
@@ -199,7 +199,7 @@
       "title": "Behavioral Clustering R&D",
       "sub": "Qkare · Aug 2025 · Employee segmentation & talent analytics",
       "badge": "R&amp;D · Research",
-      "desc": "Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for HR analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong>",
+      "desc": "Research workspace for segmenting employees and candidates from behavioral and performance data — comparing K-Means, hierarchical clustering, DBSCAN, and GMM on the same feature matrix, with PCA/t-SNE visualization and silhouette / Calinski-Harabasz / Davies-Bouldin evaluation. Outputs segment profiles as CSV and static/interactive plots for enterprise analytics decisions. <strong>Sole author — end-to-end pipeline from EDA through feature engineering to multi-algorithm benchmarking.</strong>",
       "highlightTitle": "Core ownership — comparative clustering research",
       "highlightDesc": "Sole engineer on this R&amp;D track: designed the full offline analytics loop from raw behavioral data through feature engineering, algorithm benchmarking, and visual segment profiling. Research outputs informed the Analytics Platform (dbt marts, AI precompute layers) but this repo intentionally stays script-based — no API or production deploy scope.",
       "m1": "clustering algorithms",
@@ -209,7 +209,7 @@
       "c1": {
         "module": "clustering-rd · lead",
         "title": "Feature engineering pipeline",
-        "desc": "Built feature engineering pipelines to transform raw HR/assessment inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization."
+        "desc": "Built feature engineering pipelines to transform raw behavioral inputs into scaled, model-ready matrices — bridging exploratory data and clustering modules via consistent preprocessing and joblib serialization."
       },
       "c2": {
         "module": "clustering-rd",
@@ -273,7 +273,7 @@
       "title": "Analyzer Platform",
       "sub": "Qkare · Apr 2025 – May 2026 · Behavioral Analytics AI Agent",
       "badge": "Production · B2B SaaS",
-      "desc": "Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language HR questions over psychometric data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong>",
+      "desc": "Corporate behavioral analytics platform — a LangChain ReAct agent that answers natural-language business intelligence queries over domain-specific behavioral data (Saville, 360°, 9-box, competency profiles) via dbt mart tables with native PostgreSQL RLS. Dual-service architecture: Analyzer (analysis engine) + Analyzer API (voice/text conversation layer). <strong>Lead engineer on security architecture, config bootstrap, and service integration.</strong>",
       "highlightTitle": "Core ownership — security &amp; platform foundation",
       "highlightDesc": "Primary engineer on the security and configuration foundation that made production deployment possible: merged JWT + RLS + guard pipeline into main, built the bootstrap config system agents run on, and wired observability across both analyzer engine and conversation API. ReAct agent skills, company analytics chat, and enum refactors were developed in parallel by the team; my focus was tenant-safe data access, prompt architecture, and making the dual-service stack production-ready.",
       "m1": "domain skills",
@@ -357,7 +357,7 @@
       "title": "Skills Advisor",
       "sub": "Qkare · Aug 2025 – May 2026 · AI competency dimension selection",
       "badge": "Production · B2B SaaS",
-      "desc": "AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for HR evaluators. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong>",
+      "desc": "AI advisor that selects exactly 12 competency dimensions from a closed dictionary (~900-line dimensions.json) for any job title — supporting Ocean and Saville assessment frameworks, with Turkish rationales for domain experts. Dual inference path: LangChain single-pass JSON mode or DSPy 5-expert ensemble with adjudicator consensus. <strong>Primary engineer on the founding product, SME expert system, closed-dictionary pipeline, and multi-layer caching.</strong>",
       "highlightTitle": "Core ownership — competency selection engine",
       "highlightDesc": "Primary engineer from the first competency UI through the production FastAPI service: closed-dictionary constrained generation, DSPy multi-expert consensus, and caching strategy. O*NET API v2 client, LangChain v1 migration, dimension validation middleware, CI deploy components, and grid-observability adoption were developed in parallel by the team; my focus was making exactly-12-dimension selection reliable, explainable in Turkish, and cheap at scale.",
       "m1": "dimensions per role",
@@ -392,7 +392,7 @@
       "c6": {
         "module": "skills-advisor · platform",
         "title": "Production integration",
-        "desc": "JWT + tenant whitelist via grid-auth; OTEL and prompt logging hooks; Docker netrc secrets for private PyPI; pairs with Agent API Gateway invoke path for downstream HR workflows."
+        "desc": "JWT + tenant whitelist via grid-auth; OTEL and prompt logging hooks; Docker netrc secrets for private PyPI; pairs with Agent API Gateway invoke path for downstream enterprise workflows."
       }
     },
     "gateway": {

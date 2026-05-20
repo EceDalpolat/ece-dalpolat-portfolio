@@ -22,7 +22,7 @@
     "label": "Özet",
     "title": "Hakkımda",
     "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim.",
-    "p2": "Qkare'de çok kiracılı İK analitik yığınının temel parçalarına sahibim: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), psikometrik veri üzerinde <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
+    "p2": "Qkare'de çok kiracılı kurumsal analitik yığınının temel parçalarına sahibim: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), davranışsal veri üzerinde <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
     "p3": "Çalışmalarım yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding-free ve vektör RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı inference cascade'lerini kapsıyor — erken kümeleme Ar-Ge'sinden üretim B2B SaaS'a.",
     "stat1": "Yıllık mühendislik deneyimi",
     "stat2": "Üretimdeki dbt modeli",
@@ -49,7 +49,7 @@
     "e1": {
       "date": "Haz 2025 – Devam",
       "role": "Yapay Zeka Mühendisi",
-      "desc": "Qkare İK AI platformunda ana mühendis: <strong>dbt dönüşüm katmanı</strong> (109+ model, RLS, AI ön hesaplama mart'ları), <strong>davranışsal analitik ajanlar</strong> (LangChain ReAct, kiracı-güvenli SQL) ve danışman mikroservisleri (KPI &amp; yetkinlik seçimi). <strong>Agent API gateway</strong>, kurumsal chatbot (RAG + semantik önbellek) ve CI/Docker altyapısını kurdum."
+      "desc": "Qkare B2B AI platformunda ana mühendis: <strong>dbt dönüşüm katmanı</strong> (109+ model, RLS, AI ön hesaplama mart'ları), <strong>davranışsal analitik ajanlar</strong> (LangChain ReAct, kiracı-güvenli SQL) ve danışman mikroservisleri (KPI &amp; yetkinlik seçimi). <strong>Agent API gateway</strong>, kurumsal chatbot (RAG + semantik önbellek) ve CI/Docker altyapısını kurdum."
     },
     "e2": {
       "date": "Oca 2025 – Devam",
@@ -91,7 +91,7 @@
       "type": "AI · Backend",
       "title": "CVAnalyzerAI — Özgeçmiş Analiz Platformu",
       "desc": "MCP ve birden fazla AI servisi kullanan akıllı özgeçmiş analiz platformu. LLM ve yapılandırılmış ayrıştırma ile CV'lerden güçlü/zayıf yönler ve iş uyumu çıkarır. Claude'a MCP ile entegre.",
-      "impact": "İK ekiplerinin inceleme süresini kısaltmasına ve adaylar hakkında AI destekli içgörü elde etmesine yardımcı olur.",
+      "impact": "iş ekiplerinin inceleme süresini kısaltmasına ve adaylar hakkında AI destekli içgörü elde etmesine yardımcı olur.",
       "link": "GitHub →"
     },
     "c2": {
@@ -199,7 +199,7 @@
       "title": "Davranışsal Kümeleme Ar-Ge",
       "sub": "Qkare · Ağu 2025 · Çalışan segmentasyonu & yetenek analitiği",
       "badge": "Ar-Ge · Araştırma",
-      "desc": "Çalışan ve adayları davranışsal ve performans verilerinden segmentlemek için araştırma ortamı — aynı özellik matrisinde K-Means, hiyerarşik kümeleme, DBSCAN ve GMM karşılaştırması; PCA/t-SNE görselleştirme ve silhouette / Calinski-Harabasz / Davies-Bouldin değerlendirmesi. Segment profillerini CSV ve statik/etkileşimli grafikler olarak İK analitik kararlarına sunar. <strong>Tek yazar — EDA'dan özellik mühendisliğine ve çok algoritmalı kıyaslamaya uçtan uca hat.</strong>",
+      "desc": "Çalışan ve adayları davranışsal ve performans verilerinden segmentlemek için araştırma ortamı — aynı özellik matrisinde K-Means, hiyerarşik kümeleme, DBSCAN ve GMM karşılaştırması; PCA/t-SNE görselleştirme ve silhouette / Calinski-Harabasz / Davies-Bouldin değerlendirmesi. Segment profillerini CSV ve statik/etkileşimli grafikler olarak kurumsal analitik kararlarına sunar. <strong>Tek yazar — EDA'dan özellik mühendisliğine ve çok algoritmalı kıyaslamaya uçtan uca hat.</strong>",
       "highlightTitle": "Temel sahiplik — karşılaştırmalı kümeleme araştırması",
       "highlightDesc": "Bu Ar-Ge hattında tek mühendis: ham davranışsal veriden özellik mühendisliği, algoritma kıyaslaması ve görsel segment profillemesine kadar tam çevrimdışı analitik döngüsünü tasarladım. Araştırma çıktıları Analitik Platformu'nu (dbt mart'ları, AI ön hesaplama katmanları) besledi; bu repo bilinçli olarak script tabanlı — API veya üretim deploy kapsamı yok.",
       "m1": "kümeleme algoritması",
@@ -209,7 +209,7 @@
       "c1": {
         "module": "clustering-rd · lead",
         "title": "Özellik mühendisliği hattı",
-        "desc": "Özellik mühendisliği (feature engineering) boru hatları ile ham İK/değerlendirme girdilerini ölçeklenmiş, modele hazır matrislere dönüştürdüm — tutarlı ön işleme ve joblib serileştirmesiyle keşif verisi ile kümeleme modüllerini bağladım."
+        "desc": "Özellik mühendisliği (feature engineering) boru hatları ile ham davranışsal verileri ölçeklenmiş, modele hazır matrislere dönüştürdüm — tutarlı ön işleme ve joblib serileştirmesiyle keşif verisi ile kümeleme modüllerini bağladım."
       },
       "c2": {
         "module": "clustering-rd",
@@ -273,7 +273,7 @@
       "title": "Analyzer Platformu",
       "sub": "Qkare · Nis 2025 – May 2026 · Davranışsal analitik AI ajanı",
       "badge": "Üretim · B2B SaaS",
-      "desc": "Kurumsal davranışsal analitik platformu — psikometrik veri (Saville, 360°, 9-box, yetkinlik profilleri) üzerinde doğal dilde İK sorularını yanıtlayan LangChain ReAct ajanı; native PostgreSQL RLS ile dbt mart tabloları. Çift servis mimarisi: Analyzer (analiz motoru) + Analyzer API (ses/metin konuşma katmanı). <strong>Güvenlik mimarisi, config bootstrap ve servis entegrasyonunda lider mühendis.</strong>",
+      "desc": "Kurumsal davranışsal analitik platformu — davranışsal veri (Saville, 360°, 9-box, yetkinlik profilleri) üzerinde doğal dilde iş zekası sorgularını yanıtlayan LangChain ReAct ajanı; native PostgreSQL RLS ile dbt mart tabloları. Çift servis mimarisi: Analyzer (analiz motoru) + Analyzer API (ses/metin konuşma katmanı). <strong>Güvenlik mimarisi, config bootstrap ve servis entegrasyonunda lider mühendis.</strong>",
       "highlightTitle": "Temel sahiplik — güvenlik &amp; platform temeli",
       "highlightDesc": "Üretim dağıtımını mümkün kılan güvenlik ve yapılandırma temelinde birincil mühendis: JWT + RLS + guard hattını main'e birleştirdim, ajanların çalıştığı bootstrap config sistemini kurdum ve hem analyzer motoru hem konuşma API'sinde gözlemlenebilirliği bağladım. ReAct ajan becerileri, şirket analitik sohbeti ve enum refaktörleri ekip tarafından paralel geliştirildi; odak noktam kiracı-güvenli veri erişimi, prompt mimarisi ve çift servis yığınını üretime hazır hale getirmekti.",
       "m1": "domain becerisi",
@@ -357,7 +357,7 @@
       "title": "Skills Advisor",
       "sub": "Qkare · Ağu 2025 – May 2026 · Yetkinlik boyutu seçimi AI",
       "badge": "Üretim · B2B SaaS",
-      "desc": "Herhangi bir iş unvanı için kapalı sözlükten (~900 satırlık dimensions.json) tam 12 yetkinlik boyutu seçen AI danışman — Ocean ve Saville değerlendirme çerçevelerini destekler; İK değerlendiricileri için Türkçe gerekçeler. Çift inference yolu: LangChain tek geçiş JSON mode veya DSPy 5 uzman ensemble + adjudicator uzlaşısı. <strong>Kurucu ürün, SME uzman sistemi, kapalı sözlük hattı ve çok katmanlı önbellekte birincil mühendis.</strong>",
+      "desc": "Herhangi bir iş unvanı için kapalı sözlükten (~900 satırlık dimensions.json) tam 12 yetkinlik boyutu seçen AI danışman — Ocean ve Saville değerlendirme çerçevelerini destekler; alan uzmanları için Türkçe gerekçeler. Çift inference yolu: LangChain tek geçiş JSON mode veya DSPy 5 uzman ensemble + adjudicator uzlaşısı. <strong>Kurucu ürün, SME uzman sistemi, kapalı sözlük hattı ve çok katmanlı önbellekte birincil mühendis.</strong>",
       "highlightTitle": "Temel sahiplik — yetkinlik seçim motoru",
       "highlightDesc": "İlk yetkinlik UI'ından üretim FastAPI servisine birincil mühendis: kapalı sözlük kısıtlı üretim, DSPy çok uzman uzlaşısı ve önbellek stratejisi. O*NET API v2 istemcisi, LangChain v1 migrasyonu, boyut doğrulama middleware'i, CI deploy bileşenleri ve grid-observability benimsemesi ekip tarafından paralel geliştirildi; odak noktam tam 12 boyut seçimini güvenilir, Türkçede açıklanabilir ve ölçekte ucuz hale getirmekti.",
       "m1": "rol başına boyut",
@@ -392,7 +392,7 @@
       "c6": {
         "module": "skills-advisor · platform",
         "title": "Üretim entegrasyonu",
-        "desc": "grid-auth ile JWT + kiracı whitelist; OTEL ve prompt loglama kancaları; özel PyPI için Docker netrc secret'ları; downstream İK iş akışları için Agent API Gateway invoke yoluyla eşleşir."
+        "desc": "grid-auth ile JWT + kiracı whitelist; OTEL ve prompt loglama kancaları; özel PyPI için Docker netrc secret'ları; kurumsal iş akışları için Agent API Gateway invoke yoluyla eşleşir."
       }
     },
     "gateway": {
