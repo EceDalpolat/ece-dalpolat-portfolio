@@ -40,6 +40,11 @@
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.toggle("active", btn.dataset.lang === currentLang);
     });
+
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+      cvLink.href = currentLang === 'tr' ? 'ECE-DALPOLAT-TR.pdf' : 'ECE-DALPOLAT-EN.pdf';
+    }
   }
 
   function i18nJsonUrl(lang) {
