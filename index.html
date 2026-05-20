@@ -559,19 +559,38 @@ section:nth-of-type(even) {
   border-bottom-color: var(--accent);
 }
 
+
 /* ── GA PROJECT (special) ── */
 #projects .section-title { margin-bottom: 2rem; }
 .ga-project {
   position: relative;
   background: var(--surface-2);
   border-radius: calc(var(--radius) + 2px);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   overflow: hidden;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--surface-3);
   transition: transform 0.25s, box-shadow 0.25s;
+  
+  /* TWO COLUMN LAYOUT */
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header body"
+    "metrics body";
+}
+@media (max-width: 900px) {
+  .ga-project {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "metrics"
+      "body";
+  }
 }
 .ga-project::before {
+
   content: '';
   position: absolute;
   inset: 0;
@@ -589,7 +608,9 @@ section:nth-of-type(even) {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
 }
+
 .ga-header {
+  grid-area: header;
   background: linear-gradient(135deg, #0c0e14 0%, #1a1d2e 50%, #1e1b4b 100%);
   color: #fff;
   padding: 1.75rem 2rem;
@@ -634,13 +655,25 @@ section:nth-of-type(even) {
   margin-bottom: 0.35rem;
 }
 .ga-sub { font-size: 0.8125rem; color: rgba(255,255,255,0.6); font-weight: 500; }
+
 .ga-metrics {
+  grid-area: metrics;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2rem;
-  padding: 1.35rem 2rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
   background: linear-gradient(180deg, #f8f9fd 0%, #fff 100%);
-  border-bottom: 1px solid var(--surface-3);
+  border-right: 1px solid var(--surface-3);
+}
+@media (max-width: 900px) {
+  .ga-metrics {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-right: none;
+    border-bottom: 1px solid var(--surface-3);
+    padding: 1.35rem 2rem;
+    gap: 1.5rem 2rem;
+  }
 }
 .ga-metric { text-align: left; min-width: 4.5rem; }
 .ga-metric-num {
@@ -655,7 +688,15 @@ section:nth-of-type(even) {
   line-height: 1;
 }
 .ga-metric-lbl { font-size: 0.6875rem; font-weight: 600; color: var(--ink-4); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.04em; }
-.ga-body { padding: 2rem; background: var(--surface-2); }
+
+.ga-body { 
+  grid-area: body;
+  padding: 2.5rem; 
+  background: var(--surface-2); 
+  display: flex;
+  flex-direction: column;
+}
+
 .ga-desc {
   font-size: 15px;
   color: var(--ink-2);
@@ -915,32 +956,7 @@ footer {
   .ga-header, .ga-body { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
 
-.ga-projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  align-items: start;
-}
-@media (max-width: 1024px) {
-  .ga-projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.ga-projects-grid .ga-project {
-  margin-bottom: 0;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.ga-projects-grid .ga-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-.ga-projects-grid .ga-stack {
-  margin-top: auto;
-}
+
 
 </style>
 </head>
@@ -1236,7 +1252,6 @@ footer {
     <p class="section-label" data-i18n="projects.label">Work</p>
     <h2 class="section-title" data-i18n="projects.title">Projects</h2>
 
-    <div class="ga-projects-grid">
     <!-- ANALYTICS — featured -->
     <div class="ga-project">
       <div class="ga-header">
@@ -1781,8 +1796,6 @@ footer {
           <span class="ga-stack-tag gray">joblib</span>
         </div>
       </div>
-    </div>
-
     </div>
 
     <!-- other projects grid -->
