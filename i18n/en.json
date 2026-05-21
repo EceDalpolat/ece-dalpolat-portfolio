@@ -117,6 +117,13 @@
       "title": "TOP4HONEYCHAINS — Smart Agri-Food",
       "desc": "ML solutions in honey value chains for traceability and quality assurance. Collected field data, trained predictive models, and created RESTful endpoints.",
       "impact": "Improved transparency across agri-food stakeholders and streamlined quality tracking."
+    },
+    "c6": {
+      "type": "AI · Food",
+      "title": "Yemek Chatbot — Multilingual Food Assistant",
+      "desc": "Multilingual food assistant built with RAG, Mem0, and Milvus. Recommends recipes from available ingredients, supports dietary preferences like gluten-free, vegan, and keto, and is set up for fine-tuning.",
+      "impact": "Makes recipe discovery more contextual with preference-aware, memory-backed suggestions.",
+      "link": "GitHub →"
     }
   },
   "education": {

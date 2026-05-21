@@ -117,6 +117,13 @@
       "title": "TOP4HONEYCHAINS — Akıllı Tarım-Gıda",
       "desc": "Bal değer zincirlerinde izlenebilirlik ve kalite güvencesi için ML çözümleri. Saha verisi topladım, tahmin modelleri eğittim ve RESTful uç noktalar oluşturdum.",
       "impact": "Tarım-gıda paydaşları arasında şeffaflığı artırdı ve kalite takibini kolaylaştırdı."
+    },
+    "c6": {
+      "type": "AI · Yemek",
+      "title": "Yemek Chatbot — Çok Dilli Yemek Asistanı",
+      "desc": "RAG, Mem0 ve Milvus ile geliştirilen çok dilli yemek asistanı. Eldeki malzemelere göre tarif önerir, glutensiz/vegan/keto gibi diyet tercihlerini destekler ve fine-tuning için hazırdır.",
+      "impact": "Tercihleri ve hafızayı kullanan bağlamsal önerilerle tarif keşfini güçlendirir.",
+      "link": "GitHub →"
     }
   },
   "education": {
