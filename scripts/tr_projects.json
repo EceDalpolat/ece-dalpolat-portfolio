@@ -247,7 +247,7 @@
     "badge": "Üretim · Platform",
     "desc": "Kurumsal AI agent gateway — birden fazla downstream AI mikroservisini tek standart invoke API üzerinden sunan FastAPI monorepo: paylaşımlı JWT auth, istek/yanıt zarfı, yapılandırılmış loglama ve OpenTelemetry kancaları. Ekipler ince agent handler + httpx proxy yazar; domain mantığı ayrı servislerde kalır (KPI Advisor, Analyzer vb.). <strong>Platform bootstrap, auth entegrasyonu, Docker topolojisi ve dinamik CI'da birincil mühendis.</strong>",
     "highlightTitle": "Temel sahiplik — agent gateway platformu",
-    "highlightDesc": "İlk commit'ten üretime hazır gateway'e birincil mühendis: monorepo düzeni, ilk agent bağlantısı, JWT auth, agent başına Docker/compose kalıbı ve dinamik CI hat üretimi. create_gateway_app refaktörü, CORS ayarları ve Cookiecutter agent iskelet iyileştirmeleri ekip tarafından paralel geliştirildi; grid-observability benimsemesine başka bir mühendis öncülük etti. Odak noktam platform sözleşmesi, dağıtım topolojisi ve yeni agent'ların minimum boilerplate ile takılmasıydı.",
+    "highlightDesc": "İlk commit'ten üretime hazır gateway'e birincil mühendis: monorepo düzeni, ilk agent bağlantısı, JWT auth, agent başına Docker/compose kalıbı, dinamik CI hat üretimi ve yeni agent'lar için Cookiecutter iskeleti. create_gateway_app refaktörü, CORS ayarları ve diğer iskelet iyileştirmeleri ekip tarafından paralel geliştirildi; grid-observability benimsemesine başka bir mühendis öncülük etti. Odak noktam platform sözleşmesi, dağıtım topolojisi ve yeni agent'ların minimum boilerplate ile takılmasıydı.",
     "m1": "üretim agent'ı",
     "m2": "invoke sözleşmesi",
     "m3": "hat üreticisi",
@@ -255,7 +255,7 @@
     "c1": {
       "module": "ai-api-monorepo · lead",
       "title": "Platform bootstrap &amp; gateway çekirdeği",
-      "desc": "İlk monorepo yapısını kurdum: çekirdek router factory, InvokeRequest/InvokeResponse şemaları, main.py'de agent kaydı, yeni agent'lar için Cookiecutter şablonu ve frontend ekipleri için API.md entegrasyon rehberi."
+      "desc": "İlk monorepo yapısını kurdum: çekirdek router factory, InvokeRequest/InvokeResponse şemaları, main.py'de agent kaydı, yeni agent'lar için Cookiecutter şablonu ve ekiplerin aynı sözleşmeyle servis ekleyebilmesi için API.md entegrasyon rehberi."
     },
     "c2": {
       "module": "core",

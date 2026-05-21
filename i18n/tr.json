@@ -400,9 +400,9 @@
       "title": "Agent API Gateway",
       "sub": "Qkare · Nis 2026 – May 2026 · Çok ajanlı AI API monorepo",
       "badge": "Üretim · Platform",
-      "desc": "Kurumsal AI agent gateway — birden fazla downstream AI mikroservisini tek invoke API üzerinden sunan FastAPI monorepo: paylaşımlı JWT auth, istek/yanıt zarfı, yapılandırılmış loglama ve OpenTelemetry kancaları. <strong>Platform bootstrap, auth entegrasyonu, Docker topolojisi ve dinamik CI'da birincil mühendis olarak çalıştım.</strong>",
+    "desc": "Kurumsal AI agent gateway — birden fazla downstream AI mikroservisini tek invoke API üzerinden sunan FastAPI monorepo: paylaşımlı JWT auth, istek/yanıt zarfı, yapılandırılmış loglama ve OpenTelemetry kancaları. <strong>Platform bootstrap, auth entegrasyonu, Docker topolojisi, dinamik CI ve Cookiecutter tabanlı agent iskeletinden sorumlu birincil mühendis olarak çalıştım.</strong>",
       "highlightTitle": "Katkımın özeti — platform sözleşmesi ve dağıtım",
-      "highlightDesc": "Bu projede ana görevim, agent ekosisteminin ortak giriş kapısını üretime hazır hale getirmekti. Monorepo düzeni, ilk agent bağlantısı, JWT auth, per-agent Docker/compose kalıbı ve dinamik CI üretimini ben kurdum. Diğer ekip üyeleri create_gateway_app, CORS ve iskelet iyileştirmelerini paralel ilerletti; benim odağım sözleşme ve dağıtım topolojisiydi.",
+    "highlightDesc": "Bu projede ana görevim, agent ekosisteminin ortak giriş kapısını üretime hazır hale getirmekti. Monorepo düzeni, ilk agent bağlantısı, JWT auth, per-agent Docker/compose kalıbı, dinamik CI üretimi ve yeni agent'lar için Cookiecutter iskeletini ben kurdum. Diğer ekip üyeleri create_gateway_app, CORS ve iskelet iyileştirmelerini paralel ilerletti; benim odağım sözleşme ve dağıtım topolojisiydi.",
       "m1": "üretim agent'ı",
       "m2": "invoke sözleşmesi",
       "m3": "hat üreticisi",
@@ -410,7 +410,7 @@
       "c1": {
         "module": "ai-api-monorepo · lead",
         "title": "Problem",
-        "desc": "Problem şuydu: her agent için ayrı entegrasyon yapmak, ortak auth ve deploy kalıbı olmadan hızla bakım maliyeti yaratıyordu. Yeni servis eklemek için tekrar eden boilerplate gerekiyordu."
+      "desc": "Problem şuydu: her agent için ayrı entegrasyon yapmak, ortak auth ve deploy kalıbı olmadan hızla bakım maliyeti yaratıyordu. Yeni servis eklemek için ortak bir giriş noktası ve Cookiecutter iskeleti gerekiyordu."
       },
       "c2": {
         "module": "core",

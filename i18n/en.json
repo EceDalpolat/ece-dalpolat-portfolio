@@ -400,9 +400,9 @@
       "title": "Agent API Gateway",
       "sub": "Qkare · Apr 2026 – May 2026 · Multi-agent AI API Monorepo",
       "badge": "Production · Platform",
-      "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. <strong>I led platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong>",
+      "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. <strong>I led platform bootstrap, auth integration, Docker topology, dynamic CI, and the Cookiecutter-based agent scaffold.</strong>",
       "highlightTitle": "My contribution — platform contract and deployment",
-      "highlightDesc": "My main task was to make the shared entry point for the agent ecosystem production-ready. I built the monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI generation. The rest of the team iterated on create_gateway_app, CORS, and scaffolding improvements in parallel; my focus was the contract and deployment topology.",
+      "highlightDesc": "My main task was to make the shared entry point for the agent ecosystem production-ready. I built the monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, dynamic CI generation, and the Cookiecutter scaffold for new agents. The rest of the team iterated on create_gateway_app, CORS, and scaffolding improvements in parallel; my focus was the contract and deployment topology.",
       "m1": "production agents",
       "m2": "invoke contract",
       "m3": "pipeline generator",
@@ -410,7 +410,7 @@
       "c1": {
         "module": "ai-api-monorepo · lead",
         "title": "Problem",
-        "desc": "The problem was that each agent integration created repeated boilerplate and rising maintenance cost without a shared auth and deployment pattern. New services needed a common entry point."
+        "desc": "The problem was that each agent integration created repeated boilerplate and rising maintenance cost without a shared auth and deployment pattern. New services needed a common entry point, plus a Cookiecutter scaffold they could start from."
       },
       "c2": {
         "module": "core",

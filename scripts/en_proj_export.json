@@ -221,7 +221,7 @@
   },
   "gateway": {
     "badge": "Production · Platform",
-    "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, and dynamic CI.</strong>",
+    "desc": "Corporate AI agent gateway — a FastAPI monorepo that exposes multiple downstream AI microservices through one standard invoke API: shared JWT auth, request/response envelope, structured logging, and OpenTelemetry hooks. Teams ship thin agent handlers + httpx proxies; domain logic stays in separate services (KPI Advisor, Analyzer, etc.). <strong>Primary engineer on platform bootstrap, auth integration, Docker topology, dynamic CI, and the Cookiecutter-based agent scaffold.</strong>",
     "metrics": [
       "production agents",
       "invoke contract",
@@ -232,7 +232,7 @@
       {
         "module": "ai-api-monorepo · lead",
         "title": "Platform bootstrap &amp; gateway core",
-        "desc": "Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, Cookiecutter template for new agents, and API.md integration guide for frontend teams."
+        "desc": "Created the initial monorepo structure: core router factory, InvokeRequest/InvokeResponse schemas, agent registration in main.py, a Cookiecutter template for new agents, and an API.md integration guide so teams could add services with the same contract and deployment pattern."
       },
       {
         "module": "core",
@@ -261,7 +261,7 @@
       }
     ],
     "highlightTitle": "Core ownership — agent gateway platform",
-    "highlightDesc": "Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, and dynamic CI pipeline generation. create_gateway_app refactor, CORS settings, and Cookiecutter agent scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate."
+    "highlightDesc": "Primary engineer from initial commit through production-ready gateway: monorepo layout, first agent wiring, JWT auth, per-agent Docker/compose pattern, dynamic CI pipeline generation, and the Cookiecutter scaffold for new agents. create_gateway_app refactor, CORS settings, and scaffolding improvements were developed in parallel by the team; grid-observability adoption was led by another engineer. My focus was the platform contract, deployment topology, and making new agents plug in with minimal boilerplate."
   },
   "chatbot": {
     "badge": "Production · Web",
