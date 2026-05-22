@@ -43,7 +43,7 @@
 
     const cvLink = document.getElementById('cv-link');
     if (cvLink) {
-      cvLink.href = currentLang === 'tr' ? 'ECE-DALPOLAT-TR.pdf' : 'ECE-DALPOLAT-EN.pdf';
+      cvLink.href = currentLang === 'tr' ? 'ECE-DALPOLAT-cv-TR.pdf' : 'ECE-DALPOLAT-resume.pdf';
     }
   }
 
