@@ -23,7 +23,7 @@
     "title": "Hakkımda",
     "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim. Çalışmalarım veri, model ve üretim katmanını tek akışta birleştirmeye odaklanıyor.",
     "p2": "Qkare'de çok kiracılı kurumsal analitik yığınının ana parçalarını sahipleniyorum: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), davranışsal veri üzerinde çalışan <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
-    "p3": "İşlerim yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding-free ve vektör RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı inference cascade'leri kapsıyor. Yani erken Ar-Ge'den üretim B2B SaaS'a kadar uçtan uca sistem kuruyorum.",
+    "p3": "İşlerim yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding gerektirmeyen ve vektör tabanlı RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı çıkarım akışları kapsıyor. Yani erken Ar-Ge'den üretim B2B SaaS'a kadar uçtan uca sistem kuruyorum.",
     "stat1": "Yıllık mühendislik deneyimi",
     "stat2": "Üretimdeki dbt modeli",
     "stat3": "Canlıya alınan AI sistemi"
@@ -316,7 +316,7 @@
       "title": "KPI Advisor",
       "sub": "Qkare · Nis 2026 – May 2026 · Pozisyon bazlı KPI öneri AI",
       "badge": "Üretim · B2B SaaS",
-      "desc": "Herhangi bir iş pozisyonu için SMART uyumlu KPI öneren AI mikroservisi — APQC Process Classification Framework'e dayalı, sözcüksel + kategori-öncel retrieval kullanan ve kurumsal Golden Dataset ile kalibre edilen bir sistem. <strong>Üretim motoru, retrieval katmanı, değerlendirme hattı ve entegrasyonda birincil mühendis olarak çalıştım.</strong>",
+      "desc": "Herhangi bir iş pozisyonu için SMART uyumlu KPI öneren AI mikroservisi — APQC Process Classification Framework'e dayalı, sözcüksel + kategori öncelikli geri getirme kullanan ve kurumsal Golden Dataset ile kalibre edilen bir sistem. <strong>Üretim motoru, geri getirme katmanı, değerlendirme hattı ve entegrasyonda birincil mühendis olarak çalıştım.</strong>",
       "highlightTitle": "Katkımın özeti — üretim motoru ve kalite döngüsü",
       "highlightDesc": "Bu projede ana sorumluluğum, KPI önerilerini güvenilir ve tekrar üretilebilir hale getirmekti. APQC tabanlı retrieval, JSON-mode yapılandırılmış çıktı, Redis önbellek, few-shot kalibrasyon ve offline değerlendirme hattını kurarak öneri kalitesini düzenli hale getirdim. Gözlemlenebilirlik ve UI cilası ekipte paralel ilerledi.",
       "m1": "APQC metriği",
@@ -326,7 +326,7 @@
       "c1": {
         "module": "kpi-advisor · lead",
         "title": "Problem",
-        "desc": "Problem şuydu: farklı pozisyonlar için KPI tanımı çoğu zaman elle yapılıyor ve tutarlılık kaybına uğruyordu. Generative AI ise taksonomi ve bağlam olmadan güvenilir öneri üretemiyordu."
+        "desc": "Problem şuydu: farklı pozisyonlar için KPI tanımı çoğu zaman elle yapılıyor ve tutarlılık kaybına uğruyordu. Üretken yapay zeka ise taksonomi ve bağlam olmadan güvenilir öneri üretemiyordu."
       },
       "c2": {
         "module": "kpi-advisor",
@@ -388,7 +388,7 @@
       "c5": {
         "module": "skills-advisor",
         "title": "Çok katmanlı önbellekleme",
-        "desc": "Çekirdek LLM işlem modüllerinde SHA256 LLM düzeyi önbellek ve LangChainService'te istek düzeyi önbellek (May 2026); maliyet/gecikme için varsayılanı gpt-4o-mini @ temperature 0 yaptım — aynı rol+test+grup istekleri OpenAI'ı tamamen atlar."
+        "desc": "Çekirdek LLM işlem modüllerinde SHA256 LLM düzeyi önbellek ve LangChainService'te istek düzeyi önbellek (May 2026); maliyet/gecikme için varsayılanı gpt-4o-mini @ temperature 0 yaptım — aynı rol+test+grup istekleri OpenAI'yi tamamen atlar."
       },
       "c6": {
         "module": "skills-advisor · platform",
@@ -442,11 +442,11 @@
       "title": "QKare AI Asistan",
       "sub": "Qkare · Tem 2025 · Kurumsal web sitesi chatbot",
       "badge": "Üretim · Web",
-      "desc": "QKare kurumsal web sitesi için FastAPI chatbot — ziyaretçi sorularını maliyet kontrollü bir akışla yanıtlar: önce kural tabanlı eşleşme, sonra semantic cache (FAISS veya Milvus), sonra canlı içerik üzerinden RAG ve en son OpenAI. <strong>Karşı uçtan uç tasarım ve Docker dağıtımına kadar tek başıma yeniden yazdım.</strong>",
+      "desc": "QKare kurumsal web sitesi için FastAPI chatbot — ziyaretçi sorularını maliyet kontrollü bir akışla yanıtlar: önce kural tabanlı eşleşme, sonra anlamsal önbellek (FAISS veya Milvus), sonra canlı içerik üzerinden RAG ve son aşamada OpenAI. <strong>Mimari tasarımdan Docker dağıtımına kadar tek başıma yeniden yazdım.</strong>",
       "highlightTitle": "Katkımın özeti — kurumsal chatbot yığını",
-      "highlightDesc": "Bu yeniden yazımda ana görevim, canlıya uygun ve güvenlik odaklı bir chatbot omurgası kurmaktı. Hybrid security, çift vector-store desteği ve dört katmanlı inference cascade'i hayata geçirdim. Sonraki AI servislerinde tekrar kullanılan semantic cache ve RAG pattern'leri burada oturdu.",
-      "m1": "cascade katmanı",
-      "m2": "vektör backend'i",
+      "highlightDesc": "Bu yeniden yazımda ana görevim, canlıya uygun ve güvenlik odaklı bir chatbot omurgası kurmaktı. Hibrit güvenlik, çift vektör deposu desteği ve dört katmanlı çıkarım akışını hayata geçirdim. Sonraki AI servislerinde tekrar kullanılan anlamsal önbellek ve RAG kalıpları burada oturdu.",
+      "m1": "çıkarım akışı",
+      "m2": "vektör deposu",
       "m3": "hibrit güvenlik yığını",
       "m4": "RAG hattı",
       "c1": {
@@ -457,7 +457,7 @@
       "c2": {
         "module": "qkare-chatbot",
         "title": "Katkım",
-        "desc": "Kural → semantic cache → RAG → LLM sıralı akışını kurdum. Cache servislerini, FAISS/Milvus seçeneklerini ve canlı site bağlamı üzerinden geri getirme katmanını birlikte tasarladım."
+        "desc": "Kural → anlamsal önbellek → RAG → LLM sıralı akışını kurdum. Önbellek servislerini, FAISS/Milvus seçeneklerini ve canlı site bağlamı üzerinden geri getirme katmanını birlikte tasarladım."
       },
       "c3": {
         "module": "qkare-chatbot",
