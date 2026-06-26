@@ -124,6 +124,25 @@
       "desc": "RAG, Mem0 ve Milvus ile geliştirilen çok dilli yemek asistanı. Eldeki malzemelere göre tarif önerir, glutensiz/vegan/keto gibi diyet tercihlerini destekler ve fine-tuning için hazırdır.",
       "impact": "Tercihleri ve hafızayı kullanan bağlamsal önerilerle tarif keşfini güçlendirir.",
       "link": "GitHub →"
+    },
+    "c7": {
+      "type": "Veri Platformu · AI",
+      "title": "Personal Finance Analytics — AI Destekli Çok Kaynaklı Analitik Platform",
+      "desc": "Ham banka işlemlerini, bütçeleri ve yatırımları katmanlı bir dbt pipeline'ı ile temiz analitik tablolara dönüştüren uçtan uca platform; serbest prompt'lar yerine versiyonlanmış bir dbt mart üzerine temellenen AI motoru doğal dilde içgörü üretir. Her serviste OpenTelemetry izleme ve Apache Superset ile görselleştirme.",
+      "impact": "LLM içgörülerini serbest prompt'lama yerine test edilmiş, izlenebilir veriye dayandıran production seviyesinde bir mimari örneği."
+    },
+    "c8": {
+      "type": "Yüksek Lisans Tezi · ML",
+      "title": "Ödeme Yöntemi Tercihi Sınıflandırması — Hibrit ABC-PSO Optimizasyonu",
+      "desc": "DCPC 2024 veri seti üzerinde dijital ödeme yöntemi tercihlerini sınıflandıran yüksek lisans tezi. Random Forest hiperparametrelerini PSO, ABC ve özel bir Hibrit ABC-PSO sürü algoritmasıyla optimize eder, standart test fonksiyonlarıyla kıyaslar ve SHAP ile küresel/yerel açıklanabilirlik sağlar.",
+      "impact": "Hibrit ABC-PSO, tek algoritmalı optimizasyona kıyasla balanced accuracy'i artırır; tüm deneyler tek bir pipeline scripti ile yeniden üretilebilir."
+    },
+    "c9": {
+      "type": "AI · Değerlendirme",
+      "title": "OpenEval — LLM-as-Judge Değerlendirme Çerçevesi",
+      "desc": "LLM çıktılarını otomatik değerlendirmek için hafif Python çerçevesi; OpenAI API ve yerel Ollama modellerini destekler. Soru/cevap çiftlerini faithfulness, relevance, clarity, safety ve consistency olmak üzere beş boyutta LLM-as-judge yaklaşımıyla toplu skorlar.",
+      "impact": "Ekiplere manuel kontrol yerine sağlayıcıdan bağımsız, tekrarlanabilir bir LLM çıktı kalitesi skorlama yöntemi sunar.",
+      "link": "GitHub →"
     }
   },
   "education": {
