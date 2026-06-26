@@ -1,0 +1,150 @@
+% Overleaf: Türkçe CV — main_tr.tex olarak yükle veya main.tex yap
+% pdfLaTeX | ATS uyumlu
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true, urlcolor=black, linkcolor=black}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.7em}%
+  {\normalsize\fontseries{m}\selectfont #1}\\[0.25em]
+}
+\newcommand{\jobentry}[4]{%
+  \textbf{#1} \hfill {\small #2}\\
+  {\small #3} \hfill {\small #4}\\[0.2em]
+}
+
+\begin{document}
+
+{\LARGE Ece Dalpolat} \hfill Yapay Zeka Mühendisi \& Veri Bilimci\\[0.35em]
+{\small
++90 552 360 9850 \,|\, ecedlplt9850@gmail.com \,|\, İstanbul \,|\,
+\href{https://ecedalpolat.github.io/ece-dalpolat-portfolio/}{Portföy} \,|\,
+\href{https://github.com/EceDalpolat}{GitHub} \,|\,
+\href{https://www.linkedin.com/in/ece-dalpolat-0265a0221/}{LinkedIn}
+}
+
+\cvsection{Özet}
+
+İK ve yetenek analitiği için üretim ortamında çalışan yapay zeka sistemleri kuruyorum; demo değil, canlı B2B ürünler. Qkare'de kurumsal müşterilerin kullandığı sistemlerin ana mühendisiyim: dashboard besleyen dbt veri katmanı, psikometrik veri üzerinde soru yanıtlayan LangChain ve LangGraph ajanları, KPI ve yetkinlik öneren doğrulanmış JSON çıktılı FastAPI servisleri.
+
+Günlük işim: SQL'de veri modelleme (109+ dbt modeli, native PostgreSQL satır düzeyi güvenlik, Superset), LLM hatları tasarlama (RAG, semantik önbellek, prompt injection koruması), ortak agent gateway arkasında mikroservis yayınlama, canlıya almadan önce LLM-as-judge ile kalite ölçme. Belirsiz ihtiyaçtan Docker/Kubernetes ve CI ile çok kiracılı, maliyet kontrollü üretime kadar uçtan uca sahipleniyorum.
+
+Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisiyim. Miuul'da veri bilimi ve makine öğrenmesi dersleri veriyorum. Üretime çıkan yapay zeka mühendisliği, veri mühendisliği ve ML platform rollerine açığım.
+
+\cvsection{Deneyim}
+
+\jobentry{Yapay Zeka Mühendisi}{Haz 2025 -- Devam}{Qkare}{İstanbul}
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Ana mühendis: dbt katmanı, üretim AI ajanları/danışmanları, gateway ve güvenlik; 8+ canlı sistem.
+\end{itemize}
+
+\jobentry{Öğretim Asistanı}{Oca 2025 -- Devam}{Miuul}{Uzaktan}
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Veri bilimi ve makine öğrenmesi dersleri; uygulamalı proje mentörlüğü ve değerlendirme.
+\end{itemize}
+
+\jobentry{Lisansüstü Araştırma Görevlisi}{Oca 2024 -- Haz 2025}{Işık Üniversitesi}{İstanbul}
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Yazılım laboratuvarları; veri bilimi ve derin öğrenme projelerinde danışmanlık.
+\end{itemize}
+
+\jobentry{Araştırma Veri Bilimci}{Oca 2024 -- Haz 2025}{Top4Honeychains}{}
+\begin{itemize}[leftmargin=1.2em, nosep, topsep=2pt]
+  \item Bal değer zinciri ETL, TensorFlow/scikit-learn modelleri, REST API entegrasyonları.
+\end{itemize}
+
+\cvsection{Projeler}
+
+\textbf{Analitik Platformu} \hfill Kas 2025 -- May 2026\\
+Qkare --- Uçtan uca İK analitiği: PostgreSQL FDW, 109 dbt modeli, 56 mart, 13 AI ön hesaplama tablosu, native RLS, Superset. Sorumluluk: dbt katmanı.
+
+\vspace{0.25em}
+\textbf{Analyzer Platformu} \hfill Nis 2025 -- May 2026\\
+Qkare --- Psikometrik mart'lar üzerinde LangChain ReAct ajanı; 4 katman güvenlik, JWT+RLS, Langfuse. Sorumluluk: güvenlik ve config bootstrap.
+
+\vspace{0.25em}
+\textbf{Coach Platformu} \hfill Eyl 2025 -- Kas 2025\\
+Qkare --- Çok ajanlı koçluk (LangGraph, POML, OpenAI Realtime). Referee Agent (LLM-as-judge), ses katmanı, eval araçları.
+
+\vspace{0.25em}
+\textbf{Skills Advisor} \hfill Ağu 2025 -- May 2026\\
+Qkare --- Kapalı sözlükten tam 12 yetkinlik boyutu; LangChain veya DSPy ensemble. Ana mühendis.
+
+\vspace{0.25em}
+\textbf{KPI Advisor} \hfill Nis 2026 -- May 2026\\
+Qkare --- APQC PCF ile SMART KPI; lexical retrieval, Golden Dataset, LLM-as-judge hattı. Ana mühendis.
+
+\vspace{0.25em}
+\textbf{Agent API Gateway} \hfill Nis 2026 -- May 2026\\
+Qkare --- FastAPI monorepo, birleşik invoke API, JWT, ajan başına Docker/CI. Platform sorumlusu.
+
+\vspace{0.25em}
+\textbf{QKare AI Asistan} \hfill Tem 2025\\
+Qkare --- Kurumsal chatbot: kural, semantik önbellek (FAISS/Milvus), RAG, LLM; hibrit güvenlik. Tek yazar.
+
+\vspace{0.25em}
+\textbf{Davranışsal Kümeleme Ar-Ge} \hfill Ağu 2025\\
+Qkare --- K-Means, DBSCAN, GMM; PCA/t-SNE; Analitik Platform mart'larına girdi. Tek yazar.
+
+\vspace{0.25em}
+\textbf{CVAnalyzerAI} \hfill 2025\\
+MCP ile özgeçmiş analizi (FastAPI, DSPy, ANTLR). github.com/EceDalpolat/cvAnalizerAI
+
+\vspace{0.25em}
+\textbf{TOP4HONEYCHAINS} \hfill 2024--2025\\
+Bal izlenebilirlik ML, REST API, zaman serisi tahmini.
+
+\vspace{0.25em}
+\textbf{Pazarlama Kampanyası Tahmini}\\
+Banka kampanya modeli: SMOTE, XGBoost, Streamlit.
+
+\vspace{0.25em}
+\textbf{Polen Sınıflandırma}\\
+CNN, \%90+ doğruluk; veri artırma.
+
+\vspace{0.25em}
+\textbf{Anten Davranış Analizi}\\
+DeepLabCut ile keypoint takibi; hareket analizi.
+
+\vspace{0.25em}
+\textbf{Öğrenci Başarı Analizi}\\
+Akademik özelliklerle Random Forest; Tkinter arayüzü.
+
+\cvsection{Beceriler}
+
+\textbf{AI/LLM:} LangChain, LangGraph, DSPy, RAG, OpenAI API, Pydantic, LLM-as-judge\\
+\textbf{Veri:} dbt Core, PostgreSQL, Apache Superset, Pandas, SQL\\
+\textbf{Backend:} FastAPI, httpx, WebSocket, JWT, MCP, REST\\
+\textbf{Altyapı:} Docker, Kubernetes, GitLab CI/CD, Redis, OpenTelemetry, Langfuse\\
+\textbf{Kod:} Python, SQL, JavaScript, Java, C\#
+
+\cvsection{Eğitim}
+
+\textbf{Yüksek Lisans, Bilgi Teknolojileri} \hfill 2022 -- Devam\\
+Işık Üniversitesi --- GNO 3,57. Tez: arıcılık ve bal hasadında makine öğrenmesi otomasyonu.
+
+\vspace{0.25em}
+\textbf{Lisans, Yazılım Mühendisliği} \hfill 2018 -- 2023\\
+Kırklareli Üniversitesi --- GNO 2,71
+
+\cvsection{Sertifikalar}
+
+Miuul Veri Bilimci Bootcamp; Miuul Makine Öğrenmesi; Miuul Üretken AI; Udemy LangChain/RAG; BTK Uygulamalı SQL; Huawei HCCDA-AI
+
+\vspace{0.3em}
+{\small Türkçe (ana dil) | İngilizce (B2)}
+
+\end{document}

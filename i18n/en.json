@@ -124,6 +124,25 @@
       "desc": "Multilingual food assistant built with RAG, Mem0, and Milvus. Recommends recipes from available ingredients, supports dietary preferences like gluten-free, vegan, and keto, and is set up for fine-tuning.",
       "impact": "Makes recipe discovery more contextual with preference-aware, memory-backed suggestions.",
       "link": "GitHub →"
+    },
+    "c7": {
+      "type": "Data Platform · AI",
+      "title": "Personal Finance Analytics — Multi-Source Platform with an AI Insight Engine",
+      "desc": "End-to-end analytics platform turning raw bank transactions, budgets, and investments into clean analytical tables via a layered dbt pipeline, with an AI engine grounded on a versioned dbt mart (not free-form prompts) that generates natural-language insights. Instrumented with OpenTelemetry tracing across every service and visualized in Apache Superset.",
+      "impact": "Demonstrates a production-grade pattern for grounding LLM insights in tested, lineage-tracked data instead of ungrounded prompting."
+    },
+    "c8": {
+      "type": "MSc Thesis · ML",
+      "title": "Payment Method Preference Classification — Hybrid ABC-PSO Optimization",
+      "desc": "Master's thesis pipeline classifying digital payment method preferences on the DCPC 2024 dataset. Optimizes Random Forest hyperparameters with PSO, ABC, and a custom Hybrid ABC-PSO swarm algorithm, benchmarked against standard test functions, with SHAP for global/local interpretability.",
+      "impact": "Hybrid ABC-PSO improves balanced accuracy over single-algorithm optimization, with full experiment reproducibility via a single pipeline script."
+    },
+    "c9": {
+      "type": "AI · Evaluation",
+      "title": "OpenEval — LLM-as-Judge Evaluation Framework",
+      "desc": "Lightweight Python framework for automatically evaluating LLM outputs, supporting OpenAI API and local Ollama models. Scores question/answer pairs in batch across five dimensions — faithfulness, relevance, clarity, safety, and consistency — using an LLM-as-judge approach.",
+      "impact": "Gives teams a provider-agnostic, repeatable way to score LLM output quality instead of relying on manual spot-checks.",
+      "link": "GitHub →"
     }
   },
   "education": {
