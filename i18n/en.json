@@ -86,14 +86,6 @@
     "label": "Work",
     "title": "Projects"
   },
-  "cards": {
-    "c8": {
-      "type": "MSc Thesis · ML",
-      "title": "Payment Method Preference Classification — Hybrid ABC-PSO Optimization",
-      "desc": "Master's thesis pipeline classifying digital payment method preferences on the DCPC 2024 dataset. Optimizes Random Forest hyperparameters with PSO, ABC, and a custom Hybrid ABC-PSO swarm algorithm, benchmarked against standard test functions, with SHAP for global/local interpretability.",
-      "impact": "Hybrid ABC-PSO improves balanced accuracy over single-algorithm optimization, with full experiment reproducibility via a single pipeline script."
-    }
-  },
   "education": {
     "label": "Academic",
     "title": "Education",
@@ -479,6 +471,38 @@
         "title": "Cross-service contract alignment",
         "desc": "Kept gateway payloads in sync with KPI Advisor schema evolution: leadershipLevel, positionGroup, name/definition fields, optional id — ensuring monorepo invoke examples match the downstream Pydantic models."
       }
+    },
+    "thesis": {
+      "badge": "MSc Thesis · ML Research",
+      "title": "Hybrid ABC-PSO — Payment-Preference Classification",
+      "sub": "Academic · MSc Thesis · metaheuristic ML optimization",
+      "m1": "optimizers compared",
+      "m2": "benchmark functions",
+      "m3": "novel hybrid algorithm",
+      "m4": "model explainability",
+      "desc": "My MSc thesis: classifying digital payment-method preferences on the Fed DCPC 2024 dataset. I implemented a Hybrid ABC-PSO swarm optimizer from the paper — no black-box library — to tune Random Forest hyperparameters, validated it on standard benchmark functions, and explained the model with SHAP. <strong>Solo — end to end, from data cleaning to a reproducible pipeline and an honest, problem-dependent result.</strong>",
+      "c1": {
+        "module": "optimizer · from scratch",
+        "title": "Hybrid ABC-PSO implemented by hand",
+        "desc": "Implemented the hybrid metaheuristic from the paper without a black-box library: sine-cosine velocity update, dynamic inertia weight, an ABC crossover phase, and a fitness cache to avoid recomputing expensive cross-validation scores."
+      },
+      "c2": {
+        "module": "features",
+        "title": "Feature engineering &amp; encoding",
+        "desc": "IQR + z-score outlier suppression, temporal features such as payday period, and hybrid categorical encoding (one-hot for low cardinality, target encoding for high) with SelectFromModel feature selection."
+      },
+      "c3": {
+        "module": "evaluation",
+        "title": "Honest, rigorous evaluation",
+        "desc": "Chose balanced accuracy for the imbalanced multi-class problem, used stratified cross-validation, and reported honestly that the hybrid doesn't always win — it's problem-dependent. Independently validated the optimizer on Sphere / Rastrigin benchmark functions."
+      },
+      "c4": {
+        "module": "interpretability",
+        "title": "SHAP explanations",
+        "desc": "Global and local SHAP explanations for the tuned Random Forest, so the model's decisions stay interpretable rather than a black box."
+      },
+      "highlightTitle": "My contribution — research-grade ML, end to end",
+      "highlightDesc": "Sole author from data to results: I built the hybrid metaheuristic myself, engineered the features, and reported findings honestly rather than cherry-picking. A full TR + EN thesis, an IJISRT paper, and defense slides back it up."
     }
   }
 }

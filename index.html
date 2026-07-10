@@ -1936,24 +1936,63 @@ footer {
       </div>
     </div>
 
-    <!-- other projects grid -->
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="project-type" data-i18n="cards.c8.type">MSc Thesis · ML</div>
-        <div class="project-title" data-i18n="cards.c8.title">Payment Method Preference Classification — Hybrid ABC-PSO Optimization</div>
-        <div class="project-desc" data-i18n="cards.c8.desc">Master's thesis pipeline classifying digital payment method preferences on the DCPC 2024 dataset. Optimizes Random Forest hyperparameters with PSO, ABC, and a custom Hybrid ABC-PSO swarm algorithm, benchmarked against standard test functions, with SHAP for global/local interpretability.</div>
-        <div class="project-impact" data-i18n="cards.c8.impact">Hybrid ABC-PSO improves balanced accuracy over single-algorithm optimization, with full experiment reproducibility via a single pipeline script.</div>
-        <div class="project-footer">
-          <div class="project-tech">
-            <span class="tech-pill">scikit-learn</span>
-            <span class="tech-pill">NiaPy</span>
-            <span class="tech-pill">SHAP</span>
-            <span class="tech-pill">Random Forest</span>
-          </div>
+    <!-- MSc THESIS (ABC-PSO) — academic, featured -->
+    <div class="ga-project" id="thesis">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge" data-i18n="proj.thesis.badge">MSc Thesis · ML Research</span>
+          <div class="ga-title" data-i18n="proj.thesis.title">Hybrid ABC-PSO — Payment-Preference Classification</div>
+          <div class="ga-sub" data-i18n="proj.thesis.sub">Academic · MSc Thesis · metaheuristic ML optimization</div>
         </div>
       </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">3</div><div class="ga-metric-lbl" data-i18n="proj.thesis.m1">optimizers compared</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">4+</div><div class="ga-metric-lbl" data-i18n="proj.thesis.m2">benchmark functions</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">1</div><div class="ga-metric-lbl" data-i18n="proj.thesis.m3">novel hybrid algorithm</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">SHAP</div><div class="ga-metric-lbl" data-i18n="proj.thesis.m4">model explainability</div></div>
+      </div>
+      <p class="ga-desc" data-i18n-html="proj.thesis.desc">My MSc thesis: classifying digital payment-method preferences on the Fed DCPC 2024 dataset. I implemented a Hybrid ABC-PSO swarm optimizer from the paper — no black-box library — to tune Random Forest hyperparameters, validated it on standard benchmark functions, and explained the model with SHAP. <strong>Solo — end to end, from data cleaning to a reproducible pipeline and an honest, problem-dependent result.</strong></p>
+      <div class="ga-body">
 
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.thesis.c1.module">optimizer · from scratch</div>
+            <div class="ga-contrib-title" data-i18n="proj.thesis.c1.title">Hybrid ABC-PSO implemented by hand</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.thesis.c1.desc">Implemented the hybrid metaheuristic from the paper without a black-box library: sine-cosine velocity update, dynamic inertia weight, an ABC crossover phase, and a fitness cache to avoid recomputing expensive cross-validation scores.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.thesis.c2.module">features</div>
+            <div class="ga-contrib-title" data-i18n="proj.thesis.c2.title">Feature engineering &amp; encoding</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.thesis.c2.desc">IQR + z-score outlier suppression, temporal features such as payday period, and hybrid categorical encoding (one-hot for low cardinality, target encoding for high) with SelectFromModel feature selection.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.thesis.c3.module">evaluation</div>
+            <div class="ga-contrib-title" data-i18n="proj.thesis.c3.title">Honest, rigorous evaluation</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.thesis.c3.desc">Chose balanced accuracy for the imbalanced multi-class problem, used stratified cross-validation, and reported honestly that the hybrid doesn't always win — it's problem-dependent. Independently validated the optimizer on Sphere / Rastrigin benchmark functions.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.thesis.c4.module">interpretability</div>
+            <div class="ga-contrib-title" data-i18n="proj.thesis.c4.title">SHAP explanations</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.thesis.c4.desc">Global and local SHAP explanations for the tuned Random Forest, so the model's decisions stay interpretable rather than a black box.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title" data-i18n="proj.thesis.highlightTitle">My contribution — research-grade ML, end to end</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.thesis.highlightDesc">Sole author from data to results: I built the hybrid metaheuristic myself, engineered the features, and reported findings honestly rather than cherry-picking. A full TR + EN thesis, an IJISRT paper, and defense slides back it up.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">Python</span>
+          <span class="ga-stack-tag">scikit-learn</span>
+          <span class="ga-stack-tag">NiaPy</span>
+          <span class="ga-stack-tag">SHAP</span>
+          <span class="ga-stack-tag">Random Forest</span>
+          <span class="ga-stack-tag gray">PSO</span>
+          <span class="ga-stack-tag gray">ABC</span>
+          <span class="ga-stack-tag gray">pandas</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

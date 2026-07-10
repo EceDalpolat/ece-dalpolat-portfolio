@@ -86,14 +86,6 @@
     "label": "İş",
     "title": "Projeler"
   },
-  "cards": {
-    "c8": {
-      "type": "Yüksek Lisans Tezi · ML",
-      "title": "Ödeme Yöntemi Tercihi Sınıflandırması — Hibrit ABC-PSO Optimizasyonu",
-      "desc": "DCPC 2024 veri seti üzerinde dijital ödeme yöntemi tercihlerini sınıflandıran yüksek lisans tezi. Random Forest hiperparametrelerini PSO, ABC ve özel bir Hibrit ABC-PSO sürü algoritmasıyla optimize eder, standart test fonksiyonlarıyla kıyaslar ve SHAP ile küresel/yerel açıklanabilirlik sağlar.",
-      "impact": "Hibrit ABC-PSO, tek algoritmalı optimizasyona kıyasla balanced accuracy'i artırır; tüm deneyler tek bir pipeline scripti ile yeniden üretilebilir."
-    }
-  },
   "education": {
     "label": "Akademik",
     "title": "Eğitim",
@@ -479,6 +471,38 @@
         "title": "Çapraz servis sözleşme hizalaması",
         "desc": "Gateway payload'larını KPI Advisor şema evrimiyle senkron tuttum: leadershipLevel, positionGroup, name/definition alanları, isteğe bağlı id — monorepo invoke örneklerinin downstream Pydantic modelleriyle eşleşmesi."
       }
+    },
+    "thesis": {
+      "badge": "Yüksek Lisans Tezi · ML Araştırması",
+      "title": "Hibrit ABC-PSO — Ödeme Tercihi Sınıflandırması",
+      "sub": "Akademik · Yüksek Lisans Tezi · metasezgisel ML optimizasyonu",
+      "m1": "karşılaştırılan optimizer",
+      "m2": "benchmark fonksiyonu",
+      "m3": "özgün hibrit algoritma",
+      "m4": "model açıklanabilirliği",
+      "desc": "Yüksek lisans tezim: Fed DCPC 2024 veri kümesinde dijital ödeme tercihi sınıflandırması. Random Forest hiperparametrelerini ayarlamak için makaleden Hibrit ABC-PSO sürü optimizatörünü — kütüphane çağırmadan — implemente ettim, standart benchmark fonksiyonlarında doğruladım ve modeli SHAP ile açıkladım. <strong>Tek başıma — veri temizlemeden tekrarlanabilir pipeline'a ve dürüst, probleme bağlı bir sonuca kadar uçtan uca.</strong>",
+      "c1": {
+        "module": "optimizer · sıfırdan",
+        "title": "Hibrit ABC-PSO elle implemente edildi",
+        "desc": "Hibrit metasezgiseli makaleden kütüphane kullanmadan yazdım: sinüs-kosinüs hız güncellemesi, dinamik atalet ağırlığı, ABC crossover fazı ve pahalı çapraz-doğrulama skorlarını tekrar hesaplamamak için fitness cache."
+      },
+      "c2": {
+        "module": "öznitelik",
+        "title": "Öznitelik mühendisliği &amp; kodlama",
+        "desc": "IQR + z-score aykırı değer bastırma, maaş günü periyodu gibi zamansal öznitelikler ve hibrit kategorik kodlama (düşük kardinalite için one-hot, yüksek için target encoding) ile SelectFromModel öznitelik seçimi."
+      },
+      "c3": {
+        "module": "değerlendirme",
+        "title": "Dürüst, titiz değerlendirme",
+        "desc": "Dengesiz çok-sınıflı problem için balanced accuracy seçtim, stratified çapraz-doğrulama kullandım ve hibridin her zaman kazanmadığını — probleme bağlı olduğunu — dürüstçe raporladım. Optimizatörü Sphere / Rastrigin benchmark fonksiyonlarında bağımsız doğruladım."
+      },
+      "c4": {
+        "module": "açıklanabilirlik",
+        "title": "SHAP açıklamaları",
+        "desc": "Ayarlanmış Random Forest için global ve local SHAP açıklamaları — model kararları kara kutu değil, yorumlanabilir."
+      },
+      "highlightTitle": "Katkım — uçtan uca araştırma seviyesinde ML",
+      "highlightDesc": "Veriden sonuçlara tek yazar: hibrit metasezgiseli kendim kurdum, öznitelikleri ben tasarladım ve bulguları kiraz toplamadan dürüstçe raporladım. Tam TR + EN tez, bir IJISRT makalesi ve savunma slaytları destekliyor."
     }
   }
 }
