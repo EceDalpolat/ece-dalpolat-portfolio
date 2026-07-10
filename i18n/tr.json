@@ -12,7 +12,7 @@
     "contact": "İletişim"
   },
   "hero": {
-    "eyebrow": "Yapay Zeka Mühendisi & Veri Bilimci",
+    "eyebrow": "Yapay Zeka & LLM Mühendisi",
     "bio": "Canlı sistemler geliştiren bir yapay zeka mühendisiyim: Veriyi modellere, modelleri güvenilir servislere, servisleri ise çalışan ürünlere dönüştürüyorum. Sadece prototipler değil; ölçülebilir, iyi belgelenmiş ve ölçeklenebilir sistemler inşa ediyorum. Aynı zamanda Işık Üniversitesi'nde yüksek lisans eğitimime devam ediyorum.",
     "ctaProjects": "Projeleri Gör",
     "ctaCV": "CV Görüntüle",
@@ -21,11 +21,11 @@
   "about": {
     "label": "Özet",
     "title": "Hakkımda",
-    "p1": "Işık Üniversitesi Bilgi Teknolojileri yüksek lisans öğrencisi, Kırklareli Üniversitesi Yazılım Mühendisliği mezunu bir yapay zeka mühendisiyim. Çalışmalarım veri, model ve üretim katmanını tek akışta birleştirmeye odaklanıyor.",
-    "p2": "Qkare'de çok kiracılı kurumsal analitik yığınının ana parçalarını sahipleniyorum: <strong>dbt dönüşüm katmanı</strong> (109+ model, native PostgreSQL RLS, AI ön hesaplama mart'ları), davranışsal veri üzerinde çalışan <strong>LangChain / LangGraph ajanları</strong> ve KPI ile yetkinlik seçimi için danışman mikroservisleri. Ayrıca kimlik doğrulama, invoke sözleşmesi ve gözlemlenebilirliği standartlaştıran <strong>agent API gateway</strong>'i kurdum.",
-    "p3": "İşlerim yapılandırılmış LLM çıktısı (JSON mode, Pydantic), embedding gerektirmeyen ve vektör tabanlı RAG kalıpları, LLM-as-judge değerlendirme hatları ve maliyet odaklı çıkarım akışları kapsıyor. Yani erken Ar-Ge'den üretim B2B SaaS'a kadar uçtan uca sistem kuruyorum.",
-    "stat1": "Yıllık mühendislik deneyimi",
-    "stat2": "Üretimdeki dbt modeli",
+    "p1": "Üretim sistemlerine odaklı bir AI & LLM engineer'ım — veriyi modele, modeli güvenli servise, servisi canlı ürüne taşırım. Demo değil: ölçülebilir, dokümante, ölçeklenebilir sistemler. Işık Üniversitesi'nde Bilişim Teknolojileri yüksek lisansı, Kırklareli Üniversitesi'nde Yazılım Mühendisliği lisansım var.",
+    "p2": "Uçtan uca inşa edip yayınlarım. Amiral gemim <strong>agentic-rag</strong>: kendini denetleyen otonom bir RAG runtime'ı. Bir <strong>iş-arama agent'ını</strong> ve kendi <strong>LLM-as-judge değerlendirme framework'ümü (openeval)</strong> PyPI'da yayınladım — ve openeval'i diğer sistemlerimi ölçmek için kullanıyorum. Her şeydeki tekrarlayan imzam: güvenlik, gözlemlenebilirlik ve LLM çıktısını gerçek kanıta zincirleme.",
+    "p3": "Qkare'de (2025–2026) çok-kiracılı kurumsal analitik yığınının çekirdek parçalarına sahibim: <strong>dbt dönüşüm katmanı</strong> (100+ model, native PostgreSQL RLS, AI ön-hesaplama mart'ları), <strong>LangChain / LangGraph agent'lar</strong> ve FastAPI mikroservisler — hepsi gözlemlenebilir ve üretimde.",
+    "stat1": "PyPI'da yayınlanan araç",
+    "stat2": "GitHub yıldızı",
     "stat3": "Canlıya alınan AI sistemi"
   },
   "skills": {
@@ -87,62 +87,11 @@
     "title": "Projeler"
   },
   "cards": {
-    "c1": {
-      "type": "AI · Backend",
-      "title": "CVAnalyzerAI — Özgeçmiş Analiz Platformu",
-      "desc": "MCP ve birden fazla AI servisi kullanan akıllı özgeçmiş analiz platformu. LLM ve yapılandırılmış ayrıştırma ile CV'lerden güçlü/zayıf yönler ve iş uyumu çıkarır. Claude'a MCP ile entegre.",
-      "impact": "iş ekiplerinin inceleme süresini kısaltmasına ve adaylar hakkında AI destekli içgörü elde etmesine yardımcı olur.",
-      "link": "GitHub →"
-    },
-    "c2": {
-      "type": "Bilgisayarlı Görü",
-      "title": "Anten Davranış Analizi",
-      "desc": "DeepLabCut ile böcek anten hareketlerini analiz ederek biyolojik görüntülerden davranış kalıpları çıkardım. Anahtar noktaları etiketledim, özel modeller eğittim ve hareket eğilimlerini inceledim.",
-      "impact": "Entomoloji deneylerinde yüksek doğruluklu davranış çalışmalarını mümkün kıldı."
-    },
-    "c3": {
-      "type": "Derin Öğrenme",
-      "title": "Polen Sınıflandırma",
-      "desc": "Polen görüntülerini %90'ın üzerinde doğrulukla sınıflandıran derin öğrenme modeli. Etiketli veri seti oluşturdum, veri artırma uyguladım ve CNN modelleri eğittim.",
-      "impact": "Tarım araştırmacılarının polen tipi tanımayı otomatikleştirmesine destek oldu."
-    },
-    "c4": {
-      "type": "Makine Öğrenmesi",
-      "title": "Pazarlama Kampanyası Tahmini",
-      "desc": "Bankacılık pazarlama kampanyalarında müşteri abonelik davranışını tahmin eden motor. Özellik mühendisliği, SMOTE ile sınıf dengesizliği ve Streamlit arayüzü.",
-      "impact": "Maliyet etkin kampanya yürütümü için doğru hedeflemeyi sağladı."
-    },
-    "c5": {
-      "type": "AI · Tarım-Gıda",
-      "title": "TOP4HONEYCHAINS — Akıllı Tarım-Gıda",
-      "desc": "Bal değer zincirlerinde izlenebilirlik ve kalite güvencesi için ML çözümleri. Saha verisi topladım, tahmin modelleri eğittim ve RESTful uç noktalar oluşturdum.",
-      "impact": "Tarım-gıda paydaşları arasında şeffaflığı artırdı ve kalite takibini kolaylaştırdı."
-    },
-    "c6": {
-      "type": "AI · Yemek",
-      "title": "Yemek Chatbot — Çok Dilli Yemek Asistanı",
-      "desc": "RAG, Mem0 ve Milvus ile geliştirilen çok dilli yemek asistanı. Eldeki malzemelere göre tarif önerir, glutensiz/vegan/keto gibi diyet tercihlerini destekler ve fine-tuning için hazırdır.",
-      "impact": "Tercihleri ve hafızayı kullanan bağlamsal önerilerle tarif keşfini güçlendirir.",
-      "link": "GitHub →"
-    },
-    "c7": {
-      "type": "Veri Platformu · AI",
-      "title": "Personal Finance Analytics — AI Destekli Çok Kaynaklı Analitik Platform",
-      "desc": "Ham banka işlemlerini, bütçeleri ve yatırımları katmanlı bir dbt pipeline'ı ile temiz analitik tablolara dönüştüren uçtan uca platform; serbest prompt'lar yerine versiyonlanmış bir dbt mart üzerine temellenen AI motoru doğal dilde içgörü üretir. Her serviste OpenTelemetry izleme ve Apache Superset ile görselleştirme.",
-      "impact": "LLM içgörülerini serbest prompt'lama yerine test edilmiş, izlenebilir veriye dayandıran production seviyesinde bir mimari örneği."
-    },
     "c8": {
       "type": "Yüksek Lisans Tezi · ML",
       "title": "Ödeme Yöntemi Tercihi Sınıflandırması — Hibrit ABC-PSO Optimizasyonu",
       "desc": "DCPC 2024 veri seti üzerinde dijital ödeme yöntemi tercihlerini sınıflandıran yüksek lisans tezi. Random Forest hiperparametrelerini PSO, ABC ve özel bir Hibrit ABC-PSO sürü algoritmasıyla optimize eder, standart test fonksiyonlarıyla kıyaslar ve SHAP ile küresel/yerel açıklanabilirlik sağlar.",
       "impact": "Hibrit ABC-PSO, tek algoritmalı optimizasyona kıyasla balanced accuracy'i artırır; tüm deneyler tek bir pipeline scripti ile yeniden üretilebilir."
-    },
-    "c9": {
-      "type": "AI · Değerlendirme",
-      "title": "OpenEval — LLM-as-Judge Değerlendirme Çerçevesi",
-      "desc": "LLM çıktılarını otomatik değerlendirmek için hafif Python çerçevesi; OpenAI API ve yerel Ollama modellerini destekler. Soru/cevap çiftlerini faithfulness, relevance, clarity, safety ve consistency olmak üzere beş boyutta LLM-as-judge yaklaşımıyla toplu skorlar.",
-      "impact": "Ekiplere manuel kontrol yerine sağlayıcıdan bağımsız, tekrarlanabilir bir LLM çıktı kalitesi skorlama yöntemi sunar.",
-      "link": "GitHub →"
     }
   },
   "education": {
@@ -173,6 +122,154 @@
     "text": "© 2025 Ece Dalpolat. Tüm hakları saklıdır."
   },
   "proj": {
+    "agenticrag": {
+      "title": "Agentic Knowledge Runtime",
+      "sub": "Kişisel · Mar–Haz 2026 · Kendini doğrulayan otonom RAG",
+      "badge": "Kişisel · Amiral Gemisi",
+      "desc": "Belgeler, SQL ve loglar üzerinde, kendini doğrulama döngüsü olan otonom RAG. LangGraph döngüsel grafiği (Researcher → Analyst → Auditor); Auditor yapılandırılmış bir boolean döndürür ve yanıt sadık değilse yeniden getirme için geri döner — çift frenle: iş kuralı max-revision sınırı ve altyapı recursion limiti. <strong>Eş-lider — agent grafiği, RAG çekirdeği, güvenlik ve gözlemlenebilirlik katmanları benim sorumluluğumda; tek başıma değil, bir ortakla geliştirildi.</strong>",
+      "highlightTitle": "Katkımın özeti — agent grafiği, retrieval ve güvenlik",
+      "highlightDesc": "Eş-lider olarak agent grafiğine, RAG çekirdeğine ve güvenlik ile gözlemlenebilirlik katmanlarına sahiplendim. Tek başıma değil, bir ortakla geliştirildi — odağım kendini doğrulama döngüsü, hibrit retrieval, salt-okunur SQL sınırı ve tüm runtime'ı izlenebilir ve sadık kılmaktı.",
+      "m1": "agent düğümü",
+      "m2": "retrieval aşaması",
+      "m3": "güvenlik katmanı",
+      "m4": "sadakat eşiği",
+      "c1": {
+        "module": "agent-graph · co-lead",
+        "title": "Çok ajanlı kendini doğrulama grafiği",
+        "desc": "LangGraph Researcher/Analyst/Auditor döngüsü; Auditor yapılandırılmış çıktı kullanır (metinden ayrıştırılan değil, gerçek bir bool). Mesaj geçmişi birikirken retrieval sonuçları üzerine yazılır, böylece her revizyon taze kanıtla yeniden çalışır."
+      },
+      "c2": {
+        "module": "rag-core",
+        "title": "Hibrit retrieval + rerank",
+        "desc": "Qdrant yoğun + seyrek (RRF) top-20 → cross-encoder rerank → top-5; her parçaya bir breadcrumb (A &gt; B &gt; C) taşıyan başlık-duyarlı chunker ve tablolar için ayrı satır-odaklı serileştirici."
+      },
+      "c3": {
+        "module": "security",
+        "title": "MCP salt-okunur SQL sınırı",
+        "desc": "Fiziksel olarak yazamayan DB düzeyinde bir sentinel_ro rolü ve uygulama düzeyinde bir ensure_read_only() koruması: yorum ayıklama, literal boşaltma, yalnızca tek ifadeli SELECT/WITH ve reddedilen anahtar kelime kümesi."
+      },
+      "c4": {
+        "module": "product · security",
+        "title": "Ürün yüzeyi & güvenlik",
+        "desc": "JWT RS256 kimlik doğrulama, sunucu tarafından enjekte edilen tenant_id (model kendi kiracısını asla seçemez), tipli citation DTO'ları, thread sürekliliği olan bir /chat uç noktası ve bir Streamlit operatör konsolu."
+      },
+      "c5": {
+        "module": "observability",
+        "title": "Gözlemlenebilirlik & CI",
+        "desc": "Enstrümantasyonun tracer provider'dan önce çalıştığı ve span'lerin Phoenix'e hiç ulaşmadığı gerçek bir hatayı düzelttim; CI, Trivy taramasıyla GHCR'a yayınlar ve 0.85'in altındaki bir Ragas sadakat skoru build'i başarısız kılar."
+      }
+    },
+    "jobhunt": {
+      "title": "Job-Hunt Agent",
+      "sub": "Kişisel · Tem 2026 · Ajanlı iş arama + CV uyarlama",
+      "badge": "Açık Kaynak · PyPI · 11★",
+      "desc": "CV'lerinden bir ana profil çıkaran, iş ilanlarını tarayıp uyum skoruna göre sıralayan, her ilan için cv-tailor alt-ajanı aracılığıyla uyarlanmış bir CV ve ön yazı üreten ve başvuruları yalnızca insan onayıyla gönderen uçtan uca bir ajan. deepagents / LangGraph üzerine, interrupt'larla kuruldu. <strong>Tek başıma — her commit benim; PyPI'ye yayınlandı, 11 GitHub yıldızı.</strong>",
+      "highlightTitle": "Katkımın özeti — tek başıma, yayınlanmış ve dürüst",
+      "highlightDesc": "Bunu tek başıma geliştirip yayınladım: ham CV'lerden onaylı başvurulara kadar giden, insan-döngüde interrupt'lar, zarif sağlayıcı ve veri-kaynağı fallback'leri ve katı bir anti-halüsinasyon kuralı olan bir deepagents/LangGraph ajanı. PyPI'ye yayınlandı ve 11 GitHub yıldızı topladı.",
+      "m1": "alt-ajan",
+      "m2": "sağlayıcı fallback'i",
+      "m3": "GitHub yıldızı",
+      "m4": "PyPI sürümü",
+      "c1": {
+        "module": "agent · lead",
+        "title": "deepagents primitiflerinin tam kullanımı",
+        "desc": "Alt-ajanlar, bir FilesystemBackend, insan-döngüde onay için interrupt_on artı bir checkpointer ve planlama — ajan, bunları yeniden yazmak yerine framework'ün primitiflerine uçtan uca dayanır."
+      },
+      "c2": {
+        "module": "resilience",
+        "title": "Zarif bozulma",
+        "desc": "İş kaynağı JSearch API → JobSpy scraper → paketlenmiş örnek ilanlar şeklinde fallback yapar, böylece asla sert şekilde başarısız olmaz; model sağlayıcı zinciri de Anthropic → OpenRouter → OpenAI şeklinde aynı biçimde bozulur."
+      },
+      "c3": {
+        "module": "memory",
+        "title": "Kalıcı kariyer belleği",
+        "desc": "Bir kariyer belleği ve başvuru günlüğü oturumlar arasında kalır, böylece ajan daha önce önerdiği bir işi asla tekrar önermez; çağrı başına token ve maliyet takibi usage.jsonl'a yazılır."
+      },
+      "c4": {
+        "module": "safety",
+        "title": "Anti-halüsinasyon kuralı",
+        "desc": "Üretilen CV'ler ve ön yazılar yalnızca çıkarılan profildeki gerçekleri kullanabilir — aday hakkında hiçbir şey uydurulmaz."
+      },
+      "c5": {
+        "module": "release",
+        "title": "PyPI'ye yayınlandı",
+        "desc": "GitHub Actions trusted publishing ile PyPI'ye yayınlandı; 11 GitHub yıldızı gerçek, kendiliğinden gelen kullanıcı ilgisini yansıtır."
+      }
+    },
+    "openeval": {
+      "title": "OpenEval — LLM-as-Judge Değerlendirme",
+      "sub": "Kişisel · May–Tem 2026 · LLM değerlendirme CLI",
+      "badge": "Açık Kaynak · PyPI",
+      "desc": "Hafif bir LLM-as-judge değerlendirme aracı. Soru/cevap veri setlerini bir yargıç modeliyle beş boyutta — faithfulness, relevance, clarity, safety ve consistency — skorlar ve iki çalıştırmayı karşılaştırarak öncesi/sonrası farkları gösterir. OpenAI, OpenRouter veya yerel bir Ollama modeliyle çalışır. <strong>Tek başıma — PyPI'ye openeval-llm olarak yayınlandı (import ve komut adı openeval).</strong>",
+      "highlightTitle": "Katkımın özeti — sağlam, yayınlanabilir bir değerlendirme aracı",
+      "highlightDesc": "OpenEval'i tek başıma tasarlayıp yayınladım: çökmez bir yargıç, çalıştırmalar arası fark karşılaştırması, dürüst maliyet muhasebesi ve 12 test içeren sağlayıcıdan bağımsız bir LLM-as-judge CLI. PyPI'ye openeval-llm olarak yayınlandı.",
+      "m1": "skorlama boyutu",
+      "m2": "model sağlayıcısı",
+      "m3": "CLI komutu",
+      "m4": "test",
+      "c1": {
+        "module": "cli · lead",
+        "title": "run / compare CLI",
+        "desc": "İçeri bir JSONL veri seti girer, dışarı skorlanmış bir rapor çıkar; compare bir öncesi/sonrası fark tablosu yazdırır (ör. faithfulness 0.71 → 0.88), böylece kalite değişimleri bir bakışta görünür."
+      },
+      "c2": {
+        "module": "judge",
+        "title": "Çökmez yargıç",
+        "desc": "Model çıktıyı fence veya önsözle sarsa bile JSON'u çıkarır, eksik veya bozuk boyutlarda nötr varsayılanlara döner ve geçici hataları yeniden dener — tek bir kötü yanıt tüm çalıştırmayı çökertemez."
+      },
+      "c3": {
+        "module": "reporting",
+        "title": "Rapor kaynağı & maliyet",
+        "desc": "Her rapor yargıç modelini, veri setini ve zaman damgasını kaydeder; yerel Ollama modelleri $0 olarak faturalanır, böylece maliyet muhasebesi dürüst kalır."
+      },
+      "c4": {
+        "module": "connectors",
+        "title": "Takılabilir bağlayıcılar",
+        "desc": "Yargıç, test edilen sistemden ayrıştırılmıştır; böylece zayıf bir sistemi daha güçlü bir yargıçla notlayabilir ve sağlayıcıları tek satırda değiştirebilirsin."
+      },
+      "c5": {
+        "module": "release",
+        "title": "PyPI'ye yayınlandı",
+        "desc": "PyPI trusted publishing, 12 test ve İngilizce dokümanlar (docs/ARCHITECTURE.md)."
+      }
+    },
+    "finance": {
+      "title": "Personal Finance Analytics",
+      "sub": "Kişisel · Haz–Tem 2026 · Zeminlenmiş-AI analitik platformu",
+      "badge": "Kişisel · Full-stack",
+      "desc": "Kurumsal bir analitik mimarisinin uçtan uca kişisel kanıtı: mock banka verisi → PostgreSQL FDW → dbt (staging / intermediate / marts / ai_layer) → zeminlenmiş bir AI içgörü motoru → Superset. AI ham satırları asla görmez — dbt her kullanıcıyı tek satırlık bir mart_ai_context'e önceden toplar; bu, hat ile AI arasındaki tek sözleşmedir. <strong>Tek başıma — feature-branch + PR akışıyla geliştirildi.</strong>",
+      "highlightTitle": "Katkımın özeti — gerçek bir hat üzerinde zeminlenmiş AI",
+      "highlightDesc": "Bunu bir kurumsal kalıbı uçtan uca kanıtlamak için tek başıma geliştirdim: AI ham satırlara asla dokunmaz — önceden toplanmış tek bir mart_ai_context sözleşmesini okur, Pydantic ile doğrulanmış çıktı üreten versiyonlanmış prompt şablonları üzerinde çalışır ve OpenTelemetry ile tümüyle izlenir.",
+      "m1": "dbt katmanı",
+      "m2": "Postgres örneği",
+      "m3": "AI tetikleme modu",
+      "m4": "gözlemlenebilirlik sinyali",
+      "c1": {
+        "module": "ai-layer · lead",
+        "title": "Zeminleme mimarisi",
+        "desc": "Bir mart_ai_context ön-toplaması versiyonlanmış Jinja2 prompt şablonlarını besler; Claude'un yapılandırılmış çıktısı Pydantic ile doğrulanır, böylece her içgörü tekrar üretilebilir ve denetlenebilir olur."
+      },
+      "c2": {
+        "module": "dbt",
+        "title": "Katmanlı dbt hattı",
+        "desc": "Deterministik, seed'lenmiş sentetik veri üzerinde staging → intermediate → marts → ai_layer; dbt testleri bir CI kapısı olarak bağlandı."
+      },
+      "c3": {
+        "module": "observability",
+        "title": "Tam gözlemlenebilirlik",
+        "desc": "OpenTelemetry, Tempo / Prometheus / Grafana'ya aktarır; böylece başarısız bir gece çalıştırması sessiz bir boşluk değil, izlenen bir olaydır."
+      },
+      "c4": {
+        "module": "orchestration",
+        "title": "İki AI tetikleme modu",
+        "desc": "İçgörüler her dbt build'inden sonra ve anomali ile öneri geçişleri için bir zamanlamayla çalışır."
+      },
+      "c5": {
+        "module": "engineering",
+        "title": "Mühendislik disiplini",
+        "desc": "Tek başıma çalışırken bile feature-branch + PR akışı ve mülakat tarzı bir Soru-Cevap olarak yazılmış bir README."
+      }
+    },
     "analytics": {
       "title": "Analitik Platformu",
       "sub": "Qkare · Kas 2025 – May 2026 · Çok kiracılı İK analitik yığını",
@@ -206,45 +303,13 @@
       },
       "c5": {
         "module": "ga-analytics-api",
-        "title": "Çok kiracılı API &amp; UAT deploy",
+        "title": "Çok kiracılı API & UAT deploy",
         "desc": "Çok kiracılılık refaktörü, UAT analytics-api yapılandırması &amp; Dockerfile, kiracı düzeyinde GitLab CI güvenlik test'leri ve API ile dbt katmanları arasında RLS hizalamasına öncülük ettim."
       },
       "c6": {
         "module": "ga-superset · ops",
-        "title": "Üretim engelini kaldırma &amp; TR yerelleştirme",
+        "title": "Üretim engelini kaldırma & TR yerelleştirme",
         "desc": "Canlı demodan önce 130+ downstream modeli bloke eden şema kaymasını (candidate_user) düzelttim; Superset Docker başlangıcını stabilize ettim; Türkçe UI çevirileri ve filtre yerelleştirmesini (tr-TR) güncelledim."
-      }
-    },
-    "clustering": {
-      "title": "Davranışsal Kümeleme Ar-Ge",
-      "sub": "Qkare · Ağu 2025 · Çalışan segmentasyonu & yetenek analitiği",
-      "badge": "Ar-Ge · Araştırma",
-      "desc": "Çalışan ve adayları davranışsal ve performans verilerinden segmentlemek için kurulan araştırma ortamı — aynı özellik matrisinde K-Means, hiyerarşik kümeleme, DBSCAN ve GMM karşılaştırması; PCA/t-SNE görselleştirme ve silhouette / Calinski-Harabasz / Davies-Bouldin değerlendirmesi. <strong>Tek yazar olarak keşiften model kıyasına kadar uçtan uca hattı ben kurdum.</strong>",
-      "highlightTitle": "Katkımın özeti — segmentasyon hattı",
-      "highlightDesc": "Bu Ar-Ge çalışmasındaki ana görevim, ham davranışsal veriyi karşılaştırmalı segmentasyon için kullanılabilir hale getirmekti. Özellik mühendisliği, çok algoritmalı kıyaslama, boyut indirgeme ve segment profillemesini tek bir çevrimdışı analitik akışta birleştirdim. Çıktılar Analitik Platformu'ndaki mart yapısını ve AI ön hesaplama katmanlarını besledi.",
-      "m1": "kümeleme algoritması",
-      "m2": "değerlendirme metriği",
-      "m3": "boyut indirgeme yöntemi",
-      "m4": "analiz modülü",
-      "c1": {
-        "module": "clustering-rd · lead",
-        "title": "Problem",
-        "desc": "Problem şuydu: davranışsal veriler parçalıydı ve aynı veri üzerinde farklı kümeleme yöntemlerini adil biçimde karşılaştırmak mümkün değildi. Bu da segment kararlarını açıklaması zor, dağınık ve tekrar üretmesi güç hale getiriyordu."
-      },
-      "c2": {
-        "module": "clustering-rd",
-        "title": "Katkım",
-        "desc": "Özellik mühendisliği hattı, ölçekleme, joblib serileştirme ve çok algoritmalı benchmark akışı kurdum. Aynı veri kümesinde K-Means, hiyerarşik, DBSCAN ve GMM'i karşılaştırılabilir hale getirerek segment analizini tek bir deney omurgasına bağladım."
-      },
-      "c3": {
-        "module": "clustering-rd",
-        "title": "Etki",
-        "desc": "PCA ve t-SNE görselleştirmeleri ile segmentlerin ayrışmasını görünür hale getirdim; silhouette, Calinski-Harabasz ve Davies-Bouldin skorlarıyla seçim sürecini nesnelleştirdim. Böylece segment profilleri yalnızca grafik değil, karar verilebilir çıktı haline geldi."
-      },
-      "c4": {
-        "module": "clustering-rd",
-        "title": "Çözüm",
-        "desc": "Keşif, modelleme ve raporlamayı aynı script tabanlı akışta birleştirdim: EDA modülleri, boyut indirgeme, benchmark araçları ve CSV/HTML çıktı katmanı. Böylece araştırma tekrarlanabilir ve platforma aktarılabilir hale geldi."
       }
     },
     "coach": {
@@ -253,7 +318,7 @@
       "badge": "Üretim · B2B SaaS",
       "desc": "Kurumsal B2B AI koçluk platformu — LangGraph ile çok ajanlı orkestrasyon, modüler POML prompt'ları, Parquet tabanlı kişiselleştirme, OpenAI Realtime API ile gerçek zamanlı ses ve İK analitik panoları. <strong>Değerlendirme çerçevesi, erken ses yığını ve POML temeli benim sorumluluğumdaydı.</strong>",
       "highlightTitle": "Katkımın özeti — değerlendirme ve ses katmanı",
-      "highlightDesc": "Bu projede ana görevim, koçu üretime taşırken test edilebilir ve ölçülebilir hale getirmekti. Referee Agent ile seans kalite puanlamasını kurdum, ilk OpenAI Realtime ses yolunu çalıştırdım ve POML prompt yapısını oturttum. Analitik ve performans verisi entegrasyonu ekip tarafından paralel ilerledi; benim odağım kalite güvencesi ve etkileşim katmanıydı.",
+      "highlightDesc": "Bu projede ana görevim, koçu üretime taşırken test edilebilir ve ölçülebilir hale getirmekti. Pattern motorunu ve Referee Agent'ı tasarlayıp geliştirdim, ilk OpenAI Realtime ses yolunu çalıştırdım ve POML prompt yapısını oturttum. Pattern sistemi daha sonra ekibe devredildi ve ekip tarafından taşındı; analitik ve performans verisi entegrasyonu da paralel ilerledi. Benim kalıcı odağım kalite güvencesi ve etkileşim katmanıydı.",
       "m1": "AI ajanı",
       "m2": "POML prompt",
       "m3": "değerlendirme boyutu",
@@ -276,11 +341,11 @@
       "c4": {
         "module": "coach",
         "title": "Çözüm",
-        "desc": "Pattern motoru, POML migrasyonu, ses köprüsü ve bellek kalıcılığı için ayrı bileşenler kurarak koçu modüler bir servis haline getirdim. Bu yapı, hem test edilebilirliği hem de üretim genişletilebilirliğini artırdı."
+        "desc": "Pattern motorunu, POML migrasyonunu, ses köprüsünü ve bellek kalıcılığını modüler bileşenler olarak tasarlayıp geliştirdim. Pattern sistemi daha sonra ekibe devredilip taşındı; benim kalıcı odağım değerlendirme ve ses katmanları oldu."
       },
       "c5": {
         "module": "coach",
-        "title": "İstemci simülatörü &amp; değerlendirme araçları",
+        "title": "İstemci simülatörü & değerlendirme araçları",
         "desc": "AI istemci simülatörünü tur tabanlı ilerleme rehberleri ve tekrar önleme kurallarıyla iyileştirdim (%49 daha az tur, skor 7.88→8.2); koçluk değerlendirme raporları ve tek senaryo test script'leri ekledim."
       },
       "c6": {
@@ -331,97 +396,55 @@
         "desc": "Uçtan uca LLM trace yayılımı için AnalizciAgent ve WebSocket uç noktalarında Langfuse callback'leri; analiz hattı boyunca gözlemlenebilirlik için docker-compose config ve yardımcı modül."
       }
     },
-    "kpi": {
-      "title": "KPI Advisor",
-      "sub": "Qkare · Nis 2026 – May 2026 · Pozisyon bazlı KPI öneri AI",
+    "aisvc": {
+      "title": "AI Mikroservisleri — KPI & Skills Advisor",
+      "sub": "Qkare · Ağu 2025 – May 2026 · KPI & yetkinlik öneri mikroservisleri",
       "badge": "Üretim · B2B SaaS",
-      "desc": "Herhangi bir iş pozisyonu için SMART uyumlu KPI öneren AI mikroservisi — APQC Process Classification Framework'e dayalı, sözcüksel + kategori öncelikli geri getirme kullanan ve kurumsal Golden Dataset ile kalibre edilen bir sistem. <strong>Üretim motoru, geri getirme katmanı, değerlendirme hattı ve entegrasyonda birincil mühendis olarak çalıştım.</strong>",
-      "highlightTitle": "Katkımın özeti — üretim motoru ve kalite döngüsü",
-      "highlightDesc": "Bu projede ana sorumluluğum, KPI önerilerini güvenilir ve tekrar üretilebilir hale getirmekti. APQC tabanlı retrieval, JSON-mode yapılandırılmış çıktı, Redis önbellek, few-shot kalibrasyon ve offline değerlendirme hattını kurarak öneri kalitesini düzenli hale getirdim. Gözlemlenebilirlik ve UI cilası ekipte paralel ilerledi.",
+      "desc": "Kurumsal agent gateway arkasında iki üretim B2B AI mikroservisi. <strong>KPI Advisor</strong>, herhangi bir pozisyon için SMART uyumlu KPI önerir; APQC Process Classification Framework'e dayanır (sözcüksel + kategori öncelikli retrieval, vektör DB yok) ve offline LLM-as-judge hattıyla doğrulanır. <strong>Skills Advisor</strong>, herhangi bir iş unvanı için kapalı sözlükten tam 12 yetkinlik boyutu seçer; Türkçe gerekçeler ve DSPy 5-uzman ensemble ile çalışır. <strong>Her ikisinde de birincil mühendis — üretim motorları, retrieval, değerlendirme döngüsü, önbellek ve entegrasyon.</strong>",
+      "highlightTitle": "Katkımın özeti — uçtan uca iki öneri motoru",
+      "highlightDesc": "Her iki mikroserviste de birincil mühendis: kurucu yetkinlik UI'ından ve APQC tabanlı KPI üreticisinden DSPy konsensüsüne, embedding gerektirmeyen retrieval'a, çok katmanlı önbelleğe ve offline değerlendirme döngüsüne kadar. Gözlemlenebilirlik, UI cilası ve O*NET / LangChain-v1 migrasyonları ekipte paralel ilerledi; benim odağım yapılandırılmış çıktı kalitesi, kısıtlı üretim ve her ikisini tek gateway sözleşmesi arkasında canlıya almaktı.",
       "m1": "APQC metriği",
       "m2": "PCF düğümü",
-      "m3": "prompt kuralı",
-      "m4": "hat adımı",
-      "c1": {
-        "module": "kpi-advisor · lead",
-        "title": "Problem",
-        "desc": "Problem şuydu: farklı pozisyonlar için KPI tanımı çoğu zaman elle yapılıyor ve tutarlılık kaybına uğruyordu. Üretken yapay zeka ise taksonomi ve bağlam olmadan güvenilir öneri üretemiyordu."
-      },
-      "c2": {
-        "module": "kpi-advisor",
-        "title": "Katkım",
-        "desc": "Çekirdek FastAPI servisini, APQC tabanlı retrieval katmanını, JSON-mode yapılandırılmış çıktıyı ve prompt derleme akışını kurdum. Ayrıca önbellek ve few-shot seçim mekanizmalarıyla sistemin tekrarlanabilir çalışmasını sağladım."
-      },
-      "c3": {
-        "module": "kpi-advisor",
-        "title": "Etki",
-        "desc": "Kurumsal Golden Dataset ve offline LLM-as-judge hattı ile öneri kalitesini ölçülebilir hale getirdim. Bu, KPI çıktılarının yalnızca üretilebilmesini değil, aynı zamanda denetlenebilir ve iyileştirilebilir olmasını sağladı."
-      },
-      "c4": {
-        "module": "kpi-advisor",
-        "title": "Çözüm",
-        "desc": "Pozisyon bazlı şema, geriye uyumluluk, CI/CD, Docker ve entegrasyon katmanını birlikte tasarladım. Böylece servis hem yeni girdileri hem de eski payload biçimlerini güvenle işleyebilir hale geldi."
-      },
-      "c5": {
-        "module": "kpi-advisor · infra",
-        "title": "CI/CD, test &amp; Docker",
-        "desc": "pre-commit (Ruff, MyPy), pytest + coverage, şema bütünlüğü smoke test'leriyle GitLab CI hattı; healthcheck'li çok aşamalı Docker; hat bootstrap için katalog modu pozisyon kaynağı."
-      },
-      "c6": {
-        "module": "ai-api-monorepo",
-        "title": "CORE gateway entegrasyonu",
-        "desc": "Streamlit UI'ı {input}/{output} zarfı, dev auth bypass header'ları ve yerel/UAT akışları için monorepo uç nokta yapılandırmasıyla /api/v1/agents/ga-kpi-advisor/invoke üzerinden agent gateway'e bağladım."
-      }
-    },
-    "skills": {
-      "title": "Skills Advisor",
-      "sub": "Qkare · Ağu 2025 – May 2026 · Yetkinlik boyutu seçimi AI",
-      "badge": "Üretim · B2B SaaS",
-      "desc": "Herhangi bir iş unvanı için kapalı sözlükten tam 12 yetkinlik boyutu seçen AI danışman — Ocean ve Saville çerçevelerini destekler, alan uzmanları için Türkçe gerekçeler üretir ve tek geçiş ya da uzman ensemble yoluyla çalışır. <strong>Kurucu ürün, kapalı sözlük hattı ve önbellek stratejisinde birincil mühendis olarak çalıştım.</strong>",
-      "highlightTitle": "Katkımın özeti — yetkinlik seçim motoru",
-      "highlightDesc": "Bu projede hedef, 12 boyut seçimini güvenilir, açıklanabilir ve ucuz hale getirmekti. Kapalı sözlük veri katmanını, Türkçe gerekçelendirmeyi, önbellek stratejisini ve iki farklı inference yolunu birlikte tasarladım. O*NET entegrasyonu ve gözlemlenebilirlik gibi parçalar ekipte paralel ilerledi.",
-      "m1": "rol başına boyut",
-      "m2": "değerlendirme çerçevesi",
-      "m3": "inference motoru",
+      "m3": "rol başına boyut",
       "m4": "DSPy uzman personası",
       "c1": {
-        "module": "skills-advisor · lead",
-        "title": "Problem",
-        "desc": "Problem şuydu: farklı iş ünvanları için hangi yetkinlik boyutlarının seçileceği çoğu zaman öznel kalıyordu. Mevcut süreçler hem tutarsızdı hem de Türkçe açıklama üretmekte zayıftı."
+        "module": "kpi-advisor · lead",
+        "title": "KPI üretim servisi & APQC retrieval",
+        "desc": "Çekirdek FastAPI servisini kurdum: OpenAI JSON-mode yapılandırılmış çıktı, 1631 PCF düğümü ve 2680 metrik üzerinde hibrit sözcüksel + kategori öncelikli retrieval, çeşitlilik seçimi, güven odaklı fallback ve domain-uzman personası ile kurumsal kurallar içeren prompt derleme."
       },
       "c2": {
-        "module": "skills-advisor",
-        "title": "Katkım",
-        "desc": "Kapalı sözlük veri katmanını kurdum, boyut eşlemelerini API ile servis ettim ve LLM prompt'larına bağlam enjekte ettim. Ayrıca önbellek, doğrulama ve tekrar üretilebilir seçim mantığını uyguladım."
+        "module": "kpi-advisor",
+        "title": "Offline kalite döngüsü",
+        "desc": "step2 LLM-as-judge değerlendirmesini (SMART ×0.35 + Relevance ×0.40 + Clarity ×0.25), insan incelemesi için step3 Excel çıktısını ve golden dataset'e step4 geri bildirim aktarımını uyguladım — sentetik veri → değerlendirme → insan döngüsünü kapatarak."
       },
       "c3": {
-        "module": "skills-advisor",
-        "title": "Etki",
-        "desc": "Yetkinlik seçim sürecini öznel yorumdan çıkarıp ölçülebilir hale getirdim. Böylece aynı iş unvanı için tutarlı, açıklanabilir ve Türkçe gerekçeli boyut önerileri üretilebilir oldu."
+        "module": "skills-advisor · lead",
+        "title": "Kurucu yetkinlik değerlendirme sistemi",
+        "desc": "Kurucu AI yetkinlik-öneri akışını kurdum: Ocean/Saville test tipleri, Türkçe gerekçeli boyut skorlama ve Streamlit iki sütunlu UI — modüler FastAPI refaktöründen önce ürünü ayağa kaldırarak."
       },
       "c4": {
         "module": "skills-advisor",
-        "title": "Çözüm",
-        "desc": "Çözümü iki yol üzerinden kurguladım: tek geçiş JSON mode ve DSPy uzman ensemble. Bu yapı, hem hız hem açıklanabilirlik hem de maliyet açısından esnek bir seçim motoru sağladı."
+        "title": "Kapalı sözlükle kısıtlı üretim",
+        "desc": "Boyutları ve eşlemeleri ~900 satırlık dimensions.json'a taşıdım; /dimensions uç noktaları; konumsal önyargıyı azaltmak için istek başına shuffle; her yanıtta whitelist doğrulama, dedupe ve tam 12 üst sınırı."
       },
       "c5": {
         "module": "skills-advisor",
-        "title": "Çok katmanlı önbellekleme",
-        "desc": "Çekirdek LLM işlem modüllerinde SHA256 LLM düzeyi önbellek ve LangChainService'te istek düzeyi önbellek (May 2026); maliyet/gecikme için varsayılanı gpt-4o-mini @ temperature 0 yaptım — aynı rol+test+grup istekleri OpenAI'yi tamamen atlar."
+        "title": "DSPy SME uzman ensemble",
+        "desc": "Dinamik SME ağırlık sistemi ve aritmetik-ortalama adjudicator: beş paralel uzman personası kategori dengesiyle bir konsensüs listesine birleşir — yüksek riskli roller için tek geçiş LangChain'e alternatif."
       },
       "c6": {
-        "module": "skills-advisor · platform",
-        "title": "Üretim entegrasyonu",
-        "desc": "grid-auth ile JWT + kiracı whitelist; OTEL ve prompt loglama kancaları; özel PyPI için Docker netrc secret'ları; kurumsal iş akışları için Agent API Gateway invoke yoluyla eşleşir."
+        "module": "both · infra",
+        "title": "Önbellek & üretim entegrasyonu",
+        "desc": "Aynı isteklerin modeli tamamen atlaması için SHA-256 LLM düzeyi ve istek düzeyi önbellek; grid-auth ile JWT + kiracı whitelist; ve downstream İK iş akışları için gateway invoke bağlantısı (/api/v1/agents/…/invoke)."
       }
     },
     "gateway": {
       "title": "Agent API Gateway",
       "sub": "Qkare · Nis 2026 – May 2026 · Çok ajanlı AI API monorepo",
       "badge": "Üretim · Platform",
-    "desc": "Kurumsal AI agent gateway — birden fazla downstream AI mikroservisini tek invoke API üzerinden sunan FastAPI monorepo: paylaşımlı JWT auth, istek/yanıt zarfı, yapılandırılmış loglama ve OpenTelemetry kancaları. <strong>Platform bootstrap, auth entegrasyonu, Docker topolojisi, dinamik CI ve Cookiecutter tabanlı agent iskeletinden sorumlu birincil mühendis olarak çalıştım.</strong>",
+      "desc": "Kurumsal AI agent gateway — birden fazla downstream AI mikroservisini tek invoke API üzerinden sunan FastAPI monorepo: paylaşımlı JWT auth, istek/yanıt zarfı, yapılandırılmış loglama ve OpenTelemetry kancaları. <strong>Platform bootstrap, auth entegrasyonu, Docker topolojisi, dinamik CI ve Cookiecutter tabanlı agent iskeletinden sorumlu birincil mühendis olarak çalıştım.</strong>",
       "highlightTitle": "Katkımın özeti — platform sözleşmesi ve dağıtım",
-    "highlightDesc": "Bu projede ana görevim, agent ekosisteminin ortak giriş kapısını üretime hazır hale getirmekti. Monorepo düzeni, ilk agent bağlantısı, JWT auth, per-agent Docker/compose kalıbı, dinamik CI üretimi ve yeni agent'lar için Cookiecutter iskeletini ben kurdum. Diğer ekip üyeleri create_gateway_app, CORS ve iskelet iyileştirmelerini paralel ilerletti; benim odağım sözleşme ve dağıtım topolojisiydi.",
+      "highlightDesc": "Bu projede ana görevim, agent ekosisteminin ortak giriş kapısını üretime hazır hale getirmekti. Monorepo düzeni, ilk agent bağlantısı, JWT auth, per-agent Docker/compose kalıbı, dinamik CI üretimi ve yeni agent'lar için Cookiecutter iskeletini ben kurdum. Diğer ekip üyeleri create_gateway_app, CORS ve iskelet iyileştirmelerini paralel ilerletti; benim odağım sözleşme ve dağıtım topolojisiydi.",
       "m1": "üretim agent'ı",
       "m2": "invoke sözleşmesi",
       "m3": "hat üreticisi",
@@ -429,7 +452,7 @@
       "c1": {
         "module": "ai-api-monorepo · lead",
         "title": "Problem",
-      "desc": "Problem şuydu: her agent için ayrı entegrasyon yapmak, ortak auth ve deploy kalıbı olmadan hızla bakım maliyeti yaratıyordu. Yeni servis eklemek için ortak bir giriş noktası ve Cookiecutter iskeleti gerekiyordu."
+        "desc": "Problem şuydu: her agent için ayrı entegrasyon yapmak, ortak auth ve deploy kalıbı olmadan hızla bakım maliyeti yaratıyordu. Yeni servis eklemek için ortak bir giriş noktası ve Cookiecutter iskeleti gerekiyordu."
       },
       "c2": {
         "module": "core",
@@ -455,43 +478,6 @@
         "module": "kpi-advisor agent",
         "title": "Çapraz servis sözleşme hizalaması",
         "desc": "Gateway payload'larını KPI Advisor şema evrimiyle senkron tuttum: leadershipLevel, positionGroup, name/definition alanları, isteğe bağlı id — monorepo invoke örneklerinin downstream Pydantic modelleriyle eşleşmesi."
-      }
-    },
-    "chatbot": {
-      "title": "QKare AI Asistan",
-      "sub": "Qkare · Tem 2025 · Kurumsal web sitesi chatbot",
-      "badge": "Üretim · Web",
-      "desc": "QKare kurumsal web sitesi için FastAPI chatbot — ziyaretçi sorularını maliyet kontrollü bir akışla yanıtlar: önce kural tabanlı eşleşme, sonra anlamsal önbellek (FAISS veya Milvus), sonra canlı içerik üzerinden RAG ve son aşamada OpenAI. <strong>Mimari tasarımdan Docker dağıtımına kadar tek başıma yeniden yazdım.</strong>",
-      "highlightTitle": "Katkımın özeti — kurumsal chatbot yığını",
-      "highlightDesc": "Bu yeniden yazımda ana görevim, canlıya uygun ve güvenlik odaklı bir chatbot omurgası kurmaktı. Hibrit güvenlik, çift vektör deposu desteği ve dört katmanlı çıkarım akışını hayata geçirdim. Sonraki AI servislerinde tekrar kullanılan anlamsal önbellek ve RAG kalıpları burada oturdu.",
-      "m1": "çıkarım akışı",
-      "m2": "vektör deposu",
-      "m3": "hibrit güvenlik yığını",
-      "m4": "RAG hattı",
-      "c1": {
-        "module": "qkare-chatbot · lead",
-        "title": "Problem",
-        "desc": "Problem şuydu: ziyaretçi sorularını hızlı cevaplamak gerekiyordu ama doğrudan LLM kullanmak pahalıydı ve site içeriği sık güncelleniyordu. Sabit FAQ tek başına yetersiz kalıyordu."
-      },
-      "c2": {
-        "module": "qkare-chatbot",
-        "title": "Katkım",
-        "desc": "Kural → anlamsal önbellek → RAG → LLM sıralı akışını kurdum. Önbellek servislerini, FAISS/Milvus seçeneklerini ve canlı site bağlamı üzerinden geri getirme katmanını birlikte tasarladım."
-      },
-      "c3": {
-        "module": "qkare-chatbot",
-        "title": "Etki",
-        "desc": "Bu yapı sayesinde tekrar eden sorularda maliyet düştü, güncel site içeriği ile cevaplar hizalı kaldı ve prompt injection riskine karşı güvenlik katmanı oluştu. Ürün tek başına kurumsal web sitesi asistanı seviyesine çıktı."
-      },
-      "c4": {
-        "module": "security",
-        "title": "Çözüm",
-        "desc": "Çözüm olarak hybrid security modüllerini, yapılandırılabilir eşiklerle prompt injection korumasını ve üretim paketlemesini kurdum. Böylece chatbot hem ekonomik hem de güvenli bir servis haline geldi."
-      },
-      "c5": {
-        "module": "qkare-chatbot · infra",
-        "title": "Üretim paketleme",
-        "desc": "services/ düzeni (qa, cache, milvus, rag, llm); Milvus + Attu admin UI için Docker Compose; yapılandırılmış loglama, özel exception'lar, /health uç noktası ve merkezi konfigürasyon modüllerinde ortam tabanlı config doğrulaması."
       }
     }
   }
