@@ -91,7 +91,7 @@
     "title": "Education",
     "e1": {
       "degree": "MSc Information Technologies",
-      "years": "2022 – Present",
+      "years": "2024 – Present",
       "desc": "Specialisation in Data Science and Machine Learning. My thesis builds a Random Forest classifier that predicts which payment instrument a consumer will choose, with hyperparameters optimized by a Hybrid ABC-PSO algorithm — advised by Dr. Elif Deniz Yelmenoğlu."
     },
     "e2": {
