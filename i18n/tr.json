@@ -92,7 +92,7 @@
     "e1": {
       "degree": "Yüksek Lisans — Bilgi Teknolojileri",
       "years": "2022 – Devam",
-      "desc": "Veri Bilimi ve Makine Öğrenmesi uzmanlığı. Tez: arıcılık ve bal hasadında süreçleri otomatikleştirmek için makine öğrenmesi."
+      "desc": "Veri Bilimi ve Makine Öğrenmesi uzmanlığı. Tezim, bir tüketicinin hangi ödeme aracını seçeceğini tahmin eden bir Random Forest sınıflandırıcısı kuruyor; hiperparametreleri Hibrit ABC-PSO algoritmasıyla optimize ediliyor — Dr. Elif Deniz Yelmenoğlu danışmanlığında."
     },
     "e2": {
       "degree": "Lisans — Yazılım Mühendisliği",
@@ -473,36 +473,31 @@
       }
     },
     "thesis": {
-      "badge": "Yüksek Lisans Tezi · ML Araştırması",
-      "title": "Hibrit ABC-PSO — Ödeme Tercihi Sınıflandırması",
-      "sub": "Akademik · Yüksek Lisans Tezi · metasezgisel ML optimizasyonu",
-      "m1": "karşılaştırılan optimizer",
-      "m2": "benchmark fonksiyonu",
-      "m3": "özgün hibrit algoritma",
-      "m4": "model açıklanabilirliği",
-      "desc": "Yüksek lisans tezim: Fed DCPC 2024 veri kümesinde dijital ödeme tercihi sınıflandırması. Random Forest hiperparametrelerini ayarlamak için makaleden Hibrit ABC-PSO sürü optimizatörünü — kütüphane çağırmadan — implemente ettim, standart benchmark fonksiyonlarında doğruladım ve modeli SHAP ile açıkladım. <strong>Tek başıma — veri temizlemeden tekrarlanabilir pipeline'a ve dürüst, probleme bağlı bir sonuca kadar uçtan uca.</strong>",
+      "badge": "Yüksek Lisans Tezi · ML",
+      "title": "Hibrit Optimizasyonla Ödeme Tercihi Sınıflandırması",
+      "sub": "Yüksek Lisans Tezi · Işık Üniversitesi · danışman Dr. Elif Deniz Yelmenoğlu",
+      "m1": "sürü optimizatörü",
+      "m2": "hibrit model (ABC-PSO)",
+      "m3": "ayarlanan sınıflandırıcı",
+      "m4": "karşılaştırma metriği",
+      "desc": "Yüksek lisans tezim. Bir tüketicinin hangi ödeme aracını seçeceğini tahmin eden bir Random Forest sınıflandırıcısı kurdum ve hiperparametrelerini üç sürü-zekâsı algoritmasıyla — PSO, ABC ve Hibrit ABC-PSO — optimize edip balanced accuracy üzerinde karşılaştırdım. <strong>Tek başıma, uçtan uca: veri hazırlama, modelleme, hiperparametre optimizasyonu ve değerlendirme.</strong>",
       "c1": {
-        "module": "optimizer · sıfırdan",
-        "title": "Hibrit ABC-PSO elle implemente edildi",
-        "desc": "Hibrit metasezgiseli makaleden kütüphane kullanmadan yazdım: sinüs-kosinüs hız güncellemesi, dinamik atalet ağırlığı, ABC crossover fazı ve pahalı çapraz-doğrulama skorlarını tekrar hesaplamamak için fitness cache."
+        "module": "optimizasyon",
+        "title": "Hibrit ABC-PSO hiperparametre araması",
+        "desc": "Particle Swarm Optimization (PSO) ve Artificial Bee Colony (ABC) algoritmalarını Hibrit ABC-PSO'da birleştirerek Random Forest hiperparametrelerini ayarladım ve tek başına PSO ile ABC'ye karşı karşılaştırdım."
       },
       "c2": {
-        "module": "öznitelik",
-        "title": "Öznitelik mühendisliği &amp; kodlama",
-        "desc": "IQR + z-score aykırı değer bastırma, maaş günü periyodu gibi zamansal öznitelikler ve hibrit kategorik kodlama (düşük kardinalite için one-hot, yüksek için target encoding) ile SelectFromModel öznitelik seçimi."
+        "module": "modelleme",
+        "title": "Random Forest sınıflandırıcı",
+        "desc": "Tüketici ödeme-davranışı verisinden hangi ödeme aracını seçeceğini tahmin eden bir Random Forest."
       },
       "c3": {
         "module": "değerlendirme",
-        "title": "Dürüst, titiz değerlendirme",
-        "desc": "Dengesiz çok-sınıflı problem için balanced accuracy seçtim, stratified çapraz-doğrulama kullandım ve hibridin her zaman kazanmadığını — probleme bağlı olduğunu — dürüstçe raporladım. Optimizatörü Sphere / Rastrigin benchmark fonksiyonlarında bağımsız doğruladım."
+        "title": "Balanced accuracy'de karşılaştırma",
+        "desc": "PSO, ABC ve Hibrit ABC-PSO'yu balanced accuracy üzerinde değerlendirerek hibridin tek-algoritma ayarlamaya göre gerçekten iyileştirip iyileştirmediğini test ettim."
       },
-      "c4": {
-        "module": "açıklanabilirlik",
-        "title": "SHAP açıklamaları",
-        "desc": "Ayarlanmış Random Forest için global ve local SHAP açıklamaları — model kararları kara kutu değil, yorumlanabilir."
-      },
-      "highlightTitle": "Katkım — uçtan uca araştırma seviyesinde ML",
-      "highlightDesc": "Veriden sonuçlara tek yazar: hibrit metasezgiseli kendim kurdum, öznitelikleri ben tasarladım ve bulguları kiraz toplamadan dürüstçe raporladım. Tam TR + EN tez, bir IJISRT makalesi ve savunma slaytları destekliyor."
+      "highlightTitle": "Katkım — uçtan uca araştırma pipeline'ı",
+      "highlightDesc": "Veriden sonuca tek yazar: veri hazırlama, Random Forest modeli, Hibrit ABC-PSO ile hiperparametre optimizasyonu ve balanced accuracy üzerinde dürüst bir karşılaştırma. Dr. Elif Deniz Yelmenoğlu danışmanlığında."
     }
   }
 }
