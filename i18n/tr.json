@@ -13,7 +13,7 @@
   },
   "hero": {
     "eyebrow": "Yapay Zeka & LLM Mühendisi",
-    "bio": "Canlı sistemler geliştiren bir yapay zeka mühendisiyim: Veriyi modellere, modelleri güvenilir servislere, servisleri ise çalışan ürünlere dönüştürüyorum. Sadece prototipler değil; ölçülebilir, iyi belgelenmiş ve ölçeklenebilir sistemler inşa ediyorum. Aynı zamanda Işık Üniversitesi'nde yüksek lisans eğitimime devam ediyorum.",
+    "bio": "Canlı sistemler geliştiren bir yapay zeka mühendisiyim: Veriyi modellere, modelleri güvenilir servislere, servisleri ise çalışan ürünlere dönüştürüyorum. Sadece prototipler değil; ölçülebilir, iyi belgelenmiş ve ölçeklenebilir sistemler inşa ediyorum. Işık Üniversitesi Bilişim Teknolojileri Yüksek Lisansı mezunu (2026).",
     "ctaProjects": "Projeleri Gör",
     "ctaCV": "CV Görüntüle",
     "ctaContact": "İletişime Geç"
@@ -91,8 +91,8 @@
     "title": "Eğitim",
     "e1": {
       "degree": "Yüksek Lisans — Bilgi Teknolojileri",
-      "years": "2024 – Devam",
-      "desc": "Veri Bilimi ve Makine Öğrenmesi uzmanlığı. Tezim, bir tüketicinin hangi ödeme aracını seçeceğini tahmin eden bir Random Forest sınıflandırıcısı kuruyor; hiperparametreleri Hibrit ABC-PSO algoritmasıyla optimize ediliyor — Dr. Elif Deniz Yelmenoğlu danışmanlığında."
+      "years": "2024 – 2026",
+      "desc": "Veri Bilimi ve Makine Öğrenmesi uzmanlığı. Tez: bir tüketicinin hangi ödeme aracını seçeceğini tahmin eden Random Forest sınıflandırıcısı; hiperparametreleri Hibrit ABC-PSO algoritmasıyla optimize edildi — Dr. Elif Deniz Yelmenoğlu danışmanlığında. Temmuz 2026'da savunuldu."
     },
     "e2": {
       "degree": "Lisans — Yazılım Mühendisliği",

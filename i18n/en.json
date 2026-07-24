@@ -13,7 +13,7 @@
   },
   "hero": {
     "eyebrow": "AI & LLM Engineer",
-    "bio": "I'm a production AI engineer: I take data to models, models to secure services, and services into live products. Not demos — measurable, documented, scalable systems. Currently pursuing an MSc at Işık University.",
+    "bio": "I'm a production AI engineer: I take data to models, models to secure services, and services into live products. Not demos — measurable, documented, scalable systems. MSc in Information Technologies, Işık University (2026).",
     "ctaProjects": "View Projects",
     "ctaCV": "View CV",
     "ctaContact": "Get in Touch"
@@ -91,8 +91,8 @@
     "title": "Education",
     "e1": {
       "degree": "MSc Information Technologies",
-      "years": "2024 – Present",
-      "desc": "Specialisation in Data Science and Machine Learning. My thesis builds a Random Forest classifier that predicts which payment instrument a consumer will choose, with hyperparameters optimized by a Hybrid ABC-PSO algorithm — advised by Dr. Elif Deniz Yelmenoğlu."
+      "years": "2024 – 2026",
+      "desc": "Specialisation in Data Science and Machine Learning. Thesis: built a Random Forest classifier that predicts which payment instrument a consumer will choose, with hyperparameters optimized by a Hybrid ABC-PSO algorithm — advised by Dr. Elif Deniz Yelmenoğlu. Defended July 2026."
     },
     "e2": {
       "degree": "BSc Software Engineering",
