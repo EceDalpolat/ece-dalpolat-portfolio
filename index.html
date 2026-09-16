@@ -1936,6 +1936,76 @@ footer {
       </div>
     </div>
 
+    <!-- LUNA AI — TUBITAK research project -->
+    <div class="ga-project" id="lunai">
+      <div class="ga-header">
+        <div class="ga-header-left">
+          <span class="ga-badge" data-i18n="proj.lunai.badge">TUBITAK · Production Research</span>
+          <div class="ga-title" data-i18n="proj.lunai.title">Luna AI — Job-Candidate Matching Engine</div>
+          <div class="ga-sub" data-i18n="proj.lunai.sub">TUBITAK-Funded · Jun–Aug 2026 · Multi-tenant Vector Database & ML Fairness</div>
+        </div>
+      </div>
+      <div class="ga-metrics">
+        <div class="ga-metric"><div class="ga-metric-num">4</div><div class="ga-metric-lbl" data-i18n="proj.lunai.m1">tenant isolation layers</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">5+</div><div class="ga-metric-lbl" data-i18n="proj.lunai.m2">fairness metrics implemented</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">16</div><div class="ga-metric-lbl" data-i18n="proj.lunai.m3">commits across modules</div></div>
+        <div class="ga-metric"><div class="ga-metric-num">100x+</div><div class="ga-metric-lbl" data-i18n="proj.lunai.m4">vector search speedup</div></div>
+      </div>
+      <p class="ga-desc" data-i18n-html="proj.lunai.desc">AI-powered HR matching platform: PostgreSQL multi-tenant vector store with HNSW indexing, fairness detection harness for bias mitigation, LLM zero-shot labeling, and PII anonymization. Built the data pipeline, ML fairness framework, semantic retrieval indexing, and comprehensive onboarding guide for developer adoption. <strong>Full-stack engineer — backend, data science, ML systems, and documentation across 4 modules with 16 commits.</strong></p>
+      <div class="ga-body">
+
+        <div class="ga-contributions">
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c1.module">database · lead</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c1.title">Multi-tenant vector store with RLS</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c1.desc">PostgreSQL with row-level security (RLS) isolating 1000+ tenants; pgvector integration for semantic similarity; HNSW indexing for ~100x faster approximate nearest neighbor search on candidate profiles and job descriptions.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c2.module">ml-fairness · core</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c2.title">Fairness detection harness</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c2.desc">Evaluation framework measuring disparate impact across protected attributes (gender, age band, seniority), flagging discrimination when minority ratios drop below 0.8; ensures hiring models don't harm underrepresented groups.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c3.module">data-pipeline</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c3.title">PII anonymization & KVKK compliance</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c3.desc">Irreversible redaction of personally identifiable information; compliance-aware data distribution reports; privacy-preserving dataset preparation for model training without exposing candidate data.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c4.module">embeddings · integration</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c4.title">E5 embeddings + canonical indexing</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c4.desc">Bilingual E5-base model (Turkish/English); canonical skill taxonomy awareness; semantic profile-to-job matching via pgvector indexing for high-recall candidate retrieval.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c5.module">llm-integration</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c5.title">LLM zero-shot baselines</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c5.desc">GPT-4 sector labeling without training data; batch processing and error handling; rapid prototyping of classification tasks before building full ML systems.</div>
+          </div>
+          <div class="ga-contrib">
+            <div class="ga-contrib-module" data-i18n="proj.lunai.c6.module">onboarding · documentation</div>
+            <div class="ga-contrib-title" data-i18n="proj.lunai.c6.title">Developer onboarding guide</div>
+            <div class="ga-contrib-desc" data-i18n-html="proj.lunai.c6.desc">590-line comprehensive guide: architecture diagram, 10-module setup, database initialization, Docker workflows, git practices, CI patterns, and troubleshooting — enabling new engineers to ship on day one.</div>
+          </div>
+        </div>
+
+        <div class="ga-highlight">
+          <div class="ga-highlight-title" data-i18n="proj.lunai.highlightTitle">My contribution — multi-tenant AI infrastructure & fairness</div>
+          <div class="ga-highlight-desc" data-i18n-html="proj.lunai.highlightDesc">I built the complete data and ML foundation: PostgreSQL RLS for tenant isolation, pgvector HNSW indexing for fast semantic search, a fairness detection harness with disparate impact analysis, PII redaction for KVKK compliance, and LLM baselines for zero-shot classification. I also wrote a 590-line onboarding guide that brought new developers from zero to productive.</div>
+        </div>
+
+        <div class="ga-stack">
+          <span class="ga-stack-tag">PostgreSQL</span>
+          <span class="ga-stack-tag">pgvector</span>
+          <span class="ga-stack-tag">Python</span>
+          <span class="ga-stack-tag">E5 Embeddings</span>
+          <span class="ga-stack-tag">OpenAI API</span>
+          <span class="ga-stack-tag gray">HNSW Indexing</span>
+          <span class="ga-stack-tag gray">Fairness Metrics</span>
+          <span class="ga-stack-tag gray">PII Redaction</span>
+          <span class="ga-stack-tag gray">Multi-tenant RLS</span>
+        </div>
+      </div>
+    </div>
+
     <!-- MSc THESIS (ABC-PSO) — academic, featured -->
     <div class="ga-project" id="thesis">
       <div class="ga-header">

@@ -472,6 +472,48 @@
         "desc": "Kept gateway payloads in sync with KPI Advisor schema evolution: leadershipLevel, positionGroup, name/definition fields, optional id — ensuring monorepo invoke examples match the downstream Pydantic models."
       }
     },
+    "lunai": {
+      "title": "Luna AI — Job-Candidate Matching Engine",
+      "sub": "TUBITAK-Funded · Jun–Aug 2026 · Multi-tenant Vector Database & ML Fairness",
+      "badge": "TUBITAK · Production Research",
+      "desc": "AI-powered HR matching platform: PostgreSQL multi-tenant vector store with HNSW indexing, fairness detection harness for bias mitigation, LLM zero-shot labeling, and PII anonymization. Built the data pipeline, ML fairness framework, semantic retrieval indexing, and comprehensive onboarding guide for developer adoption. <strong>Full-stack engineer — backend, data science, ML systems, and documentation across 4 modules with 16 commits.</strong>",
+      "highlightTitle": "My contribution — multi-tenant AI infrastructure & fairness",
+      "highlightDesc": "I built the complete data and ML foundation: PostgreSQL RLS for tenant isolation, pgvector HNSW indexing for fast semantic search, a fairness detection harness with disparate impact analysis, PII redaction for KVKK compliance, and LLM baselines for zero-shot classification. I also wrote a 590-line onboarding guide that brought new developers from zero to productive.",
+      "m1": "tenant isolation layers",
+      "m2": "fairness metrics implemented",
+      "m3": "commits across modules",
+      "m4": "vector search speedup",
+      "c1": {
+        "module": "database · lead",
+        "title": "Multi-tenant vector store with RLS",
+        "desc": "PostgreSQL with row-level security (RLS) isolating 1000+ tenants; pgvector integration for semantic similarity; HNSW indexing for ~100x faster approximate nearest neighbor search on candidate profiles and job descriptions."
+      },
+      "c2": {
+        "module": "ml-fairness · core",
+        "title": "Fairness detection harness",
+        "desc": "Evaluation framework measuring disparate impact across protected attributes (gender, age band, seniority), flagging discrimination when minority ratios drop below 0.8; ensures hiring models don't harm underrepresented groups."
+      },
+      "c3": {
+        "module": "data-pipeline",
+        "title": "PII anonymization & KVKK compliance",
+        "desc": "Irreversible redaction of personally identifiable information; compliance-aware data distribution reports; privacy-preserving dataset preparation for model training without exposing candidate data."
+      },
+      "c4": {
+        "module": "embeddings · integration",
+        "title": "E5 embeddings + canonical indexing",
+        "desc": "Bilingual E5-base model (Turkish/English); canonical skill taxonomy awareness; semantic profile-to-job matching via pgvector indexing for high-recall candidate retrieval."
+      },
+      "c5": {
+        "module": "llm-integration",
+        "title": "LLM zero-shot baselines",
+        "desc": "GPT-4 sector labeling without training data; batch processing and error handling; rapid prototyping of classification tasks before building full ML systems."
+      },
+      "c6": {
+        "module": "onboarding · documentation",
+        "title": "Developer onboarding guide",
+        "desc": "590-line comprehensive guide: architecture diagram, 10-module setup, database initialization, Docker workflows, git practices, CI patterns, and troubleshooting — enabling new engineers to ship on day one."
+      }
+    },
     "thesis": {
       "badge": "MSc Thesis · ML",
       "title": "Payment-Method Preference Classification via Hybrid Optimization",

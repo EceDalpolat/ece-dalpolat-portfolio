@@ -472,6 +472,48 @@
         "desc": "Gateway payload'larını KPI Advisor şema evrimiyle senkron tuttum: leadershipLevel, positionGroup, name/definition alanları, isteğe bağlı id — monorepo invoke örneklerinin downstream Pydantic modelleriyle eşleşmesi."
       }
     },
+    "lunai": {
+      "title": "Luna AI — İş-Aday Eşleştirme Motoru",
+      "sub": "TUBITAK Destekli · Haz–Ağu 2026 · Çok Kiracılı Vektör Veritabanı & ML Fairness",
+      "badge": "TUBITAK · Üretim Araştırması",
+      "desc": "AI-güçlendirilmiş İK eşleştirme platformu: PostgreSQL çok-kiracılı vektör store HNSW indexing ile, adalet tespiti harness'ı bias azaltmak için, LLM zero-shot labeling ve PII anonimizasyonu. Veri pipeline'ı, ML fairness framework'ü, semantik retrieval indexing ve geliştirici adopsiyon kılavuzunu kurdum. <strong>Full-stack mühendis — 4 modül ve 16 commit'te backend, veri bilimi, ML sistemleri ve dokümantasyon.</strong>",
+      "highlightTitle": "Katkım — çok-kiracılı AI altyapısı & fairness",
+      "highlightDesc": "Tam veri ve ML temelini kurdum: PostgreSQL RLS tenant izolasyonu, pgvector HNSW indexing hızlı semantik arama için, disparate impact analizi ile fairness harness'ı, KVKK uyumlu PII redaksiyonu ve zero-shot sınıflandırma için LLM baselines. Ayrıca 590 satırlık onboarding kılavuzu yazdım — yeni geliştiricileri sıfırdan produktif hale getiren.",
+      "m1": "tenant izolasyon katmanı",
+      "m2": "uygulanan fairness metrikleri",
+      "m3": "modüller arası commit'ler",
+      "m4": "vektör arama hızlanması",
+      "c1": {
+        "module": "veritabanı · lider",
+        "title": "RLS ile çok-kiracılı vektör store",
+        "desc": "PostgreSQL satır-düzeyi güvenlik (RLS) ile 1000+ tenant'ı izole etme; pgvector entegrasyonu semantik benzerlik için; HNSW indexing ~100x daha hızlı approximate nearest neighbor arama aday profilleri ve iş açıklamalarında."
+      },
+      "c2": {
+        "module": "ml-adalet · çekirdek",
+        "title": "Fairness tespiti harness'ı",
+        "desc": "Disparate impact'i korunan özellikler arası ölçen (cinsiyet, yaş grubu, kıdem) değerlendirme framework'ü; azınlık oranları 0.8'in altına düştüğünde ayrımcılığı işaretler; işe alma modellerinin dezavantajlı grupları zarara uğratmadığını sağlar."
+      },
+      "c3": {
+        "module": "veri-pipeline",
+        "title": "PII anonimizasyonu & KVKK uyumluluğu",
+        "desc": "Kişiye ait tanımlayıcı bilgilerin geri dönüşsüz redaksiyonu; uyum-farkında veri dağılım raporları; aday verilerini açığa çıkarmadan model eğitimi için gizlilik-koruyan veri hazırlama."
+      },
+      "c4": {
+        "module": "embeddings · entegrasyon",
+        "title": "E5 embeddings + canonical indexing",
+        "desc": "İkidilli E5-base modeli (Türkçe/İngilizce); canonical skill taxonomy farkındalığı; pgvector indexing üzerinde semantik profil-iş eşleştirmesi yüksek-recall aday retrieval'ı için."
+      },
+      "c5": {
+        "module": "llm-entegrasyonu",
+        "title": "LLM zero-shot baselines",
+        "desc": "Eğitim verisi olmadan GPT-4 sektor labeling'i; batch processing ve hata yönetimi; tam ML sistemleri kurmadan sınıflandırma görevlerinin hızlı prototiplenmesi."
+      },
+      "c6": {
+        "module": "onboarding · dokümantasyon",
+        "title": "Geliştirici onboarding kılavuzu",
+        "desc": "590 satırlık kapsamlı kılavuz: mimari diyagram, 10-modül setup, veritabanı başlatması, Docker workflow'ları, git uygulamaları, CI desenleri ve troubleshooting — yeni mühendislerin birinci günde yapabileceğini etkinleştiren."
+      }
+    },
     "thesis": {
       "badge": "Yüksek Lisans Tezi · ML",
       "title": "Hibrit Optimizasyonla Ödeme Tercihi Sınıflandırması",
