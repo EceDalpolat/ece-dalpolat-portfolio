@@ -1,7 +1,7 @@
 # Ön Yazı — GenAI / LLM Engineer (Fenix İK)
 
 **Ece Dalpolat**  
-ecedlplt9850@gmail.com · +90 552 360 9850 · İstanbul  
+ecedlplt9850@gmail.com · İstanbul  
 [Portföy](https://ecedalpolat.github.io/ece-dalpolat-portfolio/) · [LinkedIn](https://www.linkedin.com/in/ece-dalpolat-0265a0221/) · [GitHub](https://github.com/EceDalpolat)
 
 ---
